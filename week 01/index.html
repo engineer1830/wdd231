@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 - Site Header Exercise</title>
+    <meta name="description" content="WDD 231 - Site Header for Jesse Hamilton work">
+    <meta name="author" content="Jesse Hamilton">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+<body>
+    <header>
+        <img src="images/home.svg" alt="Site Logo" width="512" height="512">
+        <span>Jesse's Site Title Unknown</span>
+        <button id="ham-btn" class="hamburger"></button>
+    </header>
+    <nav>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li class=""><a href="#">News & Events</a></li>
+                <li class="current"><a href="#">Dedicated Temples</a></li>
+                <li><a href="#">Announced Temples</a></li>
+            </ul>    </nav>
+    <main>
+        <h1>Dedicated Temples</h1>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://www.facebook.com/jesse.hamilton.142" target="_blank"><img src="images/facebook.svg" alt="Facebook" width="16" height="16"></a>
+            <a href="https://www.linkedin.com/in/jesse-hamilton-84213911/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn" width="16" height="16"></a>
+            <a href="https://x.com/hammingup" target="_blank"><img src="images/twitter-alt-square.svg" alt="Twitter-x" width="16" height="16"></a>
+            <a href="https://github.com/engineer1830" target="_blank"><img src="images/github.svg" alt="Github" width="16" height="16"></a>
+        </div>
+        <p>&copy; <span id="currentyear"></span> | Jesse Hamilton | USA</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+    <script src="scripts/navigation.js"></script>
+</body>
+</html>

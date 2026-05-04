@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 - Site Header Exercise</title>
+    <meta name="description" content="WDD 231 - Site Header for Jesse Hamilton work">
+    <meta name="author" content="Jesse Hamilton">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/home.svg" alt="Site Logo" width="512" height="512">
+        <span>Jesse Hamilton WDD231 Site</span>
+        <button id="ham-btn" class="hamburger"></button>
+    </header>
+    <nav>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li class=""><a href="#">Home</a></li>
+                <li class="current"><a href="#">Chamber Project</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Home</h1>
+            <div class="grid">
+                <section>
+                    <h2>About Me</h2>
+                    <blockquote class="bio-info">
+                        <p>My name is Jesse Hamilton. I was born in North Carolina, USA and live with my wife in Arizona, USA. I have worked
+                            at Intel Corp. for 29 years and I have a MS degree in Chemical Engineering from BYU. While I have spent the
+                            majority of my career as a process engineer in the "Fab", I currently work in Business Process Management as a
+                            Lean Six Sigma Master Black Belt. I love to travel and have lived in many locations within the USA and I also
+                            lived 2 years in Dalian, China.</p>
+                </section>
+                <section>
+                    <h2>Student Photo</h2>
+                    <img src="images/profile.jpg" alt="Jesse Hamilton profile picture" width="250" height="250">
+                </section>
+            
+                <section>
+                    <h2>Web Certificate Courses</h2>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <div class="social">
+                <a href="https://www.facebook.com/jesse.hamilton.142" target="_blank"><img src="images/facebook.svg"
+                        alt="Facebook" width="16" height="16"></a>
+                <a href="https://www.linkedin.com/in/jesse-hamilton-84213911/" target="_blank"><img
+                        src="images/linkedin.svg" alt="LinkedIn" width="16" height="16"></a>
+                <a href="https://x.com/hammingup" target="_blank"><img src="images/twitter-alt-square.svg"
+                        alt="Twitter-x" width="16" height="16"></a>
+                <a href="https://github.com/engineer1830" target="_blank"><img src="images/github.svg" alt="Github"
+                        width="16" height="16"></a>
+            </div>
+            <p>&copy; <span id="currentyear"></span> | Jesse Hamilton | USA</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </footer>
+        <script src="scripts/site.js"></script>
+</body>
+
+</html>
