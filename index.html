@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
+    
+   
 
     <script src="scripts/site.js" defer></script>
 </head>
@@ -24,15 +26,16 @@
         <img src="images/home.svg" alt="Site Logo" width="512" height="512">
         <span>Jesse Hamilton WDD231 Site</span>
         <button id="ham-btn" class="hamburger"></button>
-    </header>
-    <nav>
-        <nav id="nav-bar" class="navigation">
+    
+        <nav class="navigation">
             <ul>
-                <li class=""><a href="#">Home</a></li>
-                <li class="current"><a href="#">Chamber Project</a></li>
+                <li><a href="#" id="home">Home</a></li>
+                <li><a href="#">Chamber Project</a></li>
                 <li><a href="#">Final Project</a></li>
             </ul>
         </nav>
+    </header>
+    
         <main>
             <h1>Home</h1>
             <div class="grid">
@@ -44,14 +47,21 @@
                             majority of my career as a process engineer in the "Fab", I currently work in Business Process Management as a
                             Lean Six Sigma Master Black Belt. I love to travel and have lived in many locations within the USA and I also
                             lived 2 years in Dalian, China.</p>
+                            </blockquote>
                 </section>
-                <section>
+                <section class="student-photo">
                     <h2>Student Photo</h2>
                     <img src="images/profile.jpg" alt="Jesse Hamilton profile picture" width="250" height="250">
                 </section>
             
-                <section>
+                <section class="courses">
                     <h2>Web Certificate Courses</h2>
+                    <ul>
+                        <li><a href="#" id="all">All</a></li>
+                        <li><a href="#" id="cse">CSE</a></li>
+                        <li><a href="#" id="wdd">WDD</a></li> 
+                    </ul>
+                    <div class="gallery-grid"></div>
                 </section>
             </div>
         </main>

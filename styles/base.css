@@ -95,22 +95,91 @@ h1 {
 
 h2 {
     padding: 10px;
+    text-align: center;
+    border: solid 1px #eee;
+    background: #ddd;
+    border-radius: 6px;
+
 }
 
-section img {
+.student-photo img
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     padding: 10px;
 }
 
-/* Main */
-/* .grid {
-    display: grid;
-    grid-template-columns: 65% 35%;
-    gap: 2rem;
+/* Card Grid Elements */
+
+.courses
+{
+    grid-column: auto;
+    grid-row: auto;
 }
 
-.grid section:nth-of-type(3) {
-    grid-column: 1/-1;
-} */
+.courses ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.courses li a
+{
+    display: block;
+    padding: 0.5rem 1rem;
+    background: #1A5B6B;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.courses li a:hover
+{
+    background: #8b224c;
+}
+
+.gallery-grid
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.gallery-grid section
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e5e5;
+    min-height: 100px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.gallery-grid section h3
+{
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.gallery-grid section.completed
+{
+    background-color: #d4f8d4;
+    border-color: #8bc98b;
+}
 
 /* Footer */
 footer {
