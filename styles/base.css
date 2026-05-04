@@ -1,5 +1,6 @@
 /* Colors
 Forest green: #228B22
+Dark forest green: 0B2B26
 Partner colors: 
 Crimson or magenta-maroon #8b224c 
 and 
@@ -33,7 +34,8 @@ header img {
 
 header span {
     font-size: 1.2rem;
-    color: #228B22;
+    /* color: #228B22; */
+    color: #0B2B26;
 }
 
 /* Hamburger */
