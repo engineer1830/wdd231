@@ -107,10 +107,18 @@ h1 {
 h2 {
     padding: 10px;
     text-align: center;
+    color: white;
     border: solid 1px #eee;
-    background: #ddd;
+    background: #3f3d3d;
     border-radius: 6px;
 
+}
+
+section
+{
+    background-color: #E8E8E8;
+    padding: 1rem;
+    border-radius: 8px;
 }
 
 .student-photo img
