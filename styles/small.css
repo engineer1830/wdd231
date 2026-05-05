@@ -234,3 +234,11 @@ footer {
 .social a:hover {
     background-color: #ddd;
 }
+
+@media (max-width: 600px)
+{
+    .gallery-grid
+    {
+        grid-template-columns: 1fr;
+    }
+}
