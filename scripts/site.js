@@ -2,8 +2,13 @@ const navbutton = document.querySelector('#ham-btn');
 const navlinks = document.querySelector('#nav-bar');
 
 navbutton.addEventListener('click', () => {
-    navbutton.classList.toggle('show');
+    const expanded = navbutton.classList.toggle('show');
     navlinks.classList.toggle('show');
+
+    navbutton.setAttribute(
+        'aria-label',
+        expanded ? 'Close navigation menu' : 'Open navigation menu'
+    );
 });
 
 const year = new Date().getFullYear();
