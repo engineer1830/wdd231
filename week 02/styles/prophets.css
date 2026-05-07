@@ -1,0 +1,46 @@
+* {
+    font-family: Roboto, helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+#cards section img
+{
+    width: 100%;
+    height: 340px;
+    /* or whatever height you want */
+    object-fit: cover;
+    /* or "contain" depending on your preference */
+    border-radius: 6px;
+}
+
+main {
+    border: solid 1px black;
+    background-color: #eee;
+    border-radius: 8px;
+}
+
+section {
+    border: solid 1px darkgray;
+    background-color: #C1E1C1;
+    border-radius: 6px;
+    padding: 0.5rem;
+}
+
+h1, h2, p {
+    text-align: center;
+}
+
+h1 {
+    color: darkgreen;
+}
+
+h2 {
+    color: #774253;
+}
