@@ -1,0 +1,163 @@
+/* =========================================
+   1. BASE LAYOUT
+   ========================================= */
+
+header
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header img
+{
+    margin-right: 1rem;
+}
+
+.branding
+{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* =========================================
+   2. NAVIGATION (MOBILE FIRST)
+   ========================================= */
+
+.navigation
+{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 0.75rem 1rem;
+}
+
+.navigation.show
+{
+    display: block;
+}
+
+.navigation ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.navigation a
+{
+    text-decoration: none;
+    font-weight: 600;
+    color: #1e1e1e;
+}
+
+/* Hamburger button */
+.hamburger
+{
+    margin-left: auto;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #8b224c;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    z-index: 1001;
+}
+
+.hamburger::before
+{
+    content: "\2630";
+    font-size: 2rem;
+}
+
+.hamburger.show::before
+{
+    content: "\00d7";
+    font-size: 2rem;
+}
+
+span {
+    font-size: 1.25rem;
+}
+
+h1 {
+    padding: 20px;
+}
+/* =========================================
+   3. HERO IMAGE
+   ========================================= */
+
+.hero
+{
+    display: block;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================================
+   4. WEATHER (CURRENT + FORECAST)
+   ========================================= */
+
+.forecast
+{
+    margin-top: 2rem;
+}
+
+#forecast-cards
+{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.forecast-card
+{
+    background: #ffffff;
+    padding: 0.75rem;
+    border-radius: 6px;
+    text-align: center;
+    width: 100px;
+}
+
+.forecast-card img
+{
+    width: 60px;
+    height: 60px;
+}
+
+/* =========================================
+   5. GRID LAYOUT (EVENTS / CURRENT / FORECAST)
+   ========================================= */
+
+.grid
+{
+    display: grid;
+    grid-template-columns: 40% 15% 35%;
+    gap: 1.5rem;
+    align-items: start;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.grid section
+{
+    background: #f8f8f8;
+    padding: 1rem;
+    border-radius: 8px;
+}

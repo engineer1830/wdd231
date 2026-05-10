@@ -1,0 +1,60 @@
+{
+    "businesses": [
+        {
+            "businessName": "Reliable Glass",
+            "address": "115 S Weber Dr #2, Chandler, AZ 85226",
+            "phone": "480-283-8222",
+            "url": "https://reliableglassaz.com/",
+            "image": "../images/reliable_glass.jpg",
+            "level": "member"
+        },
+        {
+            "businessName": "Desert Financial",
+            "address": "1949 W Ray Rd, Ste 34, Chandler AZ 85224",
+            "phone": "602-335-2500",
+            "url": "https://www.desertfinancial.com//",
+            "image": "../images/desert_financial.jpg",
+            "level": "member"
+        },
+        {
+            "businessName": "Vensure Employer Soutions",
+            "address": "1475 S. Price Rd, Chandler AZ 85286",
+            "phone": "480-608-2255",
+            "url": "https://vensure.com/",
+            "image": "../images/vensuresolutions.jpg",
+            "level": "silver"
+        },
+        {
+            "businessName": "Old Republic Title Agency",
+            "address": "25 S Arizona PL #310, Chandler AZ 85225",
+            "phone": "480-705-0010",
+            "url": "https://www.oldrepublictitle.com/arizona/",
+            "image": "../images/oldrepublic.jpg",
+            "level": "member"
+        },
+        {
+            "businessName": "Vantage West Credit Union",
+            "address": "1671 S Cooper Rd., Gilbert AZ 85233",
+            "phone": "602-386-2955",
+            "url": "https://vantagewest.org/",
+            "image": "../images/vantagewest.png",
+            "level": "silver"
+        },
+        {
+            "businessName": "Martinsen Wealth Management",
+            "address": "7855 S River Parkway #201, Tempe AZ 85284",
+            "phone": "480-550-6556",
+            "url": "https://www.martinsenwealth.com/",
+            "image": "../images/martinsenwealth.jpg",
+            "level": "member"
+        },
+        {
+            "businessName": "Responsive Tax & Accounting",
+            "address": "5960 S Cooper Rd., Ste 1, Chandler AZ 85249",
+            "phone": "480-553-8991",
+            "url": "https://www.responsivetax.com/",
+            "image": "../images/responsivetax.png",
+            "level": "gold"
+        }
+    ]
+}
