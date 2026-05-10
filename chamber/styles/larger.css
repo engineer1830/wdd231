@@ -1,6 +1,16 @@
 @media (min-width: 768px)
 {
 
+    .hero
+    {
+        max-width: 1200px;
+        margin: 1rem auto;
+        max-height: 350px;
+        object-fit: cover;
+        object-position: bottom;
+        width: 100%;
+    }
+
     .hamburger
     {
         display: none;

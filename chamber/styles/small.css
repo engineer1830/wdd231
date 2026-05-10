@@ -161,3 +161,76 @@ h1 {
     padding: 1rem;
     border-radius: 8px;
 }
+
+.gallery-grid
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+.business-card
+{
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    border: 1px solid #e5e5e5;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.business-card:hover
+{
+    transform: translateY(-4px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+.business-card img
+{
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+}
+
+.business-card h2
+{
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #1A5B6B;
+}
+
+.business-card h3
+{
+    font-size: 1rem;
+    margin: 0.25rem 0;
+    color: #8b224c;
+    text-transform: capitalize;
+}
+
+.business-card p
+{
+    margin: 0.25rem 0;
+    color: #333;
+}
+
+.business-card a
+{
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.5rem 1rem;
+    background: #1A5B6B;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.business-card a:hover
+{
+    background: #8b224c;
+}
