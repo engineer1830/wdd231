@@ -208,7 +208,7 @@ h1 {
 {
     font-size: 1rem;
     margin: 0.25rem 0;
-    color: #8b224c;
+    color: #333;
     text-transform: capitalize;
 }
 
@@ -233,11 +233,6 @@ h1 {
 .business-card a:hover
 {
     background: #8b224c;
-}
-
-.business-card h3
-{
-    color: #333;
 }
 
 .level-gold
