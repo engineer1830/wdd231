@@ -234,3 +234,26 @@ h1 {
 {
     background: #8b224c;
 }
+
+.business-card h3
+{
+    color: #333;
+}
+
+.level-gold
+{
+    color: goldenrod;
+    font-weight: 700;
+}
+
+.level-silver
+{
+    color: #888;
+    font-weight: 700;
+}
+
+.level-member
+{
+    color: #1A5B6B;
+    font-weight: 700;
+}

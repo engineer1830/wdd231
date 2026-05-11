@@ -35,7 +35,9 @@ async function getBusinessData() {
             busLogo.setAttribute('loading', 'lazy');
             busLogo.setAttribute('width', '200');
 
-            busStatus.textContent = business.level;
+            busStatus.innerHTML = `Member level: <span class="level-${business.level}">${business.level}</span>`;
+            busStatus.classList.add(`level-${business.level}`);
+
             busAdd.textContent = business.address;
             busPhone.textContent = business.phone;
 
