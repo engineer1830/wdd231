@@ -13,13 +13,18 @@ const listBtn = document.querySelector("#listBtn");
 gridBtn.addEventListener("click", () => {
     directory.classList.remove("list-view");
     directory.classList.add("gallery-grid");
+
+    gridBtn.classList.add("active");
+    listBtn.classList.remove("active");
 });
 
 listBtn.addEventListener("click", () => {
     directory.classList.remove("gallery-grid");
     directory.classList.add("list-view");
-});
 
+    listBtn.classList.add("active");
+    gridBtn.classList.remove("active");
+});
 
 async function getBusinessData() {
     const response = await fetch("data/members.json");
