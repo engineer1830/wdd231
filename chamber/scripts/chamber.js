@@ -6,6 +6,21 @@ navbutton.addEventListener('click', () => {
     navbutton.classList.toggle('show');
 });
 
+const directory = document.querySelector("#directory");
+const gridBtn = document.querySelector("#gridBtn");
+const listBtn = document.querySelector("#listBtn");
+
+gridBtn.addEventListener("click", () => {
+    directory.classList.remove("list-view");
+    directory.classList.add("gallery-grid");
+});
+
+listBtn.addEventListener("click", () => {
+    directory.classList.remove("gallery-grid");
+    directory.classList.add("list-view");
+});
+
+
 async function getBusinessData() {
     const response = await fetch("data/members.json");
     const data = await response.json();

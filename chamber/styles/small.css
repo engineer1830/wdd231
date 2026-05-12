@@ -252,3 +252,55 @@ h1 {
     color: #1A5B6B;
     font-weight: 700;
 }
+
+.list-view
+{
+    display: block;
+}
+
+.list-view .business-card
+{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.list-view .business-card img
+{
+    width: 80px;
+    height: auto;
+}
+
+.view-toggle
+{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.view-toggle button
+{
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #1A5B6B;
+    background: white;
+    color: #1A5B6B;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.view-toggle button:hover
+{
+    background: #1A5B6B;
+    color: white;
+}
+
+.view-toggle button.active
+{
+    background: #1A5B6B;
+    color: white;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
