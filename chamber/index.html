@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 - Chamber of Commerce Homepage</title>
+    <meta name="description" content="WDD 231 - Chamber Homepage for Jesse Hamilton work in 26B3">
+    <meta name="author" content="Jesse Hamilton">
+    <meta property="og:title" content="Chamber Homepage for Chandler for WDD231 for JHamilton">
+    <meta property="og:description"
+        content="Chamber Homepage for class assignment for Jesse Hamilton work in WDD231 26B3">
+    <meta property="og:image" content="https://engineer1830.github.io/wdd231/images/wavesofgrain.webp">
+    <meta property="og:url" content="https://engineer1830.github.io/wdd231/index.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/chamber.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="branding">
+            <img src="images/chandleraz.png" alt="Chandler Logo" width="100">
+            <span>Chandler Chamber of Commerce</span>
+        </div>
+
+        <button id="ham-btn" class="hamburger" aria-label="Open navigation menu"></button>
+
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discovery.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <img src="images/chandler7-small.jpg" alt="Site Hero Image for Chamber of Commerce" class="hero">
+
+
+    <main>
+        <h1>Home</h1>
+        <div class="grid">
+            <section class="events">
+                <h2>Events</h2>
+                <span>Events to be included </span>
+            </section>
+            <section class="current-weather">
+                <h2>Current Weather</h2>
+                <p><strong>Temperature:</strong> <span id="temp"></span></p>
+                <p><strong>Conditions:</strong> <span id="conditions"></span></p>
+                <p><strong>Wind:</strong> <span id="wind"></span></p>
+                <img id="weather-icon" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                    alt="Weather Icon">
+            </section>
+
+            <section class="weather-forecast">
+                <h2>Weather Forecast</h2>
+                <div id="forecast-cards"></div>
+            </section>
+        </div>
+        <!-- <div class="view-toggle">
+            <button id="gridBtn" class="active">Grid</button>
+            <button id="listBtn">List</button>
+        </div>
+        <div id="directory" class="gallery-grid"></div> -->
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://www.facebook.com/jesse.hamilton.142" target="_blank"><img src="images/facebook.svg"
+                    alt="Facebook logo" width="16" height="16"></a>
+            <a href="https://www.linkedin.com/in/jesse-hamilton-84213911/" target="_blank"><img
+                    src="images/linkedin.svg" alt="LinkedIn logo" width="16" height="16"></a>
+            <a href="https://x.com/hammingup" target="_blank"><img src="images/twitter-alt-square.svg"
+                    alt="Twitter-x logo" width="16" height="16"></a>
+            <a href="https://github.com/engineer1830" target="_blank"><img src="images/github.svg" alt="Github logo"
+                    width="16" height="16"></a>
+        </div>
+        <p>&copy; <span id="currentyear"></span> | Jesse Hamilton | USA</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
