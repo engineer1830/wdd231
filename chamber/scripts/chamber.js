@@ -72,7 +72,6 @@ async function getBusinessData() {
             card.appendChild(busPhone);
             card.appendChild(busLink);
 
-            // Add to page
             container.appendChild(card);
         });
     };
