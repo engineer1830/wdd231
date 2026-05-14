@@ -1,4 +1,20 @@
 /* =========================================
+   COLOR SYSTEM — Site-wide Theme
+   ========================================= */
+
+:root
+{
+    --color-primary: #1A5B6B;
+    --color-secondary: #8b224c;
+    --color-accent-gold: goldenrod;
+    --color-text-dark: #333;
+    --color-text-light: #fff;
+    --color-bg-light: #f8f8f8;
+    --color-border: #e5e5e5;
+    --color-bg-white: #ffffff;
+}
+
+/* =========================================
    1. Base layout parameters
    ========================================= */
 
@@ -37,7 +53,7 @@ header img
     top: 100%;
     left: 0;
     right: 0;
-    background: #fff;
+    background: var(--color-bg-white);
     padding: 0.75rem 1rem;
 }
 
@@ -60,7 +76,7 @@ header img
 {
     text-decoration: none;
     font-weight: 600;
-    color: #1e1e1e;
+    color: var(--color-text-dark);
 }
 
 .hamburger
@@ -71,7 +87,7 @@ header img
     background: none;
     border: none;
     cursor: pointer;
-    color: #8b224c;
+    color: var(--color-secondary);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: relative;
     z-index: 1001;
@@ -89,13 +105,16 @@ header img
     font-size: 2rem;
 }
 
-span {
+span
+{
     font-size: 1.25rem;
 }
 
-h1 {
+h1
+{
     padding: 20px;
 }
+
 /* =========================================
    3. Hero image
    ========================================= */
@@ -127,7 +146,7 @@ h1 {
 
 .forecast-card
 {
-    background: #ffffff;
+    background: var(--color-bg-white);
     padding: 0.75rem;
     border-radius: 6px;
     text-align: center;
@@ -141,7 +160,7 @@ h1 {
 }
 
 /* =========================================
-   5. GRID LAYOUT (events / current / forecast) - INDEX PAGE PLANNING
+   5. GRID LAYOUT (events / current / forecast)
    ========================================= */
 
 .grid
@@ -156,7 +175,7 @@ h1 {
 
 .grid section
 {
-    background: #f8f8f8;
+    background: var(--color-bg-light);
     padding: 1rem;
     border-radius: 8px;
 }
@@ -173,11 +192,11 @@ h1 {
 
 .business-card
 {
-    background: #fff;
+    background: var(--color-bg-white);
     border-radius: 10px;
     padding: 1.25rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-    border: 1px solid #e5e5e5;
+    border: 1px solid var(--color-border);
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -200,21 +219,21 @@ h1 {
 {
     font-size: 1.2rem;
     margin: 0.5rem 0;
-    color: #1A5B6B;
+    color: var(--color-primary);
 }
 
 .business-card h3
 {
     font-size: 1rem;
     margin: 0.25rem 0;
-    color: #333;
+    color: var(--color-text-dark);
     text-transform: capitalize;
 }
 
 .business-card p
 {
     margin: 0.25rem 0;
-    color: #333;
+    color: var(--color-text-dark);
 }
 
 .business-card a
@@ -222,8 +241,8 @@ h1 {
     display: inline-block;
     margin-top: 0.75rem;
     padding: 0.5rem 1rem;
-    background: #1A5B6B;
-    color: white;
+    background: var(--color-primary);
+    color: var(--color-text-light);
     text-decoration: none;
     border-radius: 6px;
     font-weight: 700;
@@ -231,12 +250,13 @@ h1 {
 
 .business-card a:hover
 {
-    background: #8b224c;
+    background: var(--color-secondary);
 }
 
+/* Membership level colors */
 .level-gold
 {
-    color: goldenrod;
+    color: var(--color-accent-gold);
     font-weight: 700;
 }
 
@@ -248,7 +268,7 @@ h1 {
 
 .level-member
 {
-    color: #1A5B6B;
+    color: var(--color-primary);
     font-weight: 700;
 }
 
@@ -286,9 +306,9 @@ h1 {
 .view-toggle button
 {
     padding: 0.6rem 1.2rem;
-    border: 2px solid #1A5B6B;
-    background: white;
-    color: #1A5B6B;
+    border: 2px solid var(--color-primary);
+    background: var(--color-bg-white);
+    color: var(--color-primary);
     font-weight: 600;
     border-radius: 6px;
     cursor: pointer;
@@ -297,14 +317,14 @@ h1 {
 
 .view-toggle button:hover
 {
-    background: #1A5B6B;
-    color: white;
+    background: var(--color-primary);
+    color: var(--color-text-light);
 }
 
 .view-toggle button.active
 {
-    background: #1A5B6B;
-    color: white;
+    background: var(--color-primary);
+    color: var(--color-text-light);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }
 
@@ -318,8 +338,8 @@ footer
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
-    background: #1A5B6B;
-    color: white;
+    background: var(--color-primary);
+    color: var(--color-text-light);
     flex-wrap: wrap;
     gap: 1.5rem;
 }
