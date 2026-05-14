@@ -1,5 +1,5 @@
 /* =========================================
-   1. BASE LAYOUT
+   1. Base layout parameters
    ========================================= */
 
 header
@@ -27,7 +27,7 @@ header img
 }
 
 /* =========================================
-   2. NAVIGATION (MOBILE FIRST)
+   2. NAV (mobile first)
    ========================================= */
 
 .navigation
@@ -63,7 +63,6 @@ header img
     color: #1e1e1e;
 }
 
-/* Hamburger button */
 .hamburger
 {
     margin-left: auto;
@@ -98,7 +97,7 @@ h1 {
     padding: 20px;
 }
 /* =========================================
-   3. HERO IMAGE
+   3. Hero image
    ========================================= */
 
 .hero
@@ -111,7 +110,7 @@ h1 {
 }
 
 /* =========================================
-   4. WEATHER (CURRENT + FORECAST)
+   4. Weather (current + forecast)
    ========================================= */
 
 .forecast
@@ -142,7 +141,7 @@ h1 {
 }
 
 /* =========================================
-   5. GRID LAYOUT (EVENTS / CURRENT / FORECAST)
+   5. GRID LAYOUT (events / current / forecast) - INDEX PAGE PLANNING
    ========================================= */
 
 .grid
@@ -253,6 +252,10 @@ h1 {
     font-weight: 700;
 }
 
+/* =========================================
+   6. GRID/LIST Toggle elements
+   ========================================= */
+
 .list-view
 {
     display: block;
@@ -303,4 +306,65 @@ h1 {
     background: #1A5B6B;
     color: white;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================
+   7. FOOTER Formats
+   ========================================= */
+
+footer
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background: #1A5B6B;
+    color: white;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.ccaddress
+{
+    text-align: left;
+    max-width: 250px;
+}
+
+.social
+{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.social img
+{
+    filter: brightness(0) invert(1);
+    transition: transform 0.2s ease;
+}
+
+.social img:hover
+{
+    transform: scale(1.5);
+}
+
+.classinfo
+{
+    text-align: right;
+    max-width: 200px;
+}
+
+@media (max-width: 700px)
+{
+    footer
+    {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ccaddress,
+    .classinfo
+    {
+        text-align: center;
+    }
 }
