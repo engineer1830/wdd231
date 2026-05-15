@@ -59,6 +59,7 @@ async function getBusinessData() {
             busLogo.setAttribute('alt', `Logo of ${business.businessName}`);
             busLogo.setAttribute('loading', 'lazy');
             busLogo.setAttribute('width', '200');
+            busLogo.setAttribute('height', '120');  
 
             busStatus.innerHTML = `Member level: <span class="level-${business.level}">${business.level}</span>`;
             busStatus.classList.add(`level-${business.level}`);
