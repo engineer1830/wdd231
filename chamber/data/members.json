@@ -5,7 +5,7 @@
             "address": "115 S Weber Dr #2, Chandler, AZ 85226",
             "phone": "480-283-8222",
             "url": "https://reliableglassaz.com/",
-            "image": "images/reliable_glass.jpg",
+            "image": "images/reliable_glass-small.jpg",
             "level": "member"
         },
         {
@@ -37,7 +37,7 @@
             "address": "1671 S Cooper Rd., Gilbert AZ 85233",
             "phone": "602-386-2955",
             "url": "https://vantagewest.org/",
-            "image": "images/vantagewest.png",
+            "image": "images/vantagewest-small.jpg",
             "level": "silver"
         },
         {
@@ -53,7 +53,7 @@
             "address": "5960 S Cooper Rd., Ste 1, Chandler AZ 85249",
             "phone": "480-553-8991",
             "url": "https://www.responsivetax.com/",
-            "image": "images/responsivetax.png",
+            "image": "images/responsivetax-small.jpg",
             "level": "silver"
         },
         {
