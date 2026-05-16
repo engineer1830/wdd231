@@ -185,7 +185,12 @@ h1
    5. GRID LAYOUT (events / current / forecast)
    ========================================= */
 
-.grid
+   #directory
+   {
+       min-height: 600px;
+   }
+
+   .grid
 {
     display: grid;
     grid-template-columns: 40% 15% 35%;
