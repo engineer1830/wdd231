@@ -18,7 +18,7 @@
    SELF-HOSTED ROBOTO VARIABLE FONT
    ========================================= */
 
-@font-face
+/* @font-face
 {
     font-family: 'Roboto';
     src: url('../fonts/Roboto-VariableFont_wght.ttf') format('truetype');
@@ -34,7 +34,7 @@
     font-weight: 100 900;
     font-style: italic;
     font-display: swap;
-}
+} */
 
 /* =========================================
    1. Base layout parameters
