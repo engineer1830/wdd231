@@ -383,7 +383,7 @@ h1
 }
 
 /* Membership level colors */
-.level-gold
+/* .level-gold
 {
     color: var(--color-accent-gold);
     font-weight: 700;
@@ -400,6 +400,34 @@ h1
     color: var(--color-primary);
     font-weight: 700;
     text-transform: capitalize;
+} */
+
+.member-level
+{
+    background: var(--color-primary);
+    color: #fff;
+    font-weight: 700;
+    border-radius: 12px;
+    padding: 4px 10px;
+    display: inline-block;
+}
+
+/* Gold badge */
+.level-gold
+{
+    background: linear-gradient(135deg, #d4a017, #b8860b);
+}
+
+/* Silver badge */
+.level-silver
+{
+    background: linear-gradient(135deg, #c0c0c0, #8f8f8f);
+}
+
+/* Member badge */
+.level-member
+{
+    background: #f2f2f2;
 }
 
 /* =========================================
