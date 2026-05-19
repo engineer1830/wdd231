@@ -128,6 +128,26 @@ h1
     height: auto;
 }
 
+.hero-container
+{
+    position: relative;
+}
+
+.cta
+{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    /* background: #005bbb; */
+    background: blue;
+    color: white;
+    padding: .75rem 1.25rem;
+    border-radius: .5rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
 /* =========================================
    4. Weather (current + forecast)
    ========================================= */

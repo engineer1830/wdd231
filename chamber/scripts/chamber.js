@@ -34,8 +34,39 @@ listBtn.addEventListener("click", () => {
 async function getBusinessData() {
     const response = await fetch("data/members.json");
     const data = await response.json();
+    displaySpotlight(data.businesses);
     displayBusinesses(data.businesses);
 }
+
+    function displaySpotlight(businesses) {
+        const spotlightContainer = document.querySelector("#spotlight");
+
+        if (!spotlightContainer) return;
+
+        const spotlightCandidates = businesses.filter(biz =>
+            biz.level === "silver" || biz.level === "gold"
+        );
+
+        const shuffle = spotlightCandidates.sort(() => 0.5 - Math.random());
+
+        const selected = shuffle.slice(0, 2);
+
+        selected.forEach(biz => {
+            const card = document.createElement("section");
+            card.classList.add("spotlight-card");
+
+            card.innerHTML = `
+                <img src="${biz.image}" alt="${biz.businessName} logo">
+                <h2>${biz.businessName}</h2>
+                <p>${biz.address}</p>
+                <p>${biz.phone}</p>
+                <a href="${biz.url}" target="_blank">Visit Website</a>
+            `;
+
+            spotlightContainer.appendChild(card);
+        });
+    }
+
 
 
     const displayBusinesses = (businesses) => {
