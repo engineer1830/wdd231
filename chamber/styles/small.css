@@ -80,6 +80,12 @@ header img
     color: var(--color-text-dark);
 }
 
+.navigation a.active
+{
+    color: var(--color-primary);
+    border-bottom: 3px solid var(--color-primary);
+}
+
 .hamburger
 {
     margin-left: auto;
@@ -516,5 +522,29 @@ footer
     .grid
     {
         grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 700px)
+{
+    .list-view .business-card
+    {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .list-view .business-card img
+    {
+        width: 120px;
+        height: auto;
+    }
+}
+
+@media (max-width: 700px)
+{
+    .list-view .business-card a
+    {
+        width: 100%;
+        text-align: center;
     }
 }
