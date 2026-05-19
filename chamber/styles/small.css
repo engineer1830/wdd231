@@ -149,7 +149,45 @@ h1
 }
 
 /* =========================================
-   4. Weather (current + forecast)
+   4. Spotlight content
+   ========================================= */
+
+   #spotlight
+   {
+       display: grid;
+       grid-template-columns: 1fr;
+       gap: 1.5rem;
+       margin: 2rem 0;
+       padding: 1rem;
+   }
+
+   @media (min-width: 700px)
+   {
+       #spotlight
+       {
+           grid-template-columns: repeat(2, 1fr);
+       }
+   }
+
+   .spotlight-card
+   {
+       background: lightskyblue;
+       padding: 1rem;
+       border-radius: .5rem;
+       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+       text-align: center;
+   }
+
+   .spotlight-card img
+   {
+       width: 200px;
+       height: auto;
+       border-radius: .25rem;
+       object-fit: contain;
+   }
+
+/* =========================================
+   5. Weather (current + forecast)
    ========================================= */
 
 .forecast
@@ -180,7 +218,7 @@ h1
 }
 
 /* =========================================
-   5. GRID LAYOUT (events / current / forecast)
+   6. GRID LAYOUT (events / current / forecast)
    ========================================= */
 
    #directory
@@ -298,7 +336,7 @@ h1
 }
 
 /* =========================================
-   6. GRID/LIST Toggle elements
+   7. GRID/LIST Toggle elements
    ========================================= */
 
 .list-view
@@ -354,7 +392,7 @@ h1
 }
 
 /* =========================================
-   7. FOOTER Formats
+   8. FOOTER Formats
    ========================================= */
 
 footer
