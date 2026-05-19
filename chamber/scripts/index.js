@@ -26,6 +26,7 @@ function displaySpotlight(businesses) {
         card.innerHTML = `
                 <img src="${biz.image}" alt="${biz.businessName} logo">
                 <h2>${biz.businessName}</h2>
+                <p class="level-member">Member Level: ${biz.level}</p>
                 <p>${biz.address}</p>
                 <p>${biz.phone}</p>
                 <a href="${biz.url}" target="_blank">Visit Website</a>

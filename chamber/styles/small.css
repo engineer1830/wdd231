@@ -171,7 +171,7 @@ h1
 
    .spotlight-card
    {
-       background: lightskyblue;
+       background: rgb(187, 214, 205);
        padding: 1rem;
        border-radius: .5rem;
        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
@@ -333,6 +333,7 @@ h1
 {
     color: var(--color-primary);
     font-weight: 700;
+    text-transform: capitalize;
 }
 
 /* =========================================
