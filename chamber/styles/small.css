@@ -43,14 +43,6 @@ header img
     gap: 1rem;
 }
 
-@media (max-width: 700px)
-{
-    .grid
-    {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* =========================================
    2. NAV (mobile first)
    ========================================= */
@@ -519,5 +511,10 @@ footer
     .classinfo
     {
         text-align: center;
+    }
+
+    .grid
+    {
+        grid-template-columns: 1fr;
     }
 }
