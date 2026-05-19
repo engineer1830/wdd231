@@ -186,8 +186,57 @@ h1
        object-fit: contain;
    }
 
+   /* =========================================
+   5. Events Section
+   ========================================= */
+
+   .events
+   {
+       background: #ffffff;
+       padding: 2rem;
+       border-radius: .75rem;
+       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+       margin: 2rem 0;
+       text-align: center;
+   }
+
+   .events h2
+   {
+       margin-bottom: .5rem;
+   }
+
+   .events p
+   {
+       margin-bottom: 1.5rem;
+       color: #444;
+   }
+
+   .events-btn
+   {
+       display: inline-block;
+       background: #0066cc;
+       color: #fff;
+       padding: .75rem 1.5rem;
+       border-radius: .5rem;
+       font-weight: 600;
+       text-decoration: none;
+       transition: background .25s ease, transform .2s ease;
+   }
+
+   .events-btn:hover
+   {
+       background: #004c99;
+       transform: translateY(-2px);
+   }
+
+   .events-btn:active
+   {
+       transform: translateY(0);
+   }
+
+
 /* =========================================
-   5. Weather (current + forecast)
+   6. Weather (current + forecast)
    ========================================= */
 
 .forecast
@@ -218,7 +267,7 @@ h1
 }
 
 /* =========================================
-   6. GRID LAYOUT (events / current / forecast)
+   7. GRID LAYOUT (events / current / forecast)
    ========================================= */
 
    #directory
@@ -337,7 +386,7 @@ h1
 }
 
 /* =========================================
-   7. GRID/LIST Toggle elements
+   8. GRID/LIST Toggle elements
    ========================================= */
 
 .list-view
@@ -393,7 +442,7 @@ h1
 }
 
 /* =========================================
-   8. FOOTER Formats
+   9. FOOTER Formats
    ========================================= */
 
 footer
