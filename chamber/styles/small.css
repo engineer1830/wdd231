@@ -21,6 +21,7 @@
 header
 {
     position: relative;
+    z-index: 2000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,6 +41,14 @@ header img
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+@media (max-width: 700px)
+{
+    .grid
+    {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* =========================================
