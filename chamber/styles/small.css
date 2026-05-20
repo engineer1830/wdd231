@@ -452,6 +452,13 @@ h1
     display: none;
 }
 
+.list-view .business-card a
+{
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
 .view-toggle
 {
     display: flex;
