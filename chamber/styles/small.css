@@ -368,15 +368,17 @@ h1
 .business-card a
 {
     display: inline-block;
-    margin: 0.75rem auto 0;
-    padding: 0.5rem 1.5rem;
-    background: var(--color-primary);
-    color: var(--color-text-light);
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 700;
-    width: fit-content;
-    text-align: center;
+        margin: 0.75rem auto 0;
+        padding: 0.5rem 1.5rem;
+        background: var(--color-primary);
+        color: var(--color-text-light);
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 700;
+        width: fit-content;
+        max-width: 200px;
+        text-align: center;
+    }
 }
 
 .business-card a:hover
