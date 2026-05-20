@@ -375,7 +375,7 @@ h1
     text-decoration: none;
     border-radius: 6px;
     font-weight: 700;
-    width: auto;
+    width: fit-content;
 }
 
 .business-card a:hover
