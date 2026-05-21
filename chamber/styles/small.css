@@ -283,6 +283,12 @@ h1
     height: 60px;
 }
 
+#weather-icon
+{
+    width: 80px;
+    height: 80px;
+}
+
 /* =========================================
    7. GRID LAYOUT (events / current / forecast)
    ========================================= */
@@ -384,26 +390,6 @@ h1
 {
     background: var(--color-secondary);
 }
-
-/* Membership level colors */
-/* .level-gold
-{
-    color: var(--color-accent-gold);
-    font-weight: 700;
-}
-
-.level-silver
-{
-    color: #888;
-    font-weight: 700;
-}
-
-.level-member
-{
-    color: var(--color-primary);
-    font-weight: 700;
-    text-transform: capitalize;
-} */
 
 .member-level
 {
