@@ -138,6 +138,7 @@ h1
 .hero-container
 {
     position: relative;
+    min-height: 552px;
 }
 
 .cta
@@ -306,6 +307,7 @@ h1
     align-items: start;
     margin: 2rem auto;
     max-width: 1200px;
+    min-height: 500px;
 }
 
 .grid section
