@@ -1,12 +1,12 @@
 //  This file applies to index only for the spotlight function
 
-import { getBusinessData, displaySpotlight } from "./busdata.js";
+// import { getBusinessData} from "./busdata.js";
 
-// async function getBusinessData() {
-//     const response = await fetch("data/members.json");
-//     const data = await response.json();
-//     displaySpotlight(data.businesses);
-// }
+// // async function getBusinessData() {
+// //     const response = await fetch("data/members.json");
+// //     const data = await response.json();
+// //     displaySpotlight(data.businesses);
+// // }
 
 // function displaySpotlight(businesses) {
 //     const spotlightContainer = document.querySelector("#spotlight");
@@ -39,51 +39,103 @@ import { getBusinessData, displaySpotlight } from "./busdata.js";
 // }
 
 
-// const displayBusinesses = (businesses) => {
-//     const container = document.querySelector(".gallery-grid");
+// // const displayBusinesses = (businesses) => {
+// //     const container = document.querySelector(".gallery-grid");
 
-//     businesses.forEach((business) => {
+// //     businesses.forEach((business) => {
 
-//         let card = document.createElement('section');
-//         card.classList.add("business-card");
+// //         let card = document.createElement('section');
+// //         card.classList.add("business-card");
 
-//         let busLogo = document.createElement('img');
-//         let busName = document.createElement('h2');
-//         let busStatus = document.createElement('h3');
-//         let busAdd = document.createElement('p');
-//         let busPhone = document.createElement('p');
-//         let busLink = document.createElement('a');
+// //         let busLogo = document.createElement('img');
+// //         let busName = document.createElement('h2');
+// //         let busStatus = document.createElement('h3');
+// //         let busAdd = document.createElement('p');
+// //         let busPhone = document.createElement('p');
+// //         let busLink = document.createElement('a');
 
-//         busName.textContent = business.businessName;
+// //         busName.textContent = business.businessName;
 
-//         busLogo.setAttribute('src', business.image);
-//         busLogo.setAttribute('alt', `Logo of ${business.businessName}`);
-//         busLogo.setAttribute('loading', 'lazy');
-//         busLogo.setAttribute('width', '200');
-//         busLogo.setAttribute('height', '120');
+// //         busLogo.setAttribute('src', business.image);
+// //         busLogo.setAttribute('alt', `Logo of ${business.businessName}`);
+// //         busLogo.setAttribute('loading', 'lazy');
+// //         busLogo.setAttribute('width', '200');
+// //         busLogo.setAttribute('height', '120');
 
-//         busStatus.innerHTML = `Member level: <span class="level-${business.level}">${business.level}</span>`;
-//         busStatus.classList.add(`level-${business.level}`);
+// //         busStatus.innerHTML = `Member level: <span class="level-${business.level}">${business.level}</span>`;
+// //         busStatus.classList.add(`level-${business.level}`);
 
-//         busAdd.textContent = business.address;
-//         busPhone.textContent = business.phone;
+// //         busAdd.textContent = business.address;
+// //         busPhone.textContent = business.phone;
 
-//         busLink.href = business.url;
-//         busLink.textContent = "Visit Website";
-//         busLink.target = "_blank";
+// //         busLink.href = business.url;
+// //         busLink.textContent = "Visit Website";
+// //         busLink.target = "_blank";
 
-//         card.appendChild(busLogo);
-//         card.appendChild(busName);
-//         card.appendChild(busStatus);
-//         card.appendChild(busAdd);
-//         card.appendChild(busPhone);
-//         card.appendChild(busLink);
+// //         card.appendChild(busLogo);
+// //         card.appendChild(busName);
+// //         card.appendChild(busStatus);
+// //         card.appendChild(busAdd);
+// //         card.appendChild(busPhone);
+// //         card.appendChild(busLink);
 
-//         container.appendChild(card);
-//     });
-// };
+// //         container.appendChild(card);
+// //     });
+// // };
 
-// getBusinessData();
+// // getBusinessData();
+
+// document.addEventListener("DOMContentLoaded", async () => {
+//     const businesses = await getBusinessData();
+//     displaySpotlight(businesses);
+// });
+
+import { getBusinessData } from "./busdata.js";
+
+function displaySpotlight(businesses) {
+    const spotlightContainer = document.querySelector("#spotlight");
+    if (!spotlightContainer) return;
+
+    const spotlightCandidates = businesses.filter(biz =>
+        biz.level === "silver" || biz.level === "gold"
+    );
+
+    const selected = spotlightCandidates
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 2);
+
+    selected.forEach(biz => {
+        const card = document.createElement("section");
+        card.classList.add("spotlight-card");
+
+        const img = document.createElement("img");
+        img.src = biz.image;
+        img.alt = `${biz.businessName} logo`;
+        img.width = 200;     // CLS-safe
+        img.height = 120;    // CLS-safe
+
+        const name = document.createElement("h2");
+        name.textContent = biz.businessName;
+
+        const level = document.createElement("p");
+        level.classList.add("level-member");
+        level.textContent = `Member Level: ${biz.level}`;
+
+        const address = document.createElement("p");
+        address.textContent = biz.address;
+
+        const phone = document.createElement("p");
+        phone.textContent = biz.phone;
+
+        const link = document.createElement("a");
+        link.href = biz.url;
+        link.target = "_blank";
+        link.textContent = "Visit Website";
+
+        card.append(img, name, level, address, phone, link);
+        spotlightContainer.appendChild(card);
+    });
+}
 
 document.addEventListener("DOMContentLoaded", async () => {
     const businesses = await getBusinessData();

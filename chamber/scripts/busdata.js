@@ -6,7 +6,6 @@ export async function getBusinessData() {
 
 export function displayBusinesses(businesses) {
     const container = document.querySelector(".gallery-grid");
-    if (!container) return;
 
     businesses.forEach((business) => {
 
@@ -49,41 +48,41 @@ export function displayBusinesses(businesses) {
     });
 };
 
-export function displaySpotlight(businesses, containerSelector) {
-    const container = document.querySelector(containerSelector);
-    if (!container) return;
+// export function displaySpotlight(businesses, containerSelector) {
+//     const container = document.querySelector(containerSelector);
+//     if (!container) return;
 
-    const candidates = businesses.filter(
-        biz => biz.level === "silver" || biz.level === "gold"
-    );
+//     const candidates = businesses.filter(
+//         biz => biz.level === "silver" || biz.level === "gold"
+//     );
 
-    const selected = candidates.sort(() => 0.5 - Math.random()).slice(0, 2);
+//     const selected = candidates.sort(() => 0.5 - Math.random()).slice(0, 2);
 
-    selected.forEach(biz => {
-        const card = document.createElement("section");
-        card.classList.add("spotlight-card");
+//     selected.forEach(biz => {
+//         const card = document.createElement("section");
+//         card.classList.add("spotlight-card");
 
-        const img = document.createElement("img");
-        img.src = biz.image;
-        img.alt = `${biz.businessName} logo`;
-        img.width = 200;     // prevents CLS
-        img.height = 120;    // prevents CLS
+//         const img = document.createElement("img");
+//         img.src = biz.image;
+//         img.alt = `${biz.businessName} logo`;
+//         img.width = 200;     // prevents CLS
+//         img.height = 120;    // prevents CLS
 
-        const name = document.createElement("h2");
-        name.textContent = biz.businessName;
+//         const name = document.createElement("h2");
+//         name.textContent = biz.businessName;
 
-        const address = document.createElement("p");
-        address.textContent = biz.address;
+//         const address = document.createElement("p");
+//         address.textContent = biz.address;
 
-        const phone = document.createElement("p");
-        phone.textContent = biz.phone;
+//         const phone = document.createElement("p");
+//         phone.textContent = biz.phone;
 
-        const link = document.createElement("a");
-        link.href = biz.url;
-        link.target = "_blank";
-        link.textContent = "Visit Website";
+//         const link = document.createElement("a");
+//         link.href = biz.url;
+//         link.target = "_blank";
+//         link.textContent = "Visit Website";
 
-        card.append(img, name, address, phone, link);
-        container.appendChild(card);
-    });
-}
+//         card.append(img, name, address, phone, link);
+//         container.appendChild(card);
+//     });
+// }
