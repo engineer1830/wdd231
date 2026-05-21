@@ -133,14 +133,15 @@ h1
     width: 100%;
     max-width: 100%;
     height: auto;
+    aspect-ratio: 824 / 552;
 }
 
 .hero-container
 {
     position: relative;
-    min-height: 552px;
+    /* min-height: 552px; */
     width: 100%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 
 .cta
