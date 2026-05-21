@@ -323,6 +323,7 @@ h1
     margin: 2rem auto;
     max-width: 1200px;
     padding: 0 1rem;
+    min-height: 600px;
 }
 
 .business-card
