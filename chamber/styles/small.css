@@ -139,7 +139,8 @@ h1
 .hero-container
 {
     position: relative;
-    min-height: 55px;
+    /* min-height: 552px; */
+    min-height: calc(100vw / 1.49);
     width: 100%;
     margin: 0 auto;
 }
