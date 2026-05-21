@@ -126,7 +126,7 @@ h1
    3. Hero image
    ========================================= */
 
-.hero
+/* .hero
 {
     display: block;
     margin: 1rem auto;
@@ -134,6 +134,16 @@ h1
     max-width: 100%;
     height: auto;
     /* aspect-ratio: 824 / 552; */
+/* }  */
+
+.hero {
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    max-height: 350px;
+    object-fit: cover;
+    object-position: bottom;
+    margin: 0 auto;
 }
 
 .hero-container
