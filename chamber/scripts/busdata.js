@@ -6,6 +6,7 @@ export async function getBusinessData() {
 
 export function displayBusinesses(businesses) {
     const container = document.querySelector(".gallery-grid");
+    if (!container) return;
 
     businesses.forEach((business) => {
 
