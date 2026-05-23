@@ -150,72 +150,28 @@ function createClassCard(list, totalCredits) {
         card.appendChild(cname);
         grid.appendChild(card);
     });
+
+    courseDiv.addEventListener('click', () => {
+        displayCourseDetails(course);
+      });
 }
 
 showAllCourses();
 
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+      <button id="closeModal">❌</button>
+      <h2>${course.subject} ${course.number}</h2>
+      <h3>${course.title}</h3>
+      <p><strong>Credits</strong>: ${course.credits}</p>
+      <p><strong>Certificate</strong>: ${course.certificate}</p>
+      <p>${course.description}</p>
+      <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    `;
+    courseDetails.showModal();
 
-// document.querySelector("#all").addEventListener("click", e => {
-//     e.preventDefault();
-//     createClassCard(courses);
-// });
-
-// function showAllCourses() {
-//     const totalCredits = courses.reduce((sum, course) => sum + course.credits, 0);
-
-//     createClassCard(courses, totalCredits);
-// }
-
-// function filtercseCourses() {
-//     const cseCourses = courses.filter(course => course.subject === 'CSE');
-//     const cseCredits = cseCourses.reduce((sum, course) => sum + course.credits, 0);
-//     createClassCard(cseCourses, cseCredits);
-// }
-
-// function filterwddCourses() {
-//     const wddCourses = courses.filter(course => course.subject === 'WDD');
-//     const wddCredits = wddCourses.reduce((sum, course) => sum + course.credits, 0);
-//     createClassCard(wddCourses, wddCredits);
-// }
-
-// document.querySelector("#all").addEventListener("click", e => {
-//     e.preventDefault();
-//     createClassCard(courses);
-// });
-
-// document.querySelector("#cse").addEventListener("click", e => {
-//     e.preventDefault();
-//     filtercseCourses();
-// });
-
-// document.querySelector("#wdd").addEventListener("click", e => {
-//     e.preventDefault();
-//     filterwddCourses();
-// });
-
-// function createClassCard(list) {
-//     const grid = document.querySelector(".gallery-grid");
-//     grid.innerHTML = "";
-
-//     const creditDisplay = document.querySelector("#credit-total");
-//     creditDisplay.textContent = `Total Credits: ${totalCredits}`;
-
-//     list.forEach((course) => {
-//         let card = document.createElement("section");
-//         let cname = document.createElement("h3");
-
-//         if (course.completed) {
-//             card.classList.add("completed");
-
-//             cname.innerHTML = `✔️ ${course.subject} ${course.number}`;
-//         } else {
-//             cname.textContent = `${course.subject} ${course.number}`;
-//         }
-        
-       
-//         card.appendChild(cname);
-//         grid.appendChild(card);
-//     });
-// }
-
-// createClassCard(courses);
+    closeModal.addEventListener("click", () => {
+        courseDetails.close();
+    });
+  }
