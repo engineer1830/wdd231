@@ -263,7 +263,8 @@ h1
 
 .forecast-card
 {
-    background: var(--color-bg-white);
+    /* background: var(--color-bg-white); */
+    background: lightsteelblue;
     padding: 0.75rem;
     border-radius: 6px;
     text-align: center;
