@@ -583,12 +583,6 @@ label[data-modal] {
     color: #555;
 }
 
-label[data-modal]
-{
-    cursor: pointer;
-    text-decoration: underline;
-}
-
 label[data-modal]:hover {
     background: #f0f8ff;
     border-radius: .25rem;
