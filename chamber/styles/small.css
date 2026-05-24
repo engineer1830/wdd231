@@ -591,6 +591,12 @@ footer
     max-width: 250px;
 }
 
+.classinfo
+{
+    text-align: right;
+    max-width: 200px;
+}
+
 .social
 {
     display: flex;
@@ -607,12 +613,6 @@ footer
 .social img:hover
 {
     transform: scale(1.5);
-}
-
-.classinfo
-{
-    text-align: right;
-    max-width: 200px;
 }
 
 /* =========================================
