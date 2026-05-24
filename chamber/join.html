@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="styles/larger.css">
 
     <script src="scripts/chamber.js" defer></script>
-    <script src="scripts/weather.js" defer></script>
+    <!-- <script src="scripts/weather.js" defer></script> -->
     <script type="module" src="scripts/index.js"></script>
 
 </head>
@@ -50,12 +50,50 @@
     <div class="hero-container">
         <img src="images/chandler7.webp" alt="Site Hero Image for Chamber of Commerce" class="hero" width="824"
             height="552" fetchpriority="high">
-        <a href="join.html" class="cta">Join our Chamber</a>
+        <!-- <a href="join.html" class="cta">Join our Chamber</a> -->
     </div>
-
 
     <main>
         <h1>Join Us</h1>
+
+        <form method="GET" action="thankyou.html" class="designOne">
+            <label>First Name <input type="text" name="first" required autocomplete="given-name"
+                    title="Your First Name"></label>
+            <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
+            <label>Organization Title <input type="text" name="title" required autocomplete="org-title" title="Org Title"></label>
+            <label>Email <input type="email" name="email" required placeholder="john89@gmail.com" title="Your Email"
+                    autocomplete="email"></label>
+            <label>Mobile Phone <input type="tel" name="phone" autocomplete="tel" title="A Phone Number with dashes"
+                    placeholder="480-555-1234"></label>
+            
+            <label>Business/Organization Name <input type="text" name="title" required autocomplete="org-title" title="Org Title"></label>
+        
+            <h3>Select Membership Level</h3>
+            <label><input type="radio" name="level" value="NP - Non profit" checked> Non-profit</label>
+            <label><input type="radio" name="level" value="Bronze"> Bronze</label>
+            <label><input type="radio" name="level" value="Silver"> Silver</label>
+            <label><input type="radio" name="level" value="Gold"> Gold</label>
+        
+            <label>
+                Business Description
+                <textarea name="description" rows="4" cols="40" required autocomplete="org-description"
+                    title="Org Description"></textarea>
+            </label>
+              
+        
+            <!-- <h3>Date and Location</h3>
+            <label>Date <input type="date" name="date" required></label>
+        
+            <label>Location
+                <select name="location" required>
+                    <option value="">None</option>
+                    <option value="Payson">Payson</option>
+                    <option value="Orem">Orem</option>
+                    <option value="Provo City Center">Provo City Center</option>
+            </label> -->
+        
+            <input type="submit" value="Join Us">
+            </form>
 
     </main>
     <footer>
