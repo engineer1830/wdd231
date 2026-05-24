@@ -38,3 +38,4 @@ document.querySelectorAll('.info-icon').forEach(icon => {
 document.getElementById("closeButton").addEventListener("click", () => {
     dialogBox.close();
 });
+
