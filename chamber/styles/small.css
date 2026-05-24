@@ -570,6 +570,30 @@ input:-webkit-autofill
     border-radius: 6px;
 }
 
+label[data-modal] {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #0645AD;
+}
+
+.info-icon {
+    margin-left: .25rem;
+    cursor: pointer;
+    font-size: .75rem;
+    color: #555;
+}
+
+label[data-modal]
+{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+label[data-modal]:hover {
+    background: #f0f8ff;
+    border-radius: .25rem;
+}
+
 /* =========================================
    10. FOOTER Formats
    ========================================= */
