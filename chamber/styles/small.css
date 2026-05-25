@@ -510,24 +510,20 @@ h1
        gap: 1rem;
    }
 
-   @keyframes fadeIn
-   {
-       from
-       {
+   @keyframes fadeIn {
+       from {
            opacity: 0;
            transform: translateY(20px);
        }
 
-       to
-       {
+       to {
            opacity: 1;
            transform: translateY(0);
        }
    }
 
    .membership-card {
-       /* background: var(--color-bg-light); */
-       background: lightcyan;
+       background: var(--color-bg-light);
        padding: 1rem;
        border-radius: 8px;
        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -536,6 +532,22 @@ h1
        animation-name: fadeIn;
        animation-duration: 4s;
    }
+
+   .membership-card:nth-child(1) {
+       animation-delay: 0.1s;
+    }
+
+   .membership-card:nth-child(2) {
+       animation-delay: 0.2s;
+   }
+
+   .membership-card:nth-child(3) {
+       animation-delay: 0.3s;
+    }
+
+   .membership-card:nth-child(4) {
+        animation-delay: 0.4s;
+    }
 
    .card-header
    {
