@@ -504,12 +504,6 @@ h1
        gap: 1rem;
    }
 
-   .membership-column {
-       display: flex;
-       flex-direction: column;
-       gap: 1rem;
-   }
-
    @keyframes fadeIn {
        from {
            opacity: 0;
@@ -582,7 +576,7 @@ label
 h3
 {
     font-size: .9rem;
-    color: #E07A5F;
+    color: red;
     margin: 1.5rem 0 .2rem 0;
     border-bottom: 1px solid #eee;
 }
