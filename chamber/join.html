@@ -50,54 +50,79 @@
     <div class="hero-container">
         <img src="images/chandler7.webp" alt="Site Hero Image for Chamber of Commerce" class="hero" width="824"
             height="552" fetchpriority="high">
-        <!-- <a href="join.html" class="cta">Join our Chamber</a> -->
     </div>
-
     <main>
         <h1>Join Us</h1>
-
-        <form method="GET" action="thankyou.html" class="designOne">
-            <label>First Name <input type="text" name="first" required autocomplete="given-name"
-                    title="Your First Name"></label>
-            <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
-            <label>Organization Title
-                <input type="text" name="organization-title" required autocomplete="organization-title" title="Org Title"
-                    pattern="^[A-Za-z\- ]{7,}$"></label>
-            <label>Email <input type="email" name="email" required placeholder="john89@gmail.com" title="Your Email"
-                    autocomplete="email"></label>
-            <label>Mobile Phone <input type="tel" name="phone" required autocomplete="tel" title="A Phone Number with dashes"
-                    placeholder="480-555-1234"></label>
+    
+        <div class="join-layout">
+            <div class="join-form-column">
+                <form method="GET" action="thankyou.html" class="designOne">
+    
+                    <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+                    <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
+                    <label>Organization Title <input type="text" name="organization-title" required autocomplete="organization-title" title="Org Title" pattern="^[A-Za-z\- ]{7,}$"></label>
+                    
+                    <label>Email <input type="email" name="email" required placeholder="john89@gmail.com" title="Your Email" autocomplete="email"></label>
+                    <label>Mobile Phone <input type="tel" name="phone" required autocomplete="tel" title="A Phone Number with dashes" placeholder="480-555-1234"></label>
+    
+                    <label>Business/Organization Name <input type="text" name="organization" required autocomplete="organization" title="Org Title"></label>
+    
+                    <h2>Select Membership Level</h2>
+    
+                    <label><input type="radio" name="level" value="NP - Non profit" checked> Non-profit</label>
+                    <label><input type="radio" name="level" value="Bronze"> Bronze</label>
+                    <label><input type="radio" name="level" value="Silver"> Silver</label>
+                    <label><input type="radio" name="level" value="Gold"> Gold</label>
+    
+                    <dialog id="dialogBox"><p id="dialogBoxText"></p><button id="closeButton">Close</button></dialog>
+                    <label>Business Description <textarea name="description" rows="4" cols="40" required autocomplete="organization"title="Org Description"></textarea></label>
+                    <input type="hidden" id="timestamp" name="timestamp">
+    
+                    <input type="submit" value="Join Us">
+                </form>
+            </div>
+    
+            <div class="membership-column">
             
-            <label>Business/Organization Name <input type="text" name="organization" required autocomplete="organization" title="Org Title"></label>
-        
-            <h2>Select Membership Level</h2>
-            <label data-modal="nonprofit"><input type="radio" name="level" value="NP - Non profit" checked>Non-profit <span class="info-icon" data-modal="nonprofit">ℹ️</span></label>
-            <label data-modal="bronze"><input type="radio" name="level" value="Bronze">Bronze <span class="info-icon" data-modal="bronze">ℹ️</span></label>
-            <label data-modal="silver"><input type="radio" name="level" value="Silver">Silver <span class="info-icon" data-modal="silver">ℹ️</span></label>
-            <label data-modal="gold"><input type="radio" name="level" value="Gold">Gold <span class="info-icon" data-modal="gold">ℹ️</span></label>
+                <div class="membership-card" data-modal="nonprofit">
+                    <div class="card-header">
+                        <h3>Non-profit</h3>
+                        <button class="info-btn" data-modal="nonprofit" aria-label="More information">ℹ️</button>
+                    </div>
+                    <p>Free membership for qualifying organizations.</p>
+                </div>
             
-            <dialog id="dialogBox"><p id="dialogBoxText"></p><button id="closeButton">Close</button></dialog>
-            <label>Business Description<textarea name="description" rows="4" cols="40" required autocomplete="organization" title="Org Description"></textarea></label>
-
-            <input type="hidden" id="timestamp" name="timestamp">
-
-              
-        
-            <!-- <h3>Date and Location</h3>
-            <label>Date <input type="date" name="date" required></label>
-        
-            <label>Location
-                <select name="location" required>
-                    <option value="">None</option>
-                    <option value="Payson">Payson</option>
-                    <option value="Orem">Orem</option>
-                    <option value="Provo City Center">Provo City Center</option>
-            </label> -->
-        
-            <input type="submit" value="Join Us">
-            </form>
-
+                <div class="membership-card" data-modal="bronze">
+                    <div class="card-header">
+                        <h3>Bronze</h3>
+                        <button class="info-btn" data-modal="bronze" aria-label="More information">ℹ️</button>
+                    </div>
+                    <p>Basic membership with directory listing.</p>
+                </div>
+            
+                <div class="membership-card" data-modal="silver">
+                    <div class="card-header">
+                        <h3>Silver</h3>
+                        <button class="info-btn" data-modal="silver" aria-label="More information">ℹ️</button>
+                    </div>
+                    <p>Includes homepage spotlight features.</p>
+                </div>
+            
+                <div class="membership-card" data-modal="gold">
+                    <div class="card-header">
+                        <h3>Gold</h3>
+                        <button class="info-btn" data-modal="gold" aria-label="More information">ℹ️</button>
+                    </div>
+                    <p>Top-tier membership with board inclusion and homepage spotlight features.</p>
+                </div>
+            
+            </div>
+            
+            
+    
+        </div>
     </main>
+    
     <footer>
         <div class="ccaddress">
             <p>Chandler Chamber of Commerce<br>
