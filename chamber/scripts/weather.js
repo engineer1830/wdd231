@@ -1,4 +1,4 @@
-const apiKey = 'af8538c31d31c6af92eff6fb18613787';
+const apiKey = '8d290bf29843668afa2e7543d59e9d3d';
 const city = "Chandler";
 const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
 

@@ -269,3 +269,42 @@ h2
     color: white;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }
+
+/* TopStocks Dispay */
+
+.stock-card
+{
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #1A5B6B;
+    transition: transform 0.2s ease;
+}
+
+.stock-card:hover
+{
+    transform: translateY(-4px);
+}
+
+.stock-header
+{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.stock-header img
+{
+    width: 40px;
+    height: 40px;
+}
+
+.sector-label
+{
+    font-size: 0.9rem;
+    color: #1A5B6B;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
