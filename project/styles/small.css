@@ -239,3 +239,33 @@ h2
     color: #1e6bb8;
     margin-bottom: 0.5rem;
 }
+
+/* Button formatting */
+.view-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.view-toggle button {
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #1A5B6B;
+    background: white;
+    color: #1A5B6B;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.view-toggle button:hover {
+    background: #1A5B6B;
+    color: white;
+}
+
+.view-toggle button.active {
+    background: #1A5B6B;
+    color: white;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
