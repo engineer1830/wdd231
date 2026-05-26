@@ -1,0 +1,18 @@
+/* =========================================
+   COLOR SYSTEM
+========================================= */
+:root
+{
+    --color-primary: #1A5B6B;
+    --color-secondary: #8b224c;
+    --color-accent-gold: goldenrod;
+    --color-text-dark: #333;
+    --color-text-light: #fff;
+    --color-bg-light: #f8f8f8;
+    --color-border: #e5e5e5;
+    --color-bg-white: #fff;
+}
+
+/* =========================================
+   HEADER
+========================================= */
