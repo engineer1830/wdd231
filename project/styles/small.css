@@ -308,3 +308,65 @@ h2
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
+
+/* Dashboard Formatting */
+
+.sector-dashboard
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.sector-tile
+{
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.sector-tile:hover
+{
+    transform: translateY(-4px);
+}
+
+.sector-tile-header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.sector-change
+{
+    font-weight: 700;
+}
+
+/* Trend colors */
+.sector-tile.up
+{
+    border-left: 6px solid #2ecc71;
+    background: #eafaf1;
+}
+
+.sector-tile.down
+{
+    border-left: 6px solid #e74c3c;
+    background: #fdecea;
+}
+
+.sector-tile.flat
+{
+    border-left: 6px solid #95a5a6;
+    background: #f4f4f4;
+}
+
+/* Sparkline container */
+.sparkline
+{
+    height: 40px;
+}
