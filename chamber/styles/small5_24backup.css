@@ -263,7 +263,8 @@ h1
 
 .forecast-card
 {
-    background: var(--color-bg-white);
+    /* background: var(--color-bg-white); */
+    background: rgb(193, 214, 238);
     padding: 0.75rem;
     border-radius: 6px;
     text-align: center;
@@ -473,8 +474,112 @@ h1
 }
 
 /* =========================================
-   9. FORM Formats
+   9. JOIN Page and FORM Formats
    ========================================= */
+
+/* ------------------------------
+   9.1 Layout
+------------------------------ */
+.join-layout
+{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px)
+{
+    .join-layout
+    {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
+}
+
+.join-form-column
+{
+    margin-left: 2rem;
+}
+
+.membership-column
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* ------------------------------
+   9.2 Animation
+------------------------------ */
+@keyframes fadeIn
+{
+    from
+    {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.membership-card
+{
+    background: #FDF5E2;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin-right: 4rem;
+    animation: fadeIn 4s ease-out both;
+}
+
+.membership-card:nth-child(1)
+{
+    animation-delay: 0.1s;
+}
+
+.membership-card:nth-child(2)
+{
+    animation-delay: 0.2s;
+}
+
+.membership-card:nth-child(3)
+{
+    animation-delay: 0.3s;
+}
+
+.membership-card:nth-child(4)
+{
+    animation-delay: 0.4s;
+}
+
+/* ------------------------------
+   9.3 Card Header
+------------------------------ */
+
+.card-header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-btn
+{
+    background: none;
+    border: none;
+    font-size: 0.75rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* ------------------------------
+   9.4 Form Styling
+------------------------------ */
 
 form
 {
@@ -491,9 +596,9 @@ label
 
 h3
 {
-    font-size: .9rem;
-    color: #E07A5F;
-    margin: 1.5rem 0 .2rem 0;
+    font-size: 1rem;
+    color: blue;
+    margin: 1.5rem 0 .2rem;
     border-bottom: 1px solid #eee;
 }
 
@@ -505,15 +610,14 @@ form select,
 form textarea
 {
     display: block;
-    margin: .1rem 0 1rem 0;
+    width: 250px;
+    margin: .1rem 0 1rem;
     padding: .3rem;
     border: 1px solid #999;
     border-radius: 4px;
-    border-left-width: 5px;
-    border-left-color: #555;
+    border-left: 5px solid #555;
     font-size: 1rem;
     color: #3D405B;
-    width: 250px;
 }
 
 form textarea
@@ -545,14 +649,12 @@ form input:required:valid
 form input[type=submit]
 {
     border: none;
-    text-align: center;
     background-color: #3D405B;
     color: white;
     border-radius: 1rem;
     padding: .75rem 1.5rem;
     margin: 2rem 0;
     font-size: 1.2rem;
-    -webkit-appearance: none;
     appearance: none;
 }
 
@@ -561,12 +663,41 @@ input:-webkit-autofill
     -webkit-text-fill-color: #3D405B;
 }
 
+/* ------------------------------
+   9.5 Results Box
+------------------------------ */
+
 #results
 {
     background-color: #F4F1DE;
     padding: 0 1rem;
     border: 1px solid #E07A5F;
     border-radius: 6px;
+}
+
+/* ------------------------------
+   9.6 Legacy Modal Label Styles
+------------------------------ */
+
+label[data-modal]
+{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #0645AD;
+}
+
+.info-icon
+{
+    margin-left: .25rem;
+    cursor: pointer;
+    font-size: .75rem;
+    color: #555;
+}
+
+label[data-modal]:hover
+{
+    background: #f0f8ff;
+    border-radius: .25rem;
 }
 
 /* =========================================
