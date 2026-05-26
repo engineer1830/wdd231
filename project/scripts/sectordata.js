@@ -1,7 +1,10 @@
 export async function getSectorsData() {
     const response = await fetch("data/sectors.json");
     const data = await response.json();
-    return data.sectors;
+    return {
+        sectors: data.sectors,
+        macroGroups: data.macroGroups
+    };
 }
 
 export function displaySectors(sectors) {
@@ -56,3 +59,44 @@ export function displaySectors(sectors) {
         container.appendChild(card);
     });
 };
+
+export function displayMacroGroups(macroGroups) {
+    const container = document.querySelector(".gallery-grid");
+    if (!container) return;
+
+    macroGroups.forEach(group => {
+
+        const card = document.createElement("section");
+        card.classList.add("macro-card");
+
+        const header = document.createElement("h3");
+        header.classList.add("macro-header");
+        header.textContent = group.macroGroupName;
+
+        const description = document.createElement("p");
+        description.textContent = group.description;
+
+        const included = document.createElement("p");
+        included.textContent = `Included Sectors: ${group.includedSectors.join(", ")}`;
+
+        const behavior = document.createElement("p");
+        behavior.textContent = `Economic Behavior: ${group.economicBehavior}`;
+
+        const risk = document.createElement("p");
+        risk.textContent = `Risk Profile: ${group.riskProfile}`;
+
+        const drivers = document.createElement("p");
+        drivers.textContent = `Key Drivers: ${group.keyDrivers.join(", ")}`;
+
+        card.append(
+            header,
+            description,
+            included,
+            behavior,
+            risk,
+            drivers
+        );
+
+        container.appendChild(card);
+    });
+}

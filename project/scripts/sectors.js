@@ -1,9 +1,11 @@
-import { getSectorsData, displaySectors } from "./sectordata.js";
+import { getSectorsData, displaySectors, displayMacroGroups } from "./sectordata.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
     const directory = document.querySelector("#directory");
     
 
-    const sectors = await getSectorsData();
+    const { sectors, macroGroups } = await getSectorsData();
+
+    displayMacroGroups(macroGroups);
     displaySectors(sectors);
 });

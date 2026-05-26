@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 - Final Project Top Stocks Page</title>
+    <meta name="description" content="WDD 231 - Chamber Homepage for Jesse Hamilton work in 26B3">
+    <meta name="author" content="Jesse Hamilton">
+    <meta property="og:title" content="Final Project Top Stocks Page for WDD231 for JHamilton">
+    <meta property="og:description"
+        content="Project Top Stocks for class assignment for Jesse Hamilton work in WDD231 26B3">
+    <meta property="og:image" content="https://engineer1830.github.io/wdd231/images/wavesofgrain.webp">
+    <meta property="og:url" content="https://engineer1830.github.io/wdd231/index.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script type="module" src="scripts/sectorperf.js"></script>
+    <!-- <script src="scripts/weather.js" defer></script> -->
+    <!-- <script type="module" src="scripts/index.js"></script> -->
+
+</head>
+
+<body>
+    <header>
+        <div class="site-title">Stock Market Sectors</div>
+        <button type="button" id="menu" aria-label="Toggle navigation menu"></button>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html" id="home">Home</a></li>
+                <li><a href="topstocks.html" id="top" target="_blank">Top Stocks by Sector</a></li>
+                <li><a href="dashboard.html" id="dash" target="_blank">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="logo-row">
+        <img class="side-img" src="images/onestock-small.webp" alt="Logo image for single stock performance"
+            width="250">
+        <img class="center-img" src="images/11sectors-small.webp" alt="Logo image for 11 sectors of stock market"
+            width="450">
+        <img class="side-img" src="images/dashboard-small.webp" alt="Logo image for stock market dashboard" width="250">
+    </div>
+    <h1>Stock Market Sectors</h1>
+    <main>
+        <select id="sectorSelect">
+            <option value="">Select a sector</option>
+            <option>Communication Services</option>
+            <option>Consumer Discretionary</option>
+            <option>Consumer Staples</option>
+            <option>Energy</option>
+            <option>Financials</option>
+            <option>Healthcare</option>
+            <option>Industrials</option>
+            <option>Information Technology</option>
+            <option>Materials</option>
+            <option>Real Estate</option>
+            <option>Utilities</option>
+        </select>
+        
+        <button id="fetchBtn">Get Top 5 Stocks</button>
+        
+        <div id="results"></div>
+          
+    </main>
+    <footer class="footer">
+        <p>&copy; <span id="currentyear"></span> | Jesse Hamilton | USA</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>

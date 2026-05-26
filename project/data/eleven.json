@@ -1,75 +1,4 @@
 {
-    "macroGroups": [
-        {
-            "macroGroupName": "Defensive",
-            "description": "Sectors that remain stable during recessions and economic downturns due to consistent demand for essential goods and services.",
-            "includedSectors": [
-                "Consumer Staples",
-                "Healthcare",
-                "Utilities"
-            ],
-            "economicBehavior": "Stable performance regardless of economic cycle; lower volatility.",
-            "riskProfile": "Low",
-            "keyDrivers": [
-                "population trends",
-                "regulation",
-                "essential demand",
-                "healthcare spending"
-            ]
-        },
-        {
-            "macroGroupName": "Cyclical",
-            "description": "Sectors that expand during economic growth and contract during slowdowns, closely tied to consumer and business activity.",
-            "includedSectors": [
-                "Consumer Discretionary",
-                "Industrials",
-                "Materials",
-                "Energy"
-            ],
-            "economicBehavior": "Strong performance during expansions; weaker performance during recessions.",
-            "riskProfile": "Medium to high",
-            "keyDrivers": [
-                "consumer confidence",
-                "employment levels",
-                "commodity prices",
-                "global trade"
-            ]
-        },
-        {
-            "macroGroupName": "Sensitive",
-            "description": "Sectors that react quickly to interest rates, inflation, and macroeconomic news, often leading market movements.",
-            "includedSectors": [
-                "Information Technology",
-                "Communication Services",
-                "Financials",
-                "Real Estate"
-            ],
-            "economicBehavior": "Responsive to macroeconomic shifts; often early movers in market cycles.",
-            "riskProfile": "Medium",
-            "keyDrivers": [
-                "interest rates",
-                "corporate spending",
-                "advertising demand",
-                "credit conditions"
-            ]
-        },
-        {
-            "macroGroupName": "Energy & Commodities",
-            "description": "A behavioral overlay grouping focused on sectors driven primarily by commodity cycles rather than traditional economic cycles.",
-            "includedSectors": [
-                "Energy",
-                "Materials"
-            ],
-            "economicBehavior": "Highly sensitive to commodity prices, geopolitical events, and global supply-demand imbalances.",
-            "riskProfile": "High",
-            "keyDrivers": [
-                "oil prices",
-                "metals demand",
-                "geopolitics",
-                "OPEC decisions"
-            ]
-        }
-    ],
     "sectors": [
         {
             "sectorName": "Communication Services",
@@ -102,8 +31,7 @@
                 "ad revenue",
                 "ARPU"
             ],
-            "icon": "images/comms.svg",
-            "macroGroup": "Sensitive"
+            "icon": "images/comms.svg"
         },
         {
             "sectorName": "Consumer Discretionary",
@@ -135,8 +63,7 @@
                 "inventory turnover",
                 "consumer sentiment"
             ],
-            "icon": "images/discretionary.svg",
-            "macroGroup": "Cyclical"
+            "icon": "images/discretionary.svg"
         },
         {
             "sectorName": "Consumer Staples",
@@ -168,8 +95,7 @@
                 "input costs",
                 "pricing power"
             ],
-            "icon": "images/groceries.svg",
-            "macroGroup": "Defensive"
+            "icon": "images/groceries.svg"
         },
         {
             "sectorName": "Energy",
@@ -202,8 +128,7 @@
                 "rig counts",
                 "production costs"
             ],
-            "icon": "images/energy.svg",
-            "macroGroup": "Cyclical"
+            "icon": "images/energy.svg"
         },
         {
             "sectorName": "Financials",
@@ -236,8 +161,7 @@
                 "loan growth",
                 "capital ratios"
             ],
-            "icon": "images/financial.svg",
-            "macroGroup": "Sensitive"
+            "icon": "images/financial.svg"
         },
         {
             "sectorName": "Healthcare",
@@ -269,8 +193,7 @@
                 "regulatory approvals",
                 "patent cliffs"
             ],
-            "icon": "images/healthcare.svg",
-            "macroGroup": "Defensive"
+            "icon": "images/healthcare.svg"
         },
         {
             "sectorName": "Industrials",
@@ -302,8 +225,7 @@
                 "capacity utilization",
                 "freight volumes"
             ],
-            "icon": "images/factory.svg",
-            "macroGroup": "Cyclical"
+            "icon": "images/factory.svg"
         },
         {
             "sectorName": "Information Technology",
@@ -335,8 +257,7 @@
                 "P/E ratio",
                 "volatility"
             ],
-            "icon": "images/technology.svg",
-            "macroGroup": "Sensitive"
+            "icon": "images/technology.svg"
         },
         {
             "sectorName": "Materials",
@@ -368,8 +289,7 @@
                 "commodity cycles",
                 "inventory levels"
             ],
-            "icon": "images/materials.svg",
-            "macroGroup": "Cyclical"
+            "icon": "images/materials.svg"
         },
         {
             "sectorName": "Real Estate",
@@ -399,8 +319,7 @@
                 "cap rates",
                 "occupancy"
             ],
-            "icon": "images/realestate.svg",
-            "macroGroup": "Sensitive"
+            "icon": "images/realestate.svg"
         },
         {
             "sectorName": "Utilities",
@@ -430,10 +349,7 @@
                 "dividend yield",
                 "infrastructure spending"
             ],
-            "icon": "images/utilities.svg",
-            "macroGroup": "Defensive"
+            "icon": "images/utilities.svg"
         }
     ]
 }
-
-
