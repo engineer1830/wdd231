@@ -71,7 +71,8 @@ export function displayMacroGroups(macroGroups) {
 
         const header = document.createElement("h3");
         header.classList.add("macro-header");
-        header.textContent = group.macroGroupName;
+        header.textContent = `Macro‑Group: ${group.macroGroupName}`;
+
 
         const description = document.createElement("p");
         description.textContent = group.description;
