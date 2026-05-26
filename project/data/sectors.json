@@ -1,0 +1,355 @@
+{
+    "sectors": [
+        {
+            "sectorName": "Communication Services",
+            "description": "Companies that provide communication, media, entertainment, and information services.",
+            "industries": [
+                "Telecom",
+                "Media",
+                "Interactive Media",
+                "Entertainment"
+            ],
+            "representativeCompanies": [
+                "Alphabet",
+                "Meta",
+                "Disney",
+                "Verizon"
+            ],
+            "economicSensitivity": "cyclical",
+            "riskProfile": "medium",
+            "keyDrivers": [
+                "advertising demand",
+                "consumer engagement",
+                "data usage",
+                "regulation"
+            ],
+            "etfCategories": [
+                "Communication Services sector ETFs"
+            ],
+            "commonMetrics": [
+                "subscriber growth",
+                "ad revenue",
+                "ARPU"
+            ],
+            "icon": "images/comms.svg"
+        },
+        {
+            "sectorName": "Consumer Discretionary",
+            "description": "Companies selling non-essential goods and services driven by consumer spending.",
+            "industries": [
+                "Retail",
+                "Automotive",
+                "Apparel",
+                "Hospitality"
+            ],
+            "representativeCompanies": [
+                "Amazon",
+                "Tesla",
+                "Nike",
+                "Home Depot"
+            ],
+            "economicSensitivity": "highly cyclical",
+            "riskProfile": "medium-high",
+            "keyDrivers": [
+                "consumer confidence",
+                "employment levels",
+                "interest rates"
+            ],
+            "etfCategories": [
+                "Consumer Discretionary sector ETFs"
+            ],
+            "commonMetrics": [
+                "same-store sales",
+                "inventory turnover",
+                "consumer sentiment"
+            ],
+            "icon": "images/discretionary.svg"
+        },
+        {
+            "sectorName": "Consumer Staples",
+            "description": "Companies selling essential goods such as food, beverages, and household products.",
+            "industries": [
+                "Food",
+                "Beverages",
+                "Household Products",
+                "Personal Care"
+            ],
+            "representativeCompanies": [
+                "Procter & Gamble",
+                "Coca-Cola",
+                "PepsiCo",
+                "Walmart"
+            ],
+            "economicSensitivity": "defensive",
+            "riskProfile": "low",
+            "keyDrivers": [
+                "commodity prices",
+                "population trends",
+                "brand loyalty"
+            ],
+            "etfCategories": [
+                "Consumer Staples sector ETFs"
+            ],
+            "commonMetrics": [
+                "volume growth",
+                "input costs",
+                "pricing power"
+            ],
+            "icon": "images/groceries.svg"
+        },
+        {
+            "sectorName": "Energy",
+            "description": "Companies involved in oil, gas, and renewable energy production and services.",
+            "industries": [
+                "Oil & Gas",
+                "Refining",
+                "Pipelines",
+                "Renewables"
+            ],
+            "representativeCompanies": [
+                "ExxonMobil",
+                "Chevron",
+                "ConocoPhillips",
+                "Schlumberger"
+            ],
+            "economicSensitivity": "cyclical",
+            "riskProfile": "high",
+            "keyDrivers": [
+                "oil prices",
+                "global demand",
+                "geopolitics",
+                "OPEC decisions"
+            ],
+            "etfCategories": [
+                "Energy sector ETFs"
+            ],
+            "commonMetrics": [
+                "barrel prices",
+                "rig counts",
+                "production costs"
+            ],
+            "icon": "images/energy.svg"
+        },
+        {
+            "sectorName": "Financials",
+            "description": "Banks, insurance companies, and financial service providers.",
+            "industries": [
+                "Banking",
+                "Insurance",
+                "Asset Management",
+                "Fintech"
+            ],
+            "representativeCompanies": [
+                "JPMorgan Chase",
+                "Bank of America",
+                "Wells Fargo",
+                "Goldman Sachs"
+            ],
+            "economicSensitivity": "sensitive",
+            "riskProfile": "medium",
+            "keyDrivers": [
+                "interest rates",
+                "credit demand",
+                "loan defaults",
+                "regulation"
+            ],
+            "etfCategories": [
+                "Financials sector ETFs"
+            ],
+            "commonMetrics": [
+                "net interest margin",
+                "loan growth",
+                "capital ratios"
+            ],
+            "icon": "images/financial.svg"
+        },
+        {
+            "sectorName": "Healthcare",
+            "description": "Companies providing medical services, pharmaceuticals, and biotechnology products.",
+            "industries": [
+                "Pharma",
+                "Biotech",
+                "Medical Devices",
+                "Healthcare Services"
+            ],
+            "representativeCompanies": [
+                "Johnson & Johnson",
+                "Pfizer",
+                "UnitedHealth",
+                "AbbVie"
+            ],
+            "economicSensitivity": "defensive",
+            "riskProfile": "medium",
+            "keyDrivers": [
+                "drug approvals",
+                "healthcare spending",
+                "demographics"
+            ],
+            "etfCategories": [
+                "Healthcare sector ETFs"
+            ],
+            "commonMetrics": [
+                "R&D pipeline",
+                "regulatory approvals",
+                "patent cliffs"
+            ],
+            "icon": "images/healthcare.svg"
+        },
+        {
+            "sectorName": "Industrials",
+            "description": "Manufacturing, transportation, aerospace, and industrial services companies.",
+            "industries": [
+                "Aerospace",
+                "Transportation",
+                "Machinery",
+                "Construction"
+            ],
+            "representativeCompanies": [
+                "Boeing",
+                "Caterpillar",
+                "Union Pacific",
+                "3M"
+            ],
+            "economicSensitivity": "cyclical",
+            "riskProfile": "medium",
+            "keyDrivers": [
+                "infrastructure spending",
+                "global trade",
+                "commodity prices"
+            ],
+            "etfCategories": [
+                "Industrials sector ETFs"
+            ],
+            "commonMetrics": [
+                "order backlog",
+                "capacity utilization",
+                "freight volumes"
+            ],
+            "icon": "images/factory.svg"
+        },
+        {
+            "sectorName": "Information Technology",
+            "description": "Companies involved in software, hardware, semiconductors, and IT services.",
+            "industries": [
+                "Software",
+                "Semiconductors",
+                "Hardware",
+                "IT Services"
+            ],
+            "representativeCompanies": [
+                "Apple",
+                "Microsoft",
+                "NVIDIA",
+                "Adobe"
+            ],
+            "economicSensitivity": "cyclical",
+            "riskProfile": "medium-high",
+            "keyDrivers": [
+                "innovation cycles",
+                "corporate IT spending",
+                "consumer demand"
+            ],
+            "etfCategories": [
+                "Technology sector ETFs"
+            ],
+            "commonMetrics": [
+                "earnings growth",
+                "P/E ratio",
+                "volatility"
+            ],
+            "icon": "images/technology.svg"
+        },
+        {
+            "sectorName": "Materials",
+            "description": "Companies producing raw materials such as metals, chemicals, and forestry products.",
+            "industries": [
+                "Chemicals",
+                "Metals",
+                "Mining",
+                "Paper Products"
+            ],
+            "representativeCompanies": [
+                "Dow",
+                "DuPont",
+                "Newmont",
+                "International Paper"
+            ],
+            "economicSensitivity": "cyclical",
+            "riskProfile": "medium-high",
+            "keyDrivers": [
+                "commodity prices",
+                "global demand",
+                "construction activity"
+            ],
+            "etfCategories": [
+                "Materials sector ETFs"
+            ],
+            "commonMetrics": [
+                "input costs",
+                "commodity cycles",
+                "inventory levels"
+            ],
+            "icon": "images/materials.svg"
+        },
+        {
+            "sectorName": "Real Estate",
+            "description": "Companies that own, operate, or finance real estate properties.",
+            "industries": [
+                "REITs",
+                "Commercial Real Estate",
+                "Residential Real Estate"
+            ],
+            "representativeCompanies": [
+                "American Tower",
+                "Prologis",
+                "Simon Property Group"
+            ],
+            "economicSensitivity": "sensitive",
+            "riskProfile": "medium",
+            "keyDrivers": [
+                "interest rates",
+                "occupancy rates",
+                "property values"
+            ],
+            "etfCategories": [
+                "Real Estate sector ETFs"
+            ],
+            "commonMetrics": [
+                "FFO",
+                "cap rates",
+                "occupancy"
+            ],
+            "icon": "images/realestate.svg"
+        },
+        {
+            "sectorName": "Utilities",
+            "description": "Electric, gas, and water utility companies providing essential services.",
+            "industries": [
+                "Electric Utilities",
+                "Gas Utilities",
+                "Water Utilities"
+            ],
+            "representativeCompanies": [
+                "Duke Energy",
+                "NextEra Energy",
+                "Southern Company"
+            ],
+            "economicSensitivity": "defensive",
+            "riskProfile": "low",
+            "keyDrivers": [
+                "regulation",
+                "energy prices",
+                "infrastructure investment"
+            ],
+            "etfCategories": [
+                "Utilities sector ETFs"
+            ],
+            "commonMetrics": [
+                "rate base growth",
+                "dividend yield",
+                "infrastructure spending"
+            ],
+            "icon": "images/utilities.svg"
+        }
+    ]
+}
