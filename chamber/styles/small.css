@@ -1,7 +1,6 @@
 /* =========================================
-   COLOR SYSTEM — Site-wide Theme
-   ========================================= */
-
+   COLOR SYSTEM
+========================================= */
 :root
 {
     --color-primary: #1A5B6B;
@@ -11,13 +10,12 @@
     --color-text-light: #fff;
     --color-bg-light: #f8f8f8;
     --color-border: #e5e5e5;
-    --color-bg-white: #ffffff;
+    --color-bg-white: #fff;
 }
 
 /* =========================================
-   1. Base layout parameters
-   ========================================= */
-
+   HEADER
+========================================= */
 header
 {
     position: relative;
@@ -54,9 +52,8 @@ h1
 }
 
 /* =========================================
-   2. NAV (mobile first)
-   ========================================= */
-
+   NAVIGATION
+========================================= */
 .navigation
 {
     display: none;
@@ -65,7 +62,7 @@ h1
     left: 0;
     right: 0;
     background: var(--color-bg-white);
-    padding: 0.75rem 1rem;
+    padding: .75rem 1rem;
 }
 
 .navigation.show
@@ -80,7 +77,7 @@ h1
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: .75rem;
 }
 
 .navigation a
@@ -119,13 +116,11 @@ h1
 .hamburger.show::before
 {
     content: "\00d7";
-    font-size: 2rem;
 }
 
 /* =========================================
-   3. Hero image
-   ========================================= */
-
+   HERO
+========================================= */
 .hero
 {
     display: block;
@@ -159,9 +154,8 @@ h1
 }
 
 /* =========================================
-   4. Spotlight content
-   ========================================= */
-
+   SPOTLIGHT
+========================================= */
 #spotlight
 {
     display: grid;
@@ -172,7 +166,7 @@ h1
     min-height: 300px;
 }
 
-@media (min-width: 700px)
+@media (min-width:700px)
 {
     #spotlight
     {
@@ -185,7 +179,7 @@ h1
     background: rgb(187, 214, 205);
     padding: 1rem;
     border-radius: .5rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
     text-align: center;
 }
 
@@ -198,15 +192,14 @@ h1
 }
 
 /* =========================================
-   5. Events Section
-   ========================================= */
-
+   EVENTS
+========================================= */
 .events
 {
-    background: #ffffff;
+    background: #fff;
     padding: 2rem;
     border-radius: .75rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
     margin: 2rem 0;
     text-align: center;
 }
@@ -246,9 +239,8 @@ h1
 }
 
 /* =========================================
-   6. Weather (current + forecast)
-   ========================================= */
-
+   WEATHER
+========================================= */
 .forecast
 {
     margin-top: 2rem;
@@ -263,9 +255,8 @@ h1
 
 .forecast-card
 {
-    /* background: var(--color-bg-white); */
     background: rgb(193, 214, 238);
-    padding: 0.75rem;
+    padding: .75rem;
     border-radius: 6px;
     text-align: center;
     width: 100px;
@@ -284,9 +275,8 @@ h1
 }
 
 /* =========================================
-   7. GRID LAYOUT (events / current / forecast)
-   ========================================= */
-
+   DIRECTORY GRID
+========================================= */
 #directory
 {
     min-height: 600px;
@@ -310,6 +300,9 @@ h1
     border-radius: 8px;
 }
 
+/* =========================================
+   GALLERY
+========================================= */
 .gallery-grid
 {
     display: grid;
@@ -321,21 +314,24 @@ h1
     min-height: 600px;
 }
 
+/* =========================================
+   BUSINESS CARDS
+========================================= */
 .business-card
 {
     background: var(--color-bg-white);
     border-radius: 10px;
     padding: 1.25rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
     border: 1px solid var(--color-border);
     text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform .2s ease, box-shadow .2s ease;
 }
 
 .business-card:hover
 {
     transform: translateY(-4px);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .18);
 }
 
 .business-card img
@@ -349,29 +345,29 @@ h1
 .business-card h2
 {
     font-size: 1.2rem;
-    margin: 0.5rem 0;
+    margin: .5rem 0;
     color: var(--color-primary);
 }
 
 .business-card h3
 {
     font-size: 1rem;
-    margin: 0.25rem 0;
+    margin: .25rem 0;
     color: var(--color-text-dark);
     text-transform: capitalize;
 }
 
 .business-card p
 {
-    margin: 0.25rem 0;
+    margin: .25rem 0;
     color: var(--color-text-dark);
 }
 
 .business-card a
 {
     display: inline-block;
-    margin: 0.75rem auto 0;
-    padding: 0.5rem 1.5rem;
+    margin: .75rem auto 0;
+    padding: .5rem 1.5rem;
     background: var(--color-primary);
     color: var(--color-text-light);
     text-decoration: none;
@@ -413,14 +409,8 @@ h1
 }
 
 /* =========================================
-   8. GRID/LIST Toggle elements
-   ========================================= */
-
-.list-view
-{
-    display: block;
-}
-
+   LIST VIEW
+========================================= */
 .list-view .business-card
 {
     display: flex;
@@ -441,6 +431,9 @@ h1
     white-space: normal;
 }
 
+/* =========================================
+   VIEW TOGGLE
+========================================= */
 .view-toggle
 {
     display: flex;
@@ -451,14 +444,14 @@ h1
 
 .view-toggle button
 {
-    padding: 0.6rem 1.2rem;
+    padding: .6rem 1.2rem;
     border: 2px solid var(--color-primary);
     background: var(--color-bg-white);
     color: var(--color-primary);
     font-weight: 600;
     border-radius: 6px;
     cursor: pointer;
-    transition: all 0.25s ease;
+    transition: all .25s ease;
 }
 
 .view-toggle button:hover,
@@ -470,212 +463,197 @@ h1
 
 .view-toggle button.active
 {
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 8px rgba(0, 0, 0, .15);
 }
 
 /* =========================================
-   9. JOIN Page and FORM Formats
-   ========================================= */
+   JOIN PAGE
+========================================= */
+.join-layout
+{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
 
-   /* ------------------------------
-   9.1 Layout
------------------------------- */
-   .join-layout {
-       display: grid;
-       gap: 2rem;
-       grid-template-columns: 1fr;
-   }
+@media (min-width:768px)
+{
+    .join-layout
+    {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
+}
 
-   @media (min-width: 768px) {
-       .join-layout
-       {
-           grid-template-columns: 2fr 1fr;
-           align-items: start;
-       }
-   }
+.join-form-column
+{
+    margin-left: 2rem;
+}
 
-   .join-form-column {
-       margin-left: 2rem;
-   }
+.membership-column
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
-   .membership-column {
-       display: flex;
-       flex-direction: column;
-       gap: 1rem;
-   }
+/* Animation */
+@keyframes fadeIn
+{
+    from
+    {
+        opacity: 0;
+        transform: translateY(20px);
+    }
 
-   /* ------------------------------
-   9.2 Animation
------------------------------- */
-   @keyframes fadeIn {
-       from {
-           opacity: 0;
-           transform: translateY(20px);
-       }
+    to
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-       to {
-           opacity: 1;
-           transform: translateY(0);
-       }
-   }
+.membership-card
+{
+    background: #FDF5E2;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+    max-width: 300px;
+    margin-right: 4rem;
+    animation: fadeIn 4s ease-out both;
+}
 
-   .membership-card {
-       background: #FDF5E2;
-       padding: 1rem;
-       border-radius: 8px;
-       box-shadow: 0  2px 6px rgba(0, 0, 0, 0.1);
-       max-width: 300px;
-       margin-right: 4rem;
-       animation: fadeIn 4s ease-out both;
-   }
+.membership-card:nth-child(1)
+{
+    animation-delay: .1s;
+}
 
-   .membership-card:nth-child(1) {
-       animation-delay: 0.1s;
-   }
+.membership-card:nth-child(2)
+{
+    animation-delay: .2s;
+}
 
-   .membership-card:nth-child(2) {
-       animation-delay: 0.2s;
-   }
+.membership-card:nth-child(3)
+{
+    animation-delay: .3s;
+}
 
-   .membership-card:nth-child(3) {
-       animation-delay: 0.3s;
-   }
+.membership-card:nth-child(4)
+{
+    animation-delay: .4s;
+}
 
-   .membership-card:nth-child(4) {
-       animation-delay: 0.4s;
-   }
+.card-header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-   /* ------------------------------
-   9.3 Card Header
------------------------------- */
+.info-btn
+{
+    background: none;
+    border: none;
+    font-size: .75rem;
+    cursor: pointer;
+    padding: 0;
+}
 
-   .card-header {
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-   }
+/* Form */
+form
+{
+    margin: 1rem 2%;
+}
 
-   .info-btn {
-       background: none;
-       border: none;
-       font-size: 0.75rem;
-       cursor: pointer;
-       padding: 0;
-   }
+label
+{
+    display: block;
+    font-size: .8rem;
+    color: purple;
+    padding-top: .2rem;
+}
 
-   /* ------------------------------
-   9.4 Form Styling
------------------------------- */
+h3
+{
+    font-size: 1rem;
+    color: blue;
+    margin: 1.5rem 0 .2rem;
+    border-bottom: 1px solid #eee;
+}
 
-   form {
-       margin: 1rem 2%;
-   }
+form input[type=text],
+form input[type=tel],
+form input[type=date],
+form input[type=email],
+form select,
+form textarea
+{
+    display: block;
+    width: 250px;
+    margin: .1rem 0 1rem;
+    padding: .3rem;
+    border: 1px solid #999;
+    border-radius: 4px;
+    border-left: 5px solid #555;
+    font-size: 1rem;
+    color: #3D405B;
+}
 
-   label {
-       display: block;
-       font-size: .8rem;
-       color: purple;
-       padding-top: .2rem;
-   }
+form textarea
+{
+    margin-top: .5rem;
+}
 
-   h3 {
-       font-size: 1rem;
-       color: blue;
-       margin: 1.5rem 0 .2rem;
-       border-bottom: 1px solid #eee;
-   }
+form label:has(textarea)
+{
+    margin-top: 1rem;
+}
 
-   form input[type=text],
-   form input[type=tel],
-   form input[type=date],
-   form input[type=email],
-   form select,
-   form textarea
-   {
-       display: block;
-       width: 250px;
-       margin: .1rem 0 1rem;
-       padding: .3rem;
-       border: 1px solid #999;
-       border-radius: 4px;
-       border-left: 5px solid #555;
-       font-size: 1rem;
-       color: #3D405B;
-   }
+form input:required
+{
+    border-left-color: #d70000;
+}
 
-   form textarea {
-       margin-top: .5rem;
-   }
+form input:focus
+{
+    border-left-color: black;
+    outline: none;
+}
 
-   form label:has(textarea) {
-       margin-top: 1rem;
-   }
+form input:required:valid
+{
+    border-left-color: green;
+}
 
-   form input:required {
-       border-left-color: #d70000;
-   }
+form input[type=submit]
+{
+    border: none;
+    background-color: #3D405B;
+    color: white;
+    border-radius: 1rem;
+    padding: .75rem 1.5rem;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    appearance: none;
+}
 
-   form input:focus {
-       border-left-color: black;
-       outline: none;
-   }
+input:-webkit-autofill
+{
+    -webkit-text-fill-color: #3D405B;
+}
 
-   form input:required:valid {
-       border-left-color: green;
-   }
-
-   form input[type=submit] {
-       border: none;
-       background-color: #3D405B;
-       color: white;
-       border-radius: 1rem;
-       padding: .75rem 1.5rem;
-       margin: 2rem 0;
-       font-size: 1.2rem;
-       appearance: none;
-   }
-
-   input:-webkit-autofill {
-       -webkit-text-fill-color: #3D405B;
-   }
-
-   /* ------------------------------
-   9.5 Results Box
------------------------------- */
-
-   #results {
-       background-color: #F4F1DE;
-       padding: 0 1rem;
-       border: 1px solid #E07A5F;
-       border-radius: 6px;
-   }
-
-   /* ------------------------------
-   9.6 Legacy Modal Label Styles
------------------------------- */
-
-   label[data-modal] {
-       cursor: pointer;
-       text-decoration: underline;
-       color: #0645AD;
-   }
-
-   .info-icon {
-       margin-left: .25rem;
-       cursor: pointer;
-       font-size: .75rem;
-       color: #555;
-   }
-
-   label[data-modal]:hover {
-       background: #f0f8ff;
-       border-radius: .25rem;
-   }
+#results
+{
+    background-color: #F4F1DE;
+    padding: 0 1rem;
+    border: 1px solid #E07A5F;
+    border-radius: 6px;
+}
 
 /* =========================================
-   10. FOOTER Formats
-   ========================================= */
-
+   FOOTER
+========================================= */
 footer
 {
     display: flex;
@@ -711,7 +689,7 @@ footer
 .social img
 {
     filter: brightness(0) invert(1);
-    transition: transform 0.2s ease;
+    transition: transform .2s ease;
 }
 
 .social img:hover
@@ -720,12 +698,10 @@ footer
 }
 
 /* =========================================
-   MERGED MEDIA QUERIES
-   ========================================= */
-
-@media (max-width: 700px)
+   MEDIA QUERIES
+========================================= */
+@media (max-width:700px)
 {
-
     .cta
     {
         top: 1rem;
