@@ -177,3 +177,45 @@ h2
     margin-right: 0;
     margin-left: 0.1rem;
 }
+
+/* -------------------------
+   6. Gallery Grid Cars
+-------------------------- */
+
+.gallery-grid
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.sector-card {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: beige;
+}
+
+.sector-card h2 {
+    font-size: 1.25rem;
+    color: var(--color-secondary);
+    margin: 0;
+}
+
+.sector-header
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.sector-header img
+{
+    width: 40px;
+    height: auto;
+}
