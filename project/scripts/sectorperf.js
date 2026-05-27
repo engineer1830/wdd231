@@ -23,9 +23,20 @@ async function getTop5Stocks(sectorName) {
     );
 
     const response = await fetch(url);
-    const data = await response.json();
-    return data;
+
+    // 🔥 Diagnostic: inspect the raw response BEFORE parsing JSON
+    const raw = await response.text();
+    console.log("RAW RESPONSE:", raw);
+
+    // Try to parse JSON only AFTER logging raw
+    try {
+        return JSON.parse(raw);
+    } catch (e) {
+        console.log("JSON parse error:", e);
+        return [];
+    }
 }
+
 
 
 document.getElementById("fetchBtn").addEventListener("click", async () => {
