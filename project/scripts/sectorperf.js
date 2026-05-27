@@ -1,22 +1,36 @@
 const apiKey = "yahoo not required";
 
-const sectorMap = {
-    "Technology": "Technology",
-    "Healthcare": "Healthcare",
-    "Financial Services": "Financial Services",
-    "Energy": "Energy",
-    "Consumer Cyclical": "Consumer Discretionary",
-    "Consumer Defensive": "Consumer Staples",
-    "Industrials": "Industrials",
-    "Basic Materials": "Materials",
-    "Real Estate": "Real Estate",
-    "Utilities": "Utilities",
-    "Communication Services": "Communication Services"
-};
+// const sectorMap = {
+//     "Technology": "Technology",
+//     "Healthcare": "Healthcare",
+//     "Financial Services": "Financial Services",
+//     "Energy": "Energy",
+//     "Consumer Cyclical": "Consumer Discretionary",
+//     "Consumer Defensive": "Consumer Staples",
+//     "Industrials": "Industrials",
+//     "Basic Materials": "Materials",
+//     "Real Estate": "Real Estate",
+//     "Utilities": "Utilities",
+//     "Communication Services": "Communication Services"
+// };
   
+const sectorMap = {
+    "Communication Services": "Communication Services",
+    "Consumer Discretionary": "Consumer Cyclical",
+    "Consumer Staples": "Consumer Defensive",
+    "Energy": "Energy",
+    "Financials": "Financial Services",
+    "Healthcare": "Healthcare",
+    "Industrials": "Industrials",
+    "Information Technology": "Technology",
+    "Materials": "Basic Materials",
+    "Real Estate": "Real Estate",
+    "Utilities": "Utilities"
+};
+
 
 async function getTop5Stocks(sectorName) {
-    const yahooSector = sectorName;
+    const yahooSector = sectorMap[sectorName];
 
     const body = {
         offset: 0,
@@ -40,6 +54,8 @@ async function getTop5Stocks(sectorName) {
     });
 
     const data = await response.json();
+    console.log("Dropdown:", sectorName, "→ Yahoo:", yahooSector);
+
 
     if (!data.finance || !data.finance.result || !data.finance.result[0]) {
         console.log("Yahoo returned no results for:", yahooSector);
