@@ -50,3 +50,35 @@ async function getTop5Stocks(sectorName) {
     return filtered.slice(0, 5);
 }
 
+// ⭐ EVENT LISTENER MUST BE LAST
+document.getElementById("fetchBtn").addEventListener("click", async () => {
+    const sector = document.getElementById("sectorSelect").value;
+    const resultsDiv = document.getElementById("results");
+
+    resultsDiv.innerHTML = "<p>Loading...</p>";
+
+    const stocks = await getTop5Stocks(sector);
+
+    if (stocks.length === 0) {
+        resultsDiv.innerHTML = `<p>No results found for ${sector}</p>`;
+        return;
+    }
+
+    resultsDiv.innerHTML = `
+        <h3>Top 5 Stocks in ${sector}</h3>
+        <div class="stock-grid">
+            ${stocks.map(s => `
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <img src="https://logo.clearbit.com/${s.symbol}.com" alt="${s.symbol} logo">
+                        <h4>${s.name} (${s.symbol})</h4>
+                    </div>
+                    <p class="sector-label">${s.sector}</p>
+                    <p><strong>Market Cap:</strong> ${(s.marketCap / 1e9).toFixed(1)}B</p>
+                </div>
+            `).join("")}
+        </div>
+    `;
+});
+
+
