@@ -25,6 +25,8 @@ async function getTop5Stocks(sectorName) {
     const response = await fetch(proxyUrl);
     const data = await response.json();
 
+    console.log("Proxy URL:", proxyUrl);
+
     return data;
 }
 
