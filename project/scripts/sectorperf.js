@@ -16,26 +16,17 @@ const sectorMap = {
 
 async function getTop5Stocks(sectorName) {
     const mapped = sectorMap[sectorName];
-    const proxy = "https://api.allorigins.win/raw?url=";
 
     const apiUrl = `https://financialmodelingprep.com/api/v4/stock-screener?sector=${mapped}&marketCapMoreThan=100000000000&limit=5&apikey=${apiKey}`;
 
-    const url = proxy + encodeURIComponent(apiUrl);
+    const proxyUrl = `https://hamiltondesigns.vercel.app/api/fmp?url=` +
+        encodeURIComponent(apiUrl);
 
-    const response = await fetch(url);
-    const raw = await response.text();
-    console.log("RAW RESPONSE:", raw);
+    const response = await fetch(proxyUrl);
+    const data = await response.json();
 
-    try {
-        return JSON.parse(raw);
-    } catch (e) {
-        console.log("JSON parse error:", e);
-        return [];
-    }
+    return data;
 }
-
-
-
 
 document.getElementById("fetchBtn").addEventListener("click", async () => {
     const sector = document.getElementById("sectorSelect").value;
