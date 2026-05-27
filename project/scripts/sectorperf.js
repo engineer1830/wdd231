@@ -18,17 +18,14 @@ async function getTop5Stocks(sectorName) {
     const mapped = sectorMap[sectorName];
     const proxy = "https://api.allorigins.win/raw?url=";
 
-    const url = proxy + encodeURIComponent(
-        `https://financialmodelingprep.com/api/v3/stock-screener?sector=${mapped}&marketCapMoreThan=100000000000&limit=5&apikey=${apiKey}`
-    );
+    const apiUrl = `https://financialmodelingprep.com/api/v4/stock-screener?sector=${mapped}&marketCapMoreThan=100000000000&limit=5&apikey=${apiKey}`;
+
+    const url = proxy + encodeURIComponent(apiUrl);
 
     const response = await fetch(url);
-
-    // 🔥 Diagnostic: inspect the raw response BEFORE parsing JSON
     const raw = await response.text();
     console.log("RAW RESPONSE:", raw);
 
-    // Try to parse JSON only AFTER logging raw
     try {
         return JSON.parse(raw);
     } catch (e) {
@@ -36,6 +33,7 @@ async function getTop5Stocks(sectorName) {
         return [];
     }
 }
+
 
 
 
