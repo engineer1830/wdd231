@@ -17,6 +17,8 @@ const sectorMap = {
 async function getTop5Stocks(sectorName) {
     const mapped = sectorMap[sectorName];
 
+    console.log("Mapped sector:", mapped);
+
     const apiUrl = `https://financialmodelingprep.com/api/v4/stock-screener?sector=${mapped}&marketCapMoreThan=100000000000&limit=5&apikey=${apiKey}`;
 
     const proxyUrl = `https://hamiltondesigns.vercel.app/api/fmp?url=` +
