@@ -16,7 +16,7 @@ const sectorMap = {
 
 async function getTop5Stocks(sectorName) {
     const mapped = sectorMap[sectorName];
-    const proxy = "https://cors.fmpcloud.io/?url=";
+    const proxy = "https://api.allorigins.win/raw?url=";
 
     const url = proxy + encodeURIComponent(
         `https://financialmodelingprep.com/api/v3/stock-screener?sector=${mapped}&marketCapMoreThan=100000000000&limit=5&apikey=${apiKey}`
