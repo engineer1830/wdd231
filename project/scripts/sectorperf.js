@@ -1,7 +1,22 @@
 const apiKey = "VwldoLUq23b1iHTZJIGNOIUpx0m2CCv7";
 
+const sectorMap = {
+    "Communication Services": "Communication Services",
+    "Consumer Discretionary": "Consumer Cyclical",
+    "Consumer Staples": "Consumer Defensive",
+    "Energy": "Energy",
+    "Financials": "Financial Services",
+    "Healthcare": "Healthcare",
+    "Industrials": "Industrials",
+    "Information Technology": "Technology",
+    "Materials": "Basic Materials",
+    "Real Estate": "Real Estate",
+    "Utilities": "Utilities"
+};
+
 async function getTop5Stocks(sectorName) {
-    const url = `https://financialmodelingprep.com/api/v3/stock-screener?sector=${encodeURIComponent(sectorName)}&marketCapMoreThan=100000000000&limit=5&apikey=${apiKey}`;
+    const mapped = sectorMap[sectorName];
+    const url = `https://financialmodelingprep.com/api/v3/stock-screener?sector=${encodeURIComponent(mapped)}&marketCapMoreThan=100000000000&limit=5&apikey=${apiKey}`;
 
     const response = await fetch(url);
     const data = await response.json();
