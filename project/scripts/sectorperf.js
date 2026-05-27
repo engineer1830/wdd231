@@ -36,21 +36,29 @@ async function getTickerDetails(ticker) {
 
 async function getTop5Stocks(sectorName) {
     const yahooSector = sectorMap[sectorName];
-
     const tickers = await getMegaCapTickers();
 
-    const allDetails = await Promise.all(
-        tickers.map(t => getTickerDetails(t))
-    );
+    const details = [];
 
-    const filtered = allDetails.filter(info => info.sector === yahooSector);
+    for (let i = 0; i < tickers.length; i += 10) {
+        const batch = tickers.slice(i, i + 10);
 
+        const batchDetails = await Promise.all(
+            batch.map(t => getTickerDetails(t))
+        );
+
+        details.push(...batchDetails);
+
+        await new Promise(r => setTimeout(r, 300));
+    }
+
+    const filtered = details.filter(info => info.sector === yahooSector);
     filtered.sort((a, b) => b.marketCap - a.marketCap);
 
     return filtered.slice(0, 5);
 }
 
-// ⭐ EVENT LISTENER MUST BE LAST
+
 document.getElementById("fetchBtn").addEventListener("click", async () => {
     const sector = document.getElementById("sectorSelect").value;
     const resultsDiv = document.getElementById("results");
@@ -80,5 +88,4 @@ document.getElementById("fetchBtn").addEventListener("click", async () => {
         </div>
     `;
 });
-
 
