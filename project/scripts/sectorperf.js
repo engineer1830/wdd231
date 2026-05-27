@@ -1,4 +1,4 @@
-const apiKey = "YOUR_REAL_KEY_HERE";
+const apiKey = "VwldoLUq23b1iHTZJIGNOIUpx0m2CCv7";
 
 async function getTop5Stocks(sectorName) {
     const url = `https://financialmodelingprep.com/api/v3/stock-screener?sector=${encodeURIComponent(sectorName)}&marketCapMoreThan=100000000000&limit=5&apikey=${apiKey}`;
