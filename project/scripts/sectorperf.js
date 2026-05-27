@@ -16,12 +16,17 @@ const sectorMap = {
 
 async function getTop5Stocks(sectorName) {
     const mapped = sectorMap[sectorName];
-    const url = `https://financialmodelingprep.com/api/v3/stock-screener?sector=${encodeURIComponent(mapped)}&marketCapMoreThan=100000000000&limit=5&apikey=${apiKey}`;
+    const proxy = "https://cors.fmpcloud.io/?url=";
+
+    const url = proxy + encodeURIComponent(
+        `https://financialmodelingprep.com/api/v3/stock-screener?sector=${mapped}&marketCapMoreThan=100000000000&limit=5&apikey=${apiKey}`
+    );
 
     const response = await fetch(url);
     const data = await response.json();
     return data;
 }
+
 
 document.getElementById("fetchBtn").addEventListener("click", async () => {
     const sector = document.getElementById("sectorSelect").value;
