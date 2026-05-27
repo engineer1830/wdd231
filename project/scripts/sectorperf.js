@@ -1,18 +1,4 @@
-const apiKey = "yahoo not required";
-
-// const sectorMap = {
-//     "Technology": "Technology",
-//     "Healthcare": "Healthcare",
-//     "Financial Services": "Financial Services",
-//     "Energy": "Energy",
-//     "Consumer Cyclical": "Consumer Discretionary",
-//     "Consumer Defensive": "Consumer Staples",
-//     "Industrials": "Industrials",
-//     "Basic Materials": "Materials",
-//     "Real Estate": "Real Estate",
-//     "Utilities": "Utilities",
-//     "Communication Services": "Communication Services"
-// };
+// const apiKey = "yahoo not required";
   
 const sectorMap = {
     "Communication Services": "Communication Services",
@@ -28,71 +14,39 @@ const sectorMap = {
     "Utilities": "Utilities"
 };
 
+async function getMegaCapTickers() {
+    const res = await fetch("https://hamiltondesigns.vercel.app/api/yahoo_megacap");
+    const data = await res.json();
+    return data.finance.result[0].quotes.map(q => q.symbol);
+}
+
+async function getTickerDetails(ticker) {
+    const res = await fetch(`https://hamiltondesigns.vercel.app/api/yahoo_quote?ticker=${ticker}`);
+    const data = await res.json();
+
+    const profile = data.quoteSummary.result?.[0];
+
+    return {
+        symbol: ticker,
+        sector: profile?.assetProfile?.sector,
+        marketCap: profile?.price?.marketCap?.raw || 0,
+        name: profile?.price?.shortName || ticker
+    };
+}
 
 async function getTop5Stocks(sectorName) {
     const yahooSector = sectorMap[sectorName];
 
-    const body = {
-        offset: 0,
-        size: 5,
-        sortField: "marketCap",
-        sortType: "DESC",
-        quoteType: "EQUITY",
-        query: {
-            operator: "AND",
-            operands: [
-                { operator: "eq", operands: ["sectorRaw", yahooSector] },
-                { operator: "gt", operands: ["marketCap", 100000000000] }
-            ]
-        }
-    };
+    const tickers = await getMegaCapTickers();
 
-    const response = await fetch("https://hamiltondesigns.vercel.app/api/yahoo_market", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body)
-    });
+    const allDetails = await Promise.all(
+        tickers.map(t => getTickerDetails(t))
+    );
 
-    const data = await response.json();
-    console.log("Dropdown:", sectorName, "→ Yahoo:", yahooSector);
+    const filtered = allDetails.filter(info => info.sector === yahooSector);
 
+    filtered.sort((a, b) => b.marketCap - a.marketCap);
 
-    if (!data.finance || !data.finance.result || !data.finance.result[0]) {
-        console.log("Yahoo returned no results for:", yahooSector);
-        return [];
-    }
-
-    return data.finance.result[0].quotes;
+    return filtered.slice(0, 5);
 }
-
-
-document.getElementById("fetchBtn").addEventListener("click", async () => {
-    const sector = document.getElementById("sectorSelect").value;
-    const resultsDiv = document.getElementById("results");
-
-    if (!sector) {
-        resultsDiv.innerHTML = "<p>Please select a sector.</p>";
-        return;
-    }
-
-    const stocks = await getTop5Stocks(sector);
-
-    resultsDiv.innerHTML = `
-      <h3>Top 5 Stocks in ${sector}</h3>
-      <div class="stock-grid">
-        ${stocks.map(s => `
-          <div class="stock-card">
-            <div class="stock-header">
-              <img src="https://logo.clearbit.com/${s.symbol}.com" alt="${s.symbol} logo">
-              <h4>${s.shortName} (${s.symbol})</h4>
-            </div>
-            <p class="sector-label">${s.sector}</p>
-            <p><strong>Market Cap:</strong> ${(s.marketCap / 1e9).toFixed(1)}B</p>
-          </div>
-        `).join("")}
-      </div>
-    `;
-    
-
-});
 
