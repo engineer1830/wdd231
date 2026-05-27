@@ -1,4 +1,4 @@
-const apiKey = "yahoo to be added";
+const apiKey = "yahoo not required";
 
 const sectorMap = {
     "Technology": "Technology",
@@ -16,7 +16,7 @@ const sectorMap = {
   
 
 async function getTop5Stocks(sectorName) {
-    const yahooSector = sectorName; // already mapped
+    const yahooSector = sectorName;
 
     const body = {
         offset: 0,
@@ -27,7 +27,7 @@ async function getTop5Stocks(sectorName) {
         query: {
             operator: "AND",
             operands: [
-                { operator: "eq", operands: ["sector", yahooSector] },
+                { operator: "eq", operands: ["sectorRaw", yahooSector] },
                 { operator: "gt", operands: ["marketCap", 100000000000] }
             ]
         }
@@ -40,6 +40,11 @@ async function getTop5Stocks(sectorName) {
     });
 
     const data = await response.json();
+
+    if (!data.finance || !data.finance.result || !data.finance.result[0]) {
+        console.log("Yahoo returned no results for:", yahooSector);
+        return [];
+    }
 
     return data.finance.result[0].quotes;
 }
