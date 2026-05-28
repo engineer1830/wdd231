@@ -16,24 +16,31 @@ async function getTickerDetails(ticker) {
         const quoteRes = await fetch(
             `https://hamiltondesigns.vercel.app/api/yahoo_quote?ticker=${ticker}`
         );
-        const quoteData = await quoteRes.json();
+        const q = await quoteRes.json();
+
+        const price = q.regularMarketPrice || 0;
+        const shares = q.sharesOutstanding || q.floatShares || 0;
+
+        const computedCap = (price && shares) ? price * shares : 0;
 
         return {
             symbol: ticker,
-            name: quoteData.name || ticker,
-            marketCap: quoteData.marketCap || 0,
-            price: quoteData.regularMarketPrice || 0
+            name: q.name || ticker,
+            price: price,
+            marketCap: q.marketCap || computedCap || 0
         };
+
     } catch (err) {
         console.error("Quote fetch failed for", ticker, err);
         return {
             symbol: ticker,
             name: ticker,
-            marketCap: 0,
-            price: 0
+            price: 0,
+            marketCap: 0
         };
     }
 }
+
 
 async function getTop5Stocks(sector) {
     const tickers = getTickersForSector(sector);
