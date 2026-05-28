@@ -12,17 +12,27 @@ function getTickersForSector(sector) {
 }
 
 async function getTickerDetails(ticker) {
-    const quoteRes = await fetch(
-        `https://hamiltondesigns.vercel.app/api/yahoo_quote?ticker=${ticker}`
-    );
-    const quoteData = await quoteRes.json();
+    try {
+        const quoteRes = await fetch(
+            `https://hamiltondesigns.vercel.app/api/yahoo_quote?ticker=${ticker}`
+        );
+        const quoteData = await quoteRes.json();
 
-    return {
-        symbol: ticker,
-        name: quoteData.name || ticker,
-        marketCap: quoteData.marketCap || 0,
-        price: quoteData.regularMarketPrice || 0
-    };
+        return {
+            symbol: ticker,
+            name: quoteData.name || ticker,
+            marketCap: quoteData.marketCap || 0,
+            price: quoteData.regularMarketPrice || 0
+        };
+    } catch (err) {
+        console.error("Quote fetch failed for", ticker, err);
+        return {
+            symbol: ticker,
+            name: ticker,
+            marketCap: 0,
+            price: 0
+        };
+    }
 }
 
 async function getTop5Stocks(sector) {
@@ -53,7 +63,7 @@ document.getElementById("fetchBtn").addEventListener("click", async () => {
             ${stocks.map(s => `
                 <div class="stock-card">
                     <div class="stock-header">
-                        <img src="https://logo.clearbit.com/${s.symbol}.com" alt="${s.symbol} logo">
+                    <img src="https://logo.clearbit.com/${s.symbol}.com?size=80&fallback=true" alt="${s.symbol} logo">
                         <h4>${s.name} (${s.symbol})</h4>
                     </div>
                     <p class="sector-label">${sector}</p>
