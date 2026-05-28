@@ -14,7 +14,7 @@ function getTickersForSector(sector) {
 async function getTickerDetails(ticker) {
     try {
         const quoteRes = await fetch(
-            `https://hamiltondesigns.vercel.app/api/fmp?ticker=${ticker}`
+            `https://hamiltondesigns.vercel.app/api/stock_details?ticker=${ticker}`
         );
         const q = await quoteRes.json();
 
