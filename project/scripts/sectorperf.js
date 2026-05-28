@@ -63,7 +63,6 @@ document.getElementById("fetchBtn").addEventListener("click", async () => {
             ${stocks.map(s => `
                 <div class="stock-card">
                     <div class="stock-header">
-                    <img src="https://logo.clearbit.com/${s.symbol}.com?size=80&fallback=true" alt="${s.symbol} logo">
                         <h4>${s.name} (${s.symbol})</h4>
                     </div>
                     <p class="sector-label">${sector}</p>
