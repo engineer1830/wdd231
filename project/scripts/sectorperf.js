@@ -17,48 +17,37 @@ const sectorMap = {
 async function getMegaCapTickers() {
     const res = await fetch("https://hamiltondesigns.vercel.app/api/yahoo_megacap");
     const data = await res.json();
-    return data.finance.result[0].quotes.map(q => q.symbol);
+    return data.finance?.result?.[0]?.quotes?.map(q => q.symbol) || [];
 }
 
 async function getTickerDetails(ticker) {
     const res = await fetch(`https://hamiltondesigns.vercel.app/api/yahoo_quote?ticker=${ticker}`);
     const data = await res.json();
 
-    const profile = data.quoteSummary.result?.[0];
+    const profile = data.quoteSummary?.result?.[0];
+    if (!profile) {
+        console.warn(`No quoteSummary for ${ticker}`);
+        return { symbol: ticker, sector: null, marketCap: 0, name: ticker };
+    }
 
     return {
         symbol: ticker,
-        sector: profile?.assetProfile?.sector,
-        marketCap: profile?.price?.marketCap?.raw || 0,
-        name: profile?.price?.shortName || ticker
+        sector: profile.assetProfile?.sector || null,
+        marketCap: profile.price?.marketCap?.raw || 0,
+        name: profile.price?.shortName || ticker
     };
-}
+  }
 
-async function getTop5Stocks(sectorName) {
-    const yahooSector = sectorMap[sectorName];
+async function getTop5Stocks(sector) {
     const tickers = await getMegaCapTickers();
+    const details = await Promise.all(tickers.map(t => getTickerDetails(t)));
 
-    const details = [];
-
-    for (let i = 0; i < tickers.length; i += 10) {
-        const batch = tickers.slice(i, i + 10);
-
-        const batchDetails = await Promise.all(
-            batch.map(t => getTickerDetails(t))
-        );
-
-        details.push(...batchDetails);
-
-        await new Promise(r => setTimeout(r, 300));
-    }
-
-    const filtered = details.filter(info => info.sector === yahooSector);
-    filtered.sort((a, b) => b.marketCap - a.marketCap);
-
-    return filtered.slice(0, 5);
+    return details
+        .filter(stock => stock.sector === sector)
+        .sort((a, b) => b.marketCap - a.marketCap)
+        .slice(0, 5);
 }
-
-
+  
 document.getElementById("fetchBtn").addEventListener("click", async () => {
     const sector = document.getElementById("sectorSelect").value;
     const resultsDiv = document.getElementById("results");
