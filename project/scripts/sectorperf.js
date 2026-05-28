@@ -21,22 +21,24 @@ async function getMegaCapTickers() {
 }
 
 async function getTickerDetails(ticker) {
-    const res = await fetch(`https://hamiltondesigns.vercel.app/api/yahoo_quote?ticker=${ticker}`);
-    const data = await res.json();
 
-    const profile = data.quoteSummary?.result?.[0];
-    if (!profile) {
-        console.warn(`No quoteSummary for ${ticker}`);
-        return { symbol: ticker, sector: null, marketCap: 0, name: ticker };
-    }
+    const sectorRes = await fetch(`https://hamiltondesigns.vercel.app/api/yahoo_sector?ticker=${ticker}`);
+    const sectorData = await sectorRes.json();
+
+    const quoteRes = await fetch(`https://hamiltondesigns.vercel.app/api/yahoo_quote?ticker=${ticker}`);
+    const quoteData = await quoteRes.json();
 
     return {
         symbol: ticker,
-        sector: profile.assetProfile?.sector || null,
-        marketCap: profile.price?.marketCap?.raw || 0,
-        name: profile.price?.shortName || ticker
+        name: sectorData.name || ticker,
+        sector: sectorData.sector || null,
+        industry: sectorData.industry || null,
+        marketCap: quoteData.marketCap || 0,
+        price: quoteData.regularMarketPrice || 0
     };
-  }
+}
+
+
 
 async function getTop5Stocks(sector) {
     const tickers = await getMegaCapTickers();
