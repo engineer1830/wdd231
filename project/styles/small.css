@@ -272,8 +272,49 @@ h2
 
 /* TopStocks Dispay */
 
-.stock-card
-{
+/* Parent layout */
+#stockLayout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+#leftColumn {
+    padding-right: 20px;
+    border-right: 2px solid #ddd;
+}
+
+#rightColumn {
+    padding-left: 20px;
+}
+
+.single-stock-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#stockDetailsPanel {
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    line-height: 1.5;
+}
+
+#stockDetailsPanel h3 {
+    margin-top: 0;
+}
+
+#stockDetailsPanel h4 {
+    margin-bottom: 5px;
+    margin-top: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 3px;
+}
+
+.stock-card {
     background: #ffffff;
     border-radius: 10px;
     padding: 1rem;
@@ -282,27 +323,23 @@ h2
     transition: transform 0.2s ease;
 }
 
-.stock-card:hover
-{
+.stock-card:hover {
     transform: translateY(-4px);
 }
 
-.stock-header
-{
+.stock-header {
     display: flex;
     align-items: center;
     gap: 0.75rem;
     margin-bottom: 0.5rem;
 }
 
-.stock-header img
-{
+.stock-header img {
     width: 40px;
     height: 40px;
 }
 
-.sector-label
-{
+.sector-label {
     font-size: 0.9rem;
     color: #1A5B6B;
     font-weight: 600;
@@ -311,16 +348,14 @@ h2
 
 /* Dashboard Formatting */
 
-.sector-dashboard
-{
+.sector-dashboard {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1rem;
     margin-top: 1.5rem;
 }
 
-.sector-tile
-{
+.sector-tile {
     background: #ffffff;
     border-radius: 10px;
     padding: 1rem;
@@ -328,45 +363,37 @@ h2
     transition: transform 0.2s ease;
 }
 
-.sector-tile:hover
-{
+.sector-tile:hover {
     transform: translateY(-4px);
 }
 
-.sector-tile-header
-{
+.sector-tile-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 0.75rem;
 }
 
-.sector-change
-{
+.sector-change {
     font-weight: 700;
 }
 
-/* Trend colors */
-.sector-tile.up
-{
+.sector-tile.up {
     border-left: 6px solid #2ecc71;
     background: #eafaf1;
 }
 
-.sector-tile.down
-{
+.sector-tile.down {
     border-left: 6px solid #e74c3c;
     background: #fdecea;
 }
 
-.sector-tile.flat
-{
+.sector-tile.flat {
     border-left: 6px solid #95a5a6;
     background: #f4f4f4;
 }
 
 /* Sparkline container */
-.sparkline
-{
+.sparkline {
     height: 40px;
 }

@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="styles/larger.css">
 
     <script type="module" src="scripts/sectorperf.js"></script>
-    <!-- <script src="scripts/weather.js" defer></script> -->
+    <script type="module" src="scripts/stockdetail.js"></script>
     <!-- <script type="module" src="scripts/index.js"></script> -->
 
 </head>
@@ -47,39 +47,44 @@
             width="450">
         <img class="side-img" src="images/dashboard-small.webp" alt="Logo image for stock market dashboard" width="250">
     </div>
-    <h1>Stock Sector Performance</h1>
-    <main>
-        <select id="sectorSelect">
-            <option value="">Select a sector</option>
-            <option>Communication Services</option>
-            <option>Consumer Discretionary</option>
-            <option>Consumer Staples</option>
-            <option>Energy</option>
-            <option>Financials</option>
-            <option>Healthcare</option>
-            <option>Industrials</option>
-            <option>Information Technology</option>
-            <option>Materials</option>
-            <option>Real Estate</option>
-            <option>Utilities</option>
-        </select>
-        
-        <button id="fetchBtn">Get Top 5 Stocks</button>
-        
-        <div id="results"></div>
-
-        <div id="singleStockSection">
-        
-            <h3>Individual Stock Detail</h3>
-        
-            <div class="single-stock-input">
-                <input id="tickerInput" type="text" placeholder="Enter ticker (e.g., AAPL)" />
-                <button id="detailsBtn">Get Individual Stock Detail</button>
-            </div>
-        
-            <div id="stockDetailsPanel"></div>
-        
+    <div id="stockLayout">
+        <div id="leftColumn">
+            <h1>Stock Sector Performance</h1>
+    
+            <select id="sectorSelect">
+                <option value="">Select a sector</option>
+                <option>Communication Services</option>
+                <option>Consumer Discretionary</option>
+                <option>Consumer Staples</option>
+                <option>Energy</option>
+                <option>Financials</option>
+                <option>Healthcare</option>
+                <option>Industrials</option>
+                <option>Information Technology</option>
+                <option>Materials</option>
+                <option>Real Estate</option>
+                <option>Utilities</option>
+            </select>
+    
+            <button id="fetchBtn">Get Top 5 Stocks</button>
+    
+            <div id="results"></div>
         </div>
+    
+        <div id="rightColumn">
+            <div id="singleStockSection">
+                <h3>Individual Stock Detail</h3>
+    
+                <div class="single-stock-input">
+                    <input id="tickerInput" type="text" placeholder="Enter ticker (e.g., AAPL)" />
+                    <button id="detailsBtn">Get Individual Stock Detail</button>
+                </div>
+    
+                <div id="stockDetailsPanel"></div>
+            </div>
+        </div>
+    </div>
+    
         
     </main>
     <footer class="footer">
