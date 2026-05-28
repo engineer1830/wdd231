@@ -21,34 +21,53 @@ async function getMegaCapTickers() {
 }
 
 async function getTickerDetails(ticker) {
+    // Excluding crypto
+    if (ticker.endsWith("-USD")) {
+        return {
+            symbol: ticker,
+            name: ticker,
+            sector: "Crypto",
+            industry: null,
+            marketCap: 0,
+            price: 0
+        };
+    }
 
+    // Get sector + industry
     const sectorRes = await fetch(`https://hamiltondesigns.vercel.app/api/yahoo_sector?ticker=${ticker}`);
     const sectorData = await sectorRes.json();
 
+    // Get price + marketCap
     const quoteRes = await fetch(`https://hamiltondesigns.vercel.app/api/yahoo_quote?ticker=${ticker}`);
     const quoteData = await quoteRes.json();
+
+    // Fallback for missing sectors
+    let sector = sectorData.sector || "Unknown";
 
     return {
         symbol: ticker,
         name: sectorData.name || ticker,
-        sector: sectorData.sector || null,
+        sector: sector,
         industry: sectorData.industry || null,
         marketCap: quoteData.marketCap || 0,
         price: quoteData.regularMarketPrice || 0
     };
 }
 
-
-
 async function getTop5Stocks(sector) {
     const tickers = await getMegaCapTickers();
     const details = await Promise.all(tickers.map(t => getTickerDetails(t)));
 
+    const yahooSector = sectorMap[sector];
+
     return details
-        .filter(stock => stock.sector === sector)
+        .filter(stock => stock.sector === yahooSector)
+        .filter(stock => stock.sector !== "Unknown")   // remove missing sectors
+        .filter(stock => stock.sector !== "Crypto")    // remove crypto
         .sort((a, b) => b.marketCap - a.marketCap)
         .slice(0, 5);
 }
+
   
 document.getElementById("fetchBtn").addEventListener("click", async () => {
     const sector = document.getElementById("sectorSelect").value;
