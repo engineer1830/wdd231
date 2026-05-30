@@ -1,7 +1,7 @@
 @media only screen and (min-width: 30rem) {
     
     .activity-card {
-        min-width: 450px;
+        min-width: 350px;
         grid-template-areas:
         "photo name"
         "photo description"

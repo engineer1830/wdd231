@@ -419,37 +419,6 @@ h1
     background: #f2f2f2;
 }
 
-.activity-card {
-    overflow: hidden;
-    display: grid;
-    gap: 0.5rem;
-    grid-template-areas: 
-    "name"
-    "photo"
-    "description"
-    "location";
-}
-
-.activity-card .activity-photo {
-    grid-area: photo;
-    justify-self: center;
-    align-self: center;
-    border-radius: 6px;
-}
-
-.activity-card .activity-title {
-    margin: 1rem 10px;
-    grid-area: name;
-}
-
-.activity-card .activity-description {
-    grid-area: description;
-}
-
-.activity-card .activity-location {
-    grid-area: location;
-}
-
 /* =========================================
    LIST VIEW
 ========================================= */
@@ -696,8 +665,44 @@ input:-webkit-autofill
 /* =========================================
    DISCOVER Page
 ========================================= */
+/* Note - the activity cards pick up much of their formatting 
+from the .business-card that is used on the directory page */
 
+.activity-card
+{
+    overflow: hidden;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-areas:
+        "name"
+        "photo"
+        "description"
+        "location";
+}
 
+.activity-card .activity-photo
+{
+    grid-area: photo;
+    justify-self: center;
+    align-self: center;
+    border-radius: 6px;
+}
+
+.activity-card .activity-title
+{
+    margin: 1rem 10px;
+    grid-area: name;
+}
+
+.activity-card .activity-description
+{
+    grid-area: description;
+}
+
+.activity-card .activity-location
+{
+    grid-area: location;
+}
 
 
 /* =========================================
