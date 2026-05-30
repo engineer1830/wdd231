@@ -721,6 +721,26 @@ from the .business-card that is used on the directory page */
     box-shadow: none;
 }
 
+.activity-info
+{
+    display: inline-block;
+    margin-top: .75rem;
+    padding: .5rem 1.5rem;
+    background: var(--color-primary);
+    color: var(--color-text-light);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 700;
+    width: fit-content;
+    max-width: 200px;
+    text-align: center;
+}
+
+.activity-info:hover
+{
+    background: var(--color-secondary);
+}
+
 
 /* =========================================
    FOOTER

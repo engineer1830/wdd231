@@ -34,10 +34,17 @@ export function displayActivities(activities) {
         activityLocation.classList.add("activity-location");
         activityLocation.textContent = activity.fullAddress;
 
+        const activityInfo = document.createElement("a");
+        activityInfo.classList.add("activity-info");
+        activityInfo.href = activity.url;
+        activityInfo.target = "_blank";
+        activityInfo.textContent = "Learn More";
+
         card.appendChild(activityImage);
         card.appendChild(activityTitle);
         card.appendChild(activityDescription);
         card.appendChild(activityLocation);
+        card.appendChild(activityInfo);
 
         container.appendChild(card);
     });
