@@ -1,3 +1,18 @@
+/* =========================================
+   COLOR SYSTEM
+========================================= */
+:root
+{
+    --color-primary: #1A5B6B;
+    --color-secondary: #8b224c;
+    --color-accent-gold: goldenrod;
+    --color-text-dark: #333;
+    --color-text-light: #fff;
+    --color-bg-light: #f8f8f8;
+    --color-border: #e5e5e5;
+    --color-bg-white: #fff;
+}
+
 /* -------------------------
    1. Reset + base
 -------------------------- */
@@ -29,8 +44,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: lightgoldenrodyellow;
-    color: darkgreen;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
     padding: 1rem;
     padding-right: 3.5rem;
     font-size: 2rem;
@@ -41,6 +56,24 @@ main {
     max-width: 1500px;
     margin: 1rem auto;
     padding: 1rem;
+}
+
+.navigation a:link,
+.navigation a:visited {
+    color: var(--color-text-light);
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: lightblue;
+}
+
+.navigation a:active {
+    color: white;
+}
+
+.navigation a.active {
+    border-bottom: 3px solid var(--color-text-light);
 }
 
 /* -------------------------
