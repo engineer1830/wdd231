@@ -27,6 +27,9 @@ export function displayActivities(activities) {
         const activityDescription = document.createElement("p");
         activityDescription.textContent = activity.description;
 
+        const activityLocation = document.createElement("p");
+        activityLocation.textContent = activity.fullAddress;
+
         const link = document.createElement("a");
         link.href = activity.url;
         link.target = "_blank";
@@ -34,6 +37,7 @@ export function displayActivities(activities) {
 
         card.appendChild(link);
         card.appendChild(activityDescription);
+        card.appendChild(activityLocation);
 
         container.appendChild(card);
     });
