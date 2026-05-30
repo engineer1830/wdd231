@@ -16,9 +16,18 @@
             box-shadow: 0 0 50px #333;   }
 }
 
-@media only screen and (max-width: 29.999rem)
+/* @media only screen and (max-width: 29.999rem)
 {
     .activity-card .activity-photo:hover {
+        box-shadow: none;
+        transform: none;
+    }
+} */
+
+@media (hover: none)
+{
+    .activity-card .activity-photo:hover
+    {
         box-shadow: none;
         transform: none;
     }
