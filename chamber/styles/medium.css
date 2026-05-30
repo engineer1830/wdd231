@@ -15,3 +15,10 @@
     .activity-card .activity-photo:hover {
             box-shadow: 0 0 50px #333;   }
 }
+
+@media only screen and (max-width: 29.999rem)
+{
+    .activity-card .activity-photo:hover {
+        box-shadow: none;
+    }
+}
