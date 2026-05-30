@@ -303,8 +303,8 @@ h1
 /* =========================================
    GALLERY
 ========================================= */
-.gallery-grid
-{
+.gallery-grid,
+.activity-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
@@ -317,8 +317,8 @@ h1
 /* =========================================
    BUSINESS CARDS
 ========================================= */
-.business-card
-{
+.business-card,
+.activity-card {
     background: var(--color-bg-white);
     border-radius: 10px;
     padding: 1.25rem;
@@ -328,43 +328,43 @@ h1
     transition: transform .2s ease, box-shadow .2s ease;
 }
 
-.business-card:hover
-{
+.business-card:hover,
+.activity-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 4px 14px rgba(0, 0, 0, .18);
 }
 
-.business-card img
-{
+.business-card img,
+.activity-card img {
     max-width: 100%;
     height: auto;
     margin-bottom: 1rem;
     border-radius: 6px;
 }
 
-.business-card h2
-{
+.business-card h2,
+.activity-card h2 {
     font-size: 1.2rem;
     margin: .5rem 0;
     color: var(--color-primary);
 }
 
-.business-card h3
-{
+.business-card h3,
+.activity-card h3 {
     font-size: 1rem;
     margin: .25rem 0;
     color: var(--color-text-dark);
     text-transform: capitalize;
 }
 
-.business-card p
-{
+.business-card p,
+.activity-card p {
     margin: .25rem 0;
     color: var(--color-text-dark);
 }
 
-.business-card a
-{
+.business-card a,
+.activity-card a {
     display: inline-block;
     margin: .75rem auto 0;
     padding: .5rem 1.5rem;
@@ -378,8 +378,8 @@ h1
     text-align: center;
 }
 
-.business-card a:hover
-{
+.business-card a:hover,
+.activity-card a:hover{
     background: var(--color-secondary);
 }
 
@@ -650,6 +650,12 @@ input:-webkit-autofill
     border: 1px solid #E07A5F;
     border-radius: 6px;
 }
+
+/* =========================================
+   DISCOVER Page
+========================================= */
+
+
 
 /* =========================================
    FOOTER
