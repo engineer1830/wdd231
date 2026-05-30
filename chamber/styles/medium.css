@@ -11,4 +11,7 @@
     .activity-card .activity-photo {
         width: 300px;       
     }
+
+    .activity-card .activity-photo:hover {
+            box-shadow: 0 0 50px #333;   }
 }

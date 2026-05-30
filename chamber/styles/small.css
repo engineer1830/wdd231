@@ -717,6 +717,10 @@ from the .business-card that is used on the directory page */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+.activity-card .activity-photo:hover {
+    box-shadow: none;
+}
+
 
 /* =========================================
    FOOTER
