@@ -20,5 +20,6 @@
 {
     .activity-card .activity-photo:hover {
         box-shadow: none;
+        transform: none;
     }
 }
