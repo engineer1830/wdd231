@@ -21,13 +21,13 @@ export function displayActivities(activities) {
         activityImage.loading = "lazy";
         activityImage.width = 300;
 
-        const activityTitle = document.createElement("h3");
+        const activityTitle = document.createElement("h2");
         activityTitle.textContent = activity.title;
 
         const activityDescription = document.createElement("p");
         activityDescription.textContent = activity.description;
 
-        const activityLocation = document.createElement("p");
+        const activityLocation = document.createElement("div");
         activityLocation.textContent = activity.fullAddress;
 
         const link = document.createElement("a");
