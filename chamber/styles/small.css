@@ -46,8 +46,7 @@ span
     font-size: 1.25rem;
 }
 
-h1
-{
+h1, h2 {
     padding: 20px;
 }
 
@@ -702,6 +701,20 @@ from the .business-card that is used on the directory page */
 .activity-card .activity-location
 {
     grid-area: location;
+}
+
+.visit-message
+{
+    background-color: #f0f8ff;
+    font-weight: 500;
+    color: var(--color-primary);
+    text-align: center;
+    margin: 1rem auto;
+    width: fit-content;
+    padding: 0.75rem 1.25rem;
+    background: var(--color-bg-white);
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 
