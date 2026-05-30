@@ -5,13 +5,19 @@
             "title": "Chandler Ostrich Festival",
             "description": "A signature Chandler event featuring ostrich races, concerts, carnival rides, and local food.",
             "url": "https://ostrichfestival.com/",
+            "image": "images/ostrich-festival.jpg",
+            "thumbnail": "images/ostrich-festival-thumb.jpg",
+            "alt": "Ostrich Festival event in Chandler, Arizona",
             "category": "festival"
         },
         {
             "id": 2,
             "title": "Veterans Oasis Park & Solar System Walk",
             "description": "A desert preserve with a scale-model solar system walk, wildlife viewing, and scenic trails.",
-            "url": "https://www.chandleraz.gov/explore/chandler-parks/guide/veterans-oasis-park",
+            "url": "https://www.chandleraz.gov/explore/chandler-parks/veterans-oasis-park",
+            "image": "images/veterans-oasis-park.jpg",
+            "thumbnail": "images/veterans-oasis-park-thumb.jpg",
+            "alt": "Veterans Oasis Park desert landscape and lake",
             "category": "outdoors"
         },
         {
@@ -19,6 +25,9 @@
             "title": "Arizona Railway Museum",
             "description": "Explore historic locomotives, cabooses, and passenger cars in an interactive rail museum.",
             "url": "https://www.azrymuseum.org/",
+            "image": "images/arizona-railway-museum.jpg",
+            "thumbnail": "images/arizona-railway-museum-thumb.jpg",
+            "alt": "Historic train cars at the Arizona Railway Museum",
             "category": "museum"
         },
         {
@@ -26,6 +35,9 @@
             "title": "Historic Downtown Chandler",
             "description": "Art deco architecture, murals, boutique shops, restaurants, and frequent community events.",
             "url": "https://www.downtownchandler.org/",
+            "image": "images/downtown-chandler.jpg",
+            "thumbnail": "images/downtown-chandler-thumb.jpg",
+            "alt": "Historic Downtown Chandler streetscape",
             "category": "downtown"
         },
         {
@@ -33,6 +45,9 @@
             "title": "Chandler Center for the Arts",
             "description": "A unique rotating-stage theater offering concerts, plays, comedy, and cultural performances.",
             "url": "https://www.chandlercenter.org/",
+            "image": "images/chandler-center-for-the-arts.jpg",
+            "thumbnail": "images/chandler-center-for-the-arts-thumb.jpg",
+            "alt": "Chandler Center for the Arts building exterior",
             "category": "arts"
         },
         {
@@ -40,6 +55,9 @@
             "title": "Chandler Museum & McCullough-Price House",
             "description": "A modern museum with rotating exhibits and a historic 1938 mansion next door.",
             "url": "https://www.chandlermuseum.org/",
+            "image": "images/chandler-museum.jpg",
+            "thumbnail": "images/chandler-museum-thumb.jpg",
+            "alt": "Chandler Museum modern architecture",
             "category": "museum"
         },
         {
@@ -47,6 +65,9 @@
             "title": "Tumbleweed Park & Playtopia",
             "description": "A massive themed playground and park that hosts Chandler’s major seasonal events.",
             "url": "https://www.chandleraz.gov/explore/chandler-parks/tumbleweed-park",
+            "image": "images/tumbleweed-park.jpg",
+            "thumbnail": "images/tumbleweed-park-thumb.jpg",
+            "alt": "Playtopia playground at Tumbleweed Park",
             "category": "park"
         },
         {
@@ -54,6 +75,9 @@
             "title": "Chandler Fashion Center & Outdoor Village",
             "description": "A popular shopping and entertainment district with fountains, art, and seasonal events.",
             "url": "https://www.chandlerfashioncenter.com/",
+            "image": "images/chandler-fashion-center.jpg",
+            "thumbnail": "images/chandler-fashion-center-thumb.jpg",
+            "alt": "Chandler Fashion Center outdoor village area",
             "category": "shopping"
         }
     ]
