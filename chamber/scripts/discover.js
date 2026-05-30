@@ -1,6 +1,6 @@
 import { getActivityData, displayActivities } from "./activity.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
-    const { chandlerActivities } = await getActivityData();
+    const { activities } = await getActivityData();
     displayActivities(chandlerActivities);
 });

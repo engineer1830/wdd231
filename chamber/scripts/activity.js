@@ -2,7 +2,7 @@ export async function getActivityData() {
     const response = await fetch("data/discover.json");
     const data = await response.json();
     return {
-        activities: data.activities,
+        activities: data.chandlerActivities,
     };
 }
 
