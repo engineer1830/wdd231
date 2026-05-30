@@ -20,25 +20,26 @@ export function displayActivities(activities) {
         activityImage.alt = activity.alt;
         activityImage.loading = "lazy";
         activityImage.width = 300;
+        activityImage.classList.add("activity-photo");
 
         const activityTitle = document.createElement("h2");
+        activityTitle.classList.add("activity-title");
         activityTitle.textContent = activity.title;
 
         const activityDescription = document.createElement("p");
+        activityDescription.classList.add("activity-description");
         activityDescription.textContent = activity.description;
 
-        const activityLocation = document.createElement("div");
+        const activityLocation = document.createElement("p");
+        activityLocation.classList.add("activity-location");
         activityLocation.textContent = activity.fullAddress;
 
-        const link = document.createElement("a");
-        link.href = activity.url;
-        link.target = "_blank";
-        link.append(activityImage, activityTitle);
-
-        card.appendChild(link);
+        card.appendChild(activityImage);
+        card.appendChild(activityTitle);
         card.appendChild(activityDescription);
         card.appendChild(activityLocation);
 
         container.appendChild(card);
     });
 }
+

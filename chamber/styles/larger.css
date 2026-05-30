@@ -41,4 +41,20 @@
         max-width: 1400px;
         margin: 2rem auto;
     }
+
+    .activity-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .activity-card {
+        grid-template-areas:
+            "photo name"
+            "photo description"
+            "photo location";
+    }
+
+    .activity-card .activity-photo {
+        width: 300px;
+    }
 }
