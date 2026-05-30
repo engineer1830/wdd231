@@ -38,7 +38,7 @@ export function displayActivities(activities) {
         activityInfo.classList.add("activity-info");
         activityInfo.href = activity.url;
         activityInfo.target = "_blank";
-        activityInfo.textContent = "Learn More";
+        activityInfo.textContent = `Learn More about ${activity.title}`;
 
         card.appendChild(activityImage);
         card.appendChild(activityTitle);
