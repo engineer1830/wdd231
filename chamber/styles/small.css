@@ -379,8 +379,19 @@ h1
 }
 
 .business-card a:hover,
-.activity-card a:hover{
+.activity-card a:hover {
     background: var(--color-secondary);
+}
+
+.activity-card a {
+    background: white;
+    color: var(--color-primary);
+    border: 1px solid var(--color-border);
+}
+
+.activity-card a:hover
+{
+    background: var(--color-accent-gold);
 }
 
 .member-level
