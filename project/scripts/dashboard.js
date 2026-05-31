@@ -1,6 +1,4 @@
-import { getTickerDetails } from "./sectorperf.js";
-
-import { loadTopStocks } from "./sectorperf.js";
+import { loadTopStocks, getTickerDetails } from "./sectorperf.js";
 
 await loadTopStocks();
 
