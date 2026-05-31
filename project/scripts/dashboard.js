@@ -4,44 +4,41 @@ await loadTopStocks();
 
 export async function getWeightedSectorPerformance() {
     const response = await fetch("data/topstocksdata.json");
-    const sectorData = await response.json();
+    const tickerData = await response.json();
 
     const sectorPerformance = {};
+    const sectorMarketCap = {};
 
-    for (const sectorName in sectorData) {
-        const companies = sectorData[sectorName];
+    for (const ticker in tickerData) {
+        const meta = tickerData[ticker];
 
-        let totalWeightedChange = 0;
-        let totalMarketCap = 0;
+        const details = await getTickerDetails(ticker);
 
-        for (const tickerSymbol in companies) {
-            const company = companies[tickerSymbol];
-
-            try {
-                const details = await getTickerDetails(tickerSymbol);
-
-                if (!details || !details.marketCap || !details.regularMarketChangePercent) {
-                    console.warn(`Missing data for ${tickerSymbol}`);
-                    continue;
-                }
-
-                const marketCap = details.marketCap;
-                const changePercent = details.regularMarketChangePercent;
-
-                totalWeightedChange += marketCap * changePercent;
-                totalMarketCap += marketCap;
-
-            } catch (err) {
-                console.error(`Error fetching data for ${tickerSymbol}:`, err);
-            }
+        if (!details || !details.marketCap || !details.regularMarketChangePercent) {
+            console.warn(`Missing data for ${ticker}`);
+            continue;
         }
 
-        const weightedPerformance =
-            totalMarketCap > 0 ? totalWeightedChange / totalMarketCap : 0;
+        const sector = meta.sector;
+        const marketCap = details.marketCap;
+        const changePercent = details.regularMarketChangePercent;
 
-        sectorPerformance[sectorName] = weightedPerformance;
+        if (!sectorPerformance[sector]) {
+            sectorPerformance[sector] = 0;
+            sectorMarketCap[sector] = 0;
+        }
+
+        sectorPerformance[sector] += marketCap * changePercent;
+        sectorMarketCap[sector] += marketCap;
+    }
+
+    for (const sector in sectorPerformance) {
+        const totalCap = sectorMarketCap[sector];
+        sectorPerformance[sector] =
+            totalCap > 0 ? sectorPerformance[sector] / totalCap : 0;
     }
 
     return sectorPerformance;
 }
+
 
