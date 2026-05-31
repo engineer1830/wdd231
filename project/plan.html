@@ -1,17 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<h1>Site Name:  Stock Market Sectors and Data</h1>
-<h2>Site Purpose</h2>
-<p>The purpose for this website is that I have been creating (on my own time) a personal finance website to teach my children and provide financial resources and tools. This will becomes one more point of information for them as well.
-The reason that I chose this project is that I’m interested in the financial markets and by building such a site, it
-combines my interest with the learning of dynamic websites.
-</p>
-<h2>Desktop & Mobile Wireframe</h2>
-<h3>Some zoom may be required to read all elements of embedded item</h3>
-<p>There will be 3 pages in this project:  Index (home), Topstocks/Data calls, Dashboard</p>
-<p>Use the dropdown within the embedded element to toggle through all 3 wireframe plans </p>
-<p>. . . desktop on the left with mobile on the right.  Black elements inside the boxes capture the DOM created cards from js that will be in the page</p>
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
-    src="https://embed.figma.com/design/A1jbRAiVjgjWoqFT40JXCp/231-project-wireframe?embed-host=share"
-    allowfullscreen></iframe>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 - Final Project Plan</title>
+    <meta name="description" content="WDD 231 - Final Project Plan for Jesse Hamilton work in 26B3">
+    <meta name="author" content="Jesse Hamilton">
+    <meta property="og:title" content="Final Project Homepage for WDD231 for JHamilton">
+    <meta property="og:description"
+        content="Project Homepage for class assignment for Jesse Hamilton work in WDD231 26B3">
+    <meta property="og:image" content="https://engineer1830.github.io/wdd231/images/wavesofgrain.webp">
+    <meta property="og:url" content="https://engineer1830.github.io/wdd231/index.html">
 
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="styles/plan.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="site-title">Stock Market Sectors</div>
+        <button type="button" id="menu" aria-label="Toggle navigation menu"></button>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html" id="home">Home</a></li>
+                <li><a href="topstocks.html" id="top" target="_blank">Top Stocks by Sector</a></li>
+                <li><a href="dashboard.html" id="dash" target="_blank">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>WDD231 Project Plan</h1>
+    <main>
+        <h2>Required Info Per Rubric</h2>
+        <div class="group1">
+        <h3>Site Name</h3>
+            <p>Stock Market Sectors and Data</p>
+        </div>
+        <div class="group1">
+        <h3>Site Purpose</h3>
+            <p>The purpose for this website is that I have been creating (on my own time) a personal finance website to teach my 
+                children and provide financial resources and tools. This will becomes one more point of information for them as well.
+                The reason that I chose this project is that I’m interested in the financial markets and by building such a site, it 
+                combines my interest with the learning of dynamic websites.
+            </p>
+        </div>
+        <div class="group2">
+        <h3>Scenarios</h3>
+        <ol>
+            <li>What are the sectors of the stock market?</li>
+            <li>What are the top companies in each sector by market capitalization?</li>
+            <li>What is the market cap of the top 5 companies of each sector?</li>
+            <li>What are the fundamentals of a specific company by stock ticker?</li>
+        </ol>
+        </div>
+        <div class="group3">
+        <h3>Color Schema</h3>
+        <p>This block's background color is only for helping these colors resolve</p>
+        <ul>
+            <li class="banner-color">Banner Color</li>
+            <li class="banner-text">Banner Text</li>
+            <li class="sector-card">Sector Card</li>
+            <li class="macro-card">Macro Group Card</li>
+        </ul>
+        <p><em><strong>This plan site uses the designed header for the project website for demonstration of the colors and the links are active to the current progress on the project.</strong></em></p>
+        </div>
+        <div class="group1">
+        <h3>Typography</h3>
+        <p>This website uses the Google Font Roboto.  Font weight 400 is standard with 700 for emphasis.</p>
+        </div>
+        <div class="group1">
+        <h3>Desktop & Mobile Wireframe</h3>
+        <h4>Some zoom may be required to read all elements of embedded item</h4>
+        <p>There will be 3 pages in this project: Index (home), Topstocks/Data calls, Dashboard</p>
+        <p>Use the dropdown within the embedded element to toggle through all 3 wireframe plans </p>
+        <p class="lastone">. . . desktop on the left with mobile on the right. Black elements inside the boxes capture the DOM created cards
+            from js that will be in the page</p>
+            <iframe class="figma-embed" width="800" height="450"
+                src="https://embed.figma.com/design/A1jbRAiVjgjWoqFT40JXCp/231-project-wireframe?embed-host=share" allowfullscreen>
+            </iframe>        
+        </div>
+    </main>
+    <footer class="footer">
+        <p>WDD231 Project Plan | Jesse Hamilton | USA</p>
+    </footer>
+</body>
+
+</html>
