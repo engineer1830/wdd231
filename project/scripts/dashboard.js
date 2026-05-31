@@ -9,12 +9,21 @@ export async function getWeightedSectorPerformance() {
     const sectorPerformance = {};
     const sectorMarketCap = {};
 
-    for (const ticker in tickerData) {
+    const validTickers = Object.keys(tickerData).filter(ticker => {
+        return ticker.length > 1 && tickerData[ticker]?.sector;
+    });
+
+    for (const ticker of validTickers) {
         const meta = tickerData[ticker];
 
         const details = await getTickerDetails(ticker);
 
-        if (!details || !details.marketCap || !details.regularMarketChangePercent) {
+        if (
+            !details ||
+            !details.marketCap ||
+            details.regularMarketChangePercent === null ||
+            details.regularMarketChangePercent === undefined
+        ) {
             console.warn(`Missing data for ${ticker}`);
             continue;
         }
@@ -40,5 +49,6 @@ export async function getWeightedSectorPerformance() {
 
     return sectorPerformance;
 }
+
 
 
