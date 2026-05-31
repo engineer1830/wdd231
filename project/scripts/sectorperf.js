@@ -1,16 +1,15 @@
 let topStocksBySector = {};
 
-async function loadTopStocks() {
+export async function loadTopStocks() {
     const res = await fetch("data/topstocks.json");
     topStocksBySector = await res.json();
 }
-loadTopStocks();
 
-function getTickersForSector(sector) {
+export function getTickersForSector(sector) {
     return topStocksBySector[sector] || [];
 }
 
-async function getTickerDetails(ticker) {
+export async function getTickerDetails(ticker) {
     try {
         const quoteRes = await fetch(
             `https://hamiltondesigns.vercel.app/api/stock_details?ticker=${ticker}`
@@ -26,7 +25,9 @@ async function getTickerDetails(ticker) {
             symbol: ticker,
             name: q.shortName || ticker,
             price,
-            marketCap: q.marketCap ?? computedCap
+            marketCap: q.marketCap ?? computedCap,
+            regularMarketChangePercent: q.regularMarketChangePercent ?? 0
+
         };
     } catch (err) {
         console.error("Quote fetch failed for", ticker, err);
@@ -34,41 +35,8 @@ async function getTickerDetails(ticker) {
     }
 }
 
-async function getTop5Stocks(sector) {
+export async function getTop5Stocks(sector) {
     const tickers = getTickersForSector(sector);
     const details = await Promise.all(tickers.map(getTickerDetails));
     return details.sort((a, b) => b.marketCap - a.marketCap).slice(0, 5);
 }
-
-document.getElementById("fetchBtn").addEventListener("click", async () => {
-    const sector = document.getElementById("sectorSelect").value;
-    const resultsDiv = document.getElementById("results");
-    resultsDiv.innerHTML = "<p>Loading...</p>";
-
-    const stocks = await getTop5Stocks(sector);
-    if (!stocks.length) {
-        resultsDiv.innerHTML = `<p>No results found for ${sector}</p>`;
-        return;
-    }
-
-    resultsDiv.innerHTML = `
-    <h3>Top 5 Stocks in ${sector}</h3>
-    <div class="stock-grid">
-      ${stocks
-            .map(
-                s => `
-          <div class="stock-card">
-            <div class="stock-header">
-              <h4>${s.name} (${s.symbol})</h4>
-            </div>
-            <p class="sector-label">${sector}</p>
-            <p><strong>Price:</strong> $${s.price.toFixed(2)}</p>
-            <p><strong>Market Cap:</strong> ${(s.marketCap / 1e9).toFixed(1)}B</p>
-          </div>
-        `
-            )
-            .join("")}
-    </div>
-  `;
-});
-

@@ -1,4 +1,4 @@
-import { getWeightedSectorPerformance } from "./weightedSectorPerformance.js";
+import { getWeightedSectorPerformance } from "./dashboard.js";
 
 function createSectorTile(sectorName, value) {
     const tile = document.createElement("div");
