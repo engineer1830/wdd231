@@ -8,10 +8,14 @@ function createSectorTile(sectorName, value) {
         value > 0 ? "up" : value < 0 ? "down" : "flat";
     tile.classList.add(trendClass);
 
+    // ⭐ Adaptive precision logic
+    const decimals = Math.abs(value) < 0.1 ? 5 : 3;
+    const formattedValue = value.toFixed(decimals);
+
     tile.innerHTML = `
         <div class="sector-tile-header">
             <h3>${sectorName}</h3>
-            <span class="sector-change">${value.toFixed(4)}%</span>
+            <span class="sector-change">${formattedValue}%</span>
         </div>
 
         <div class="sparkline" id="spark-${sectorName.replace(/\s+/g, "-")}"></div>
@@ -19,6 +23,7 @@ function createSectorTile(sectorName, value) {
 
     return tile;
 }
+
 
 function updateSectorTile(sectorName, value) {
     const container = document.querySelector("#sectorDashboard");
