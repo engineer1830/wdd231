@@ -8,8 +8,7 @@ function createSectorTile(sectorName, value) {
         value > 0 ? "up" : value < 0 ? "down" : "flat";
     tile.classList.add(trendClass);
 
-    // ⭐ Adaptive precision logic
-    const decimals = Math.abs(value) < 0.1 ? 5 : 3;
+    const decimals = Math.abs(value) < 0.1 ? 5 : 2;
     const formattedValue = value.toFixed(decimals);
 
     tile.innerHTML = `
