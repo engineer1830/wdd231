@@ -11,7 +11,7 @@ function createSectorTile(sectorName, value) {
     tile.innerHTML = `
         <div class="sector-tile-header">
             <h3>${sectorName}</h3>
-            <span class="sector-change">${value.toFixed(2)}%</span>
+            <span class="sector-change">${value.toFixed(4)}%</span>
         </div>
 
         <div class="sparkline" id="spark-${sectorName.replace(/\s+/g, "-")}"></div>
