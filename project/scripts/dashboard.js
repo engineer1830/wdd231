@@ -1,4 +1,4 @@
-import { getTickerDetails } from "./sectorperform.js";
+import { getTickerDetails } from "./sectorperf.js";
 
 import { loadTopStocks } from "./sectorperf.js";
 
