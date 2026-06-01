@@ -25,6 +25,8 @@
     <script type="module" src="scripts/sectorperf.js"></script>
     <script type="module" src="scripts/dash.js"></script>
     <script type="module" src="scripts/dashboard.js"></script>
+    <script type="module" src="scripts/chart.js"></script>
+    <script type="module" src="scripts/colors.js"></script>
 
 </head>
 
@@ -48,7 +50,7 @@
         <img class="side-img" src="images/dashboard-small.webp" alt="Logo image for stock market dashboard" width="250">
     </div>
     <main>
-        <h1>Sector Performance Overview</h1>
+        <h1>Daily Sector Performance Overview</h1>
         <h2>Sector Dashboard</h2>
         <h3>This dashboard is representative only.  It is built using only free APIs and as such, not all financial 
             fundamentals are available.  These calculations are based on the cumulative performance of the top 15 stocks 
@@ -56,7 +58,12 @@
         <p><em>Note, dashboard loading time may take 30-45 seconds as it is calculating based on the top 15 stocks of 
             each sector.</em></p>
         <div id="sectorDashboard" class="sector-dashboard"></div>
-
+        <section>
+        <script type="module">
+            import { initSectorChart } from "./chart.js";
+            initSectorChart();
+        </script>
+        </section>
     </main>
     <footer class="footer">
         <p>&copy; <span id="currentyear"></span> | Jesse Hamilton | USA</p>
