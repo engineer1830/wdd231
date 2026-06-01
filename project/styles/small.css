@@ -252,6 +252,21 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
+/* Visit Message */
+
+.visit-message {
+    background-color: #f0f8ff;
+    font-weight: 500;
+    color: var(--color-primary);
+    text-align: center;
+    margin: 1rem auto;
+    width: fit-content;
+    padding: 0.75rem 1.25rem;
+    background: var(--color-bg-white);
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
 /* Button formatting */
 .view-toggle {
     display: flex;
@@ -290,30 +305,22 @@ h2 {
     grid-template-columns: 1fr;
 }
 
-/* .inquiry-layout {
-    grid-template-columns: 2fr 1fr;
-    align-items: start;
-} */
-
 .inquiry-form-column {
     margin-left: 2rem;
 }
 
-form
-{
+form {
     margin: 1rem 2%;
 }
 
-label
-{
+label {
     display: block;
     font-size: .8rem;
     color: purple;
     padding-top: .2rem;
 }
 
-.inquiry-form-column h3
-{
+.inquiry-form-column h3 {
     font-size: 1rem;
     color: blue;
     margin: 1.5rem 0.2rem;
@@ -323,11 +330,10 @@ label
 }
 
 form input[type=text],
-/* form input[type=date], */
+form input[type=date],
 form input[type=email],
 form select,
-form textarea
-{
+form textarea {
     display: block;
     width: 250px;
     margin: .1rem 0 1rem;
@@ -339,34 +345,28 @@ form textarea
     color: #3D405B;
 }
 
-form textarea
-{
+form textarea {
     margin-top: .5rem;
 }
 
-form label:has(textarea)
-{
+form label:has(textarea) {
     margin-top: 1rem;
 }
 
-form input:required
-{
+form input:required {
     border-left-color: #d70000;
 }
 
-form input:focus
-{
+form input:focus {
     border-left-color: black;
     outline: none;
 }
 
-form input:required:valid
-{
+form input:required:valid {
     border-left-color: green;
 }
 
-form input[type=submit]
-{
+form input[type=submit] {
     border: none;
     background-color: #3D405B;
     color: white;
@@ -377,13 +377,11 @@ form input[type=submit]
     appearance: none;
 }
 
-input:-webkit-autofill
-{
+input:-webkit-autofill {
     -webkit-text-fill-color: #3D405B;
 }
 
-#results
-{
+#results {
     background-color: #F4F1DE;
     padding: 0 1rem;
     border: 1px solid #E07A5F;
@@ -392,8 +390,7 @@ input:-webkit-autofill
 
 /* TopStocks Display */
 
-.sr-only
-{
+.sr-only {
     position: absolute;
     width: 1px;
     height: 1px;
