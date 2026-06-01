@@ -1,5 +1,9 @@
 import { getWeightedSectorPerformance } from "./dashboard.js";
 
+import { initSectorChart } from "./chart.js";
+
+initSectorChart();
+
 function createSectorTile(sectorName, value) {
     const tile = document.createElement("div");
     tile.classList.add("sector-tile");
