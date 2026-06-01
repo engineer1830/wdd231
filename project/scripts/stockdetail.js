@@ -45,6 +45,7 @@ export function renderStockDetails(details) {
 
     container.innerHTML = `
         <h3>${details.name} (${details.symbol})</h3>
+        <p><strong>Price:</strong> $${details.price?.toFixed(2) || "N/A"}</p>
         <p><strong>Sector:</strong> ${details.sector}</p>
         <p><strong>Industry:</strong> ${details.industry}</p>
 
