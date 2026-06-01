@@ -421,6 +421,29 @@ h3 {
     background: #f4f4f4;
 }
 
+.chart-container
+{
+    position: relative;
+    height: 450px;
+    width: 100%;
+}
+
+@media (max-width: 900px)
+{
+    .chart-container
+    {
+        height: 350px;
+    }
+}
+
+@media (max-width: 600px)
+{
+    .chart-container
+    {
+        height: 250px;
+    }
+}
+
 /* Hiding the chart on mobile because it is too dense for mobile display */
 @media (max-width: 600px)
 {
