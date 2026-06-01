@@ -1,3 +1,5 @@
+document.getElementById("timestamp").value = new Date().toISOString();
+
 import { getSectorsData, displaySectors, displayMacroGroups } from "./sectordata.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
