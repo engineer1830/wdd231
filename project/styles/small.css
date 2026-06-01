@@ -440,6 +440,27 @@ h3 {
     width: 100%;
 }
 
+@media (max-width: 800px)
+{
+    #stockLayout
+    {
+        grid-template-columns: 1fr;
+    }
+
+    #leftColumn
+    {
+        padding-right: 0;
+        border-right: none;
+    }
+
+    #rightColumn
+    {
+        padding-left: 0;
+        border-top: 2px solid #ddd;
+        padding-top: 20px;
+    }
+}
+
 @media (max-width: 900px)
 {
     .chart-container
