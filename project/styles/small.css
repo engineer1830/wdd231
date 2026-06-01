@@ -372,6 +372,32 @@ h2 {
 
 /* Dashboard Formatting */
 
+.info-btn {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.6rem 1.4rem;
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.info-btn:hover {
+    background: #147086;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.info-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
 #sectorTiles, #sectorChartSection {
     border: 1px solid black;
     border-radius: 8px;
