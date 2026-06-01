@@ -25,8 +25,6 @@
     <script type="module" src="scripts/sectorperf.js"></script>
     <script type="module" src="scripts/dash.js"></script>
     <script type="module" src="scripts/dashboard.js"></script>
-    <script type="module" src="scripts/chart.js"></script>
-    <script type="module" src="scripts/colors.js"></script>
 
 </head>
 
@@ -52,19 +50,41 @@
     <main>
         <h1>Daily Sector Performance Overview</h1>
         <h2>Sector Dashboard</h2>
-        <h3>This dashboard is representative only.  It is built using only free APIs and as such, not all financial 
-            fundamentals are available.  These calculations are based on the cumulative performance of the top 15 stocks 
-            in each sector and comparison to the broader market segments will have variations.</h3>
-        <p><em>Note, dashboard loading time may take 30-45 seconds as it is calculating based on the top 15 stocks of 
-            each sector.</em></p>
+        <h3>
+            This dashboard is representative only. It is built using only free APIs and as such,
+            not all financial fundamentals are available. These calculations are based on the
+            cumulative performance of the top 15 stocks in each sector and comparison to the
+            broader market segments will have variations.
+        </h3>
+        <p>
+            <em>Note, dashboard loading time may take 30-45 seconds as it is calculating based
+                on the top 15 stocks of each sector.</em>
+        </p>
+    
         <div id="sectorDashboard" class="sector-dashboard"></div>
-        <section>
+    
+        <section id="sectorChartSection">
+            <h2>12‑Month Sector Performance</h2>
+    
+            <div id="rangeButtons">
+                <button data-range="1M">1M</button>
+                <button data-range="3M">3M</button>
+                <button data-range="6M">6M</button>
+                <button data-range="12M" class="active">12M</button>
+                <button data-range="YTD">YTD</button>
+            </div>
+    
+            <div class="chart-container">
+                <canvas id="sectorChart"></canvas>
+            </div>
+        </section>
+    
         <script type="module">
             import { initSectorChart } from "./chart.js";
             initSectorChart();
         </script>
-        </section>
     </main>
+    
     <footer class="footer">
         <p>&copy; <span id="currentyear"></span> | Jesse Hamilton | USA</p>
         <p>Last Modification: <span id="lastModified"></span></p>
