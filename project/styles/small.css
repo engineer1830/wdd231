@@ -360,6 +360,12 @@ h2 {
 
 /* Dashboard Formatting */
 
+h3, p {
+    text-align: center;
+}
+
+
+
 .sector-dashboard {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
