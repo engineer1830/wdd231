@@ -4,7 +4,7 @@ let fullData = {};
 let chart = null;
 
 export async function initSectorChart() {
-    const res = await fetch("/api/12month");
+    const res = await fetch("https://hamiltondesigns.vercel.app/api/12month");
     const data = await res.json();
 
     fullData = Object.fromEntries(
