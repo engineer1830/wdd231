@@ -1,4 +1,4 @@
-import { sectorColors } from "/scripts/colors.js";
+import { sectorColors } from "./scripts/colors.js";
 
 let fullData = {};
 let chart = null;
