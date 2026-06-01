@@ -64,8 +64,38 @@
             </div>
             <div id="directory" class="gallery-grid"></div>
 
-            <h3 class="summary">Resources of this website -- need to build cards as well work has stopped at this point
-                of the page</h3>
+            <h4 class="inquiry">Resources of this website -- if you have a question or if you'd like more information about financial markets, complete this form and you'll receive a response.</h4>
+                <div class="inquiry-layout">
+                    <div class="inquiry-form-column">
+                        <form method="GET" action="thankyou.html" class="designOne">
+                
+                            <label>First Name <input type="text" name="first" required autocomplete="given-name"
+                                    title="Your First Name"></label>
+                            <label>Last Name <input type="text" name="last" required autocomplete="family-name"
+                                    title="Your Last Name"></label>
+                
+                            <label>Email <input type="email" name="email" required placeholder="john89@gmail.com" title="Your Email"
+                                    autocomplete="email"></label>
+                
+                            <label>Business/Organization Name <input type="text" name="organization" required
+                                    autocomplete="organization" title="Org Title"></label>
+                
+                            <h3>Select Topic</h3>
+                
+                            <label><input type="radio" name="level" value="markets" checked> Financial Markets</label>
+                            <label><input type="radio" name="level" value="investments"> Investments</label>
+                            <label><input type="radio" name="level" value="company"> Specific Company</label>
+                            <label><input type="radio" name="level" value="other"> Other</label>
+                
+                            <!-- <dialog id="dialogBox">
+                                <p id="dialogBoxText"></p><button id="closeButton">Close</button>
+                            </dialog> -->
+                            <label>Inquiry Detail <textarea name="description" rows="4" cols="40" required
+                                    autocomplete="inquiry" title="inquiry"></textarea></label>
+                            <input type="hidden" id="timestamp" name="timestamp">
+                
+                            <input type="submit" value="Inquire Now">
+                        </form>  </div>
         </section>
     </main>
     <footer class="footer">

@@ -282,7 +282,115 @@ h2 {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }
 
-/* TopStocks Dispay */
+/* Form Display */
+
+.inquiry-layout {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+/* .inquiry-layout {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+} */
+
+.inquiry-form-column {
+    margin-left: 2rem;
+}
+
+form
+{
+    margin: 1rem 2%;
+}
+
+label
+{
+    display: block;
+    font-size: .8rem;
+    color: purple;
+    padding-top: .2rem;
+}
+
+.inquiry-form-column h3
+{
+    font-size: 1rem;
+    color: blue;
+    margin: 1.5rem 0.2rem;
+    margin-bottom: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+form input[type=text],
+/* form input[type=date], */
+form input[type=email],
+form select,
+form textarea
+{
+    display: block;
+    width: 250px;
+    margin: .1rem 0 1rem;
+    padding: .3rem;
+    border: 1px solid #999;
+    border-radius: 4px;
+    border-left: 5px solid #555;
+    font-size: 1rem;
+    color: #3D405B;
+}
+
+form textarea
+{
+    margin-top: .5rem;
+}
+
+form label:has(textarea)
+{
+    margin-top: 1rem;
+}
+
+form input:required
+{
+    border-left-color: #d70000;
+}
+
+form input:focus
+{
+    border-left-color: black;
+    outline: none;
+}
+
+form input:required:valid
+{
+    border-left-color: green;
+}
+
+form input[type=submit]
+{
+    border: none;
+    background-color: #3D405B;
+    color: white;
+    border-radius: 1rem;
+    padding: .75rem 1.5rem;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    appearance: none;
+}
+
+input:-webkit-autofill
+{
+    -webkit-text-fill-color: #3D405B;
+}
+
+#results
+{
+    background-color: #F4F1DE;
+    padding: 0 1rem;
+    border: 1px solid #E07A5F;
+    border-radius: 6px;
+}
+
+/* TopStocks Display */
 
 .sr-only
 {
