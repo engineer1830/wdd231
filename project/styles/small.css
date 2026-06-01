@@ -398,6 +398,36 @@ h2 {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
+dialog
+{
+    padding: 1.5rem 2rem;
+    border: none;
+    border-radius: 12px;
+    max-width: 450px;
+    width: 90%;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    background: white;
+}
+
+dialog::backdrop
+{
+    background: rgba(0, 0, 0, 0.55);
+}
+
+#closeButton
+{
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
 #sectorTiles, #sectorChartSection {
     border: 1px solid black;
     border-radius: 8px;
