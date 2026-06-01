@@ -420,7 +420,24 @@ h3 {
     background: #f4f4f4;
 }
 
-/* Sparkline container */
-.sparkline {
-    height: 40px;
+/* Hiding the chart on mobile because it is too dense for mobile display */
+@media (max-width: 600px)
+{
+    #sectorChartSection
+    {
+        display: none;
+    }
+}
+
+@media (max-width: 600px)
+{
+    #sectorChartSection::before
+    {
+        content: "Chart not available on mobile — view on desktop for full detail.";
+        display: block;
+        padding: 1rem;
+        text-align: center;
+        font-style: italic;
+        color: #666;
+    }
 }
