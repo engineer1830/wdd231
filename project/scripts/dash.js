@@ -53,3 +53,16 @@ async function initDashboard() {
 
 initDashboard();
 
+document.addEventListener("DOMContentLoaded", () => {
+
+    const dialogBox = document.getElementById("dialogBox");
+    const dialogBoxText = document.getElementById("dialogBoxText");
+
+    const modalText = "This dashboard is representative only.It is built using only free APIs and as such, not all financial fundamentals are available.These calculations are based on the cumulative performance of the top 15 stocks in each sector and comparison to the broader market segments will have variations.";
+
+
+    document.getElementById("closeButton").addEventListener("click", () => {
+        dialogBox.close();
+    });
+
+});
