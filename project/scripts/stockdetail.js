@@ -13,8 +13,8 @@ export async function getStockDetail(ticker) {
 
         //Fetch Yahoo price
         const yahooRes = await fetch(
-            `https://hamiltondesigns.vercel.app/api/yahoo_quote?ticker=${ticker}`
-        );
+            `https://hamiltondesigns.vercel.app/api/stock_details?ticker=${ticker}`
+        );        
         const yahoo = await yahooRes.json();
 
         return {
