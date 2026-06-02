@@ -1,6 +1,3 @@
-
-/* This is the original larger file */
-
 @media (min-width: 768px)
 {
     .hero
@@ -40,6 +37,10 @@
         width: auto;
         justify-content: space-between;
     }
+
+        .navigation a {
+            color: var(--color-text-light);
+        }
 
     .hero
     {

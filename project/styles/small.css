@@ -75,11 +75,9 @@ main {
     color: lightblue;
 }
 
-.navigation a:active {
-    color: white;
-}
-
-.navigation a.active {
+.navigation a.active
+{
+    color: var(--color-text-light);
     border-bottom: 3px solid var(--color-text-light);
 }
 
