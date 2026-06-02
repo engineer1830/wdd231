@@ -75,15 +75,14 @@ main {
     color: lightblue;
 }
 
-.navigation a.active
-{
+.navigation a.active {
     color: var(--color-text-light);
     border-bottom: 3px solid var(--color-text-light);
 }
 
 @media (max-width: 767px) {
-    header
-        {
+
+    header{
             position: relative;
         }
 
@@ -149,16 +148,14 @@ main {
     }
 }
 
-@media (min-width: 768px) and (max-width: 980px)
-{
-    header
-    {
+@media (min-width: 768px) and (max-width: 980px) {
+
+    header {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .navigation
-    {
+    .navigation {
         margin-top: 0.5rem;
         justify-content: flex-start;
     }
@@ -310,8 +307,7 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
-.sector-header
-{
+.sector-header {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -339,8 +335,6 @@ h2 {
     color: #1e6bb8;
     margin-bottom: 0.5rem;
 }
-
-/* Visit Message */
 
 .visit-message {
     background-color: #f0f8ff;
@@ -591,8 +585,7 @@ input:-webkit-autofill {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
-dialog
-{
+dialog {
     padding: 1.5rem 2rem;
     border: none;
     border-radius: 12px;
@@ -605,13 +598,11 @@ dialog
     background: white;
 }
 
-dialog::backdrop
-{
+dialog::backdrop {
     background: rgba(0, 0, 0, 0.55);
 }
 
-#closeButton
-{
+#closeButton {
     margin-top: 1rem;
     padding: 0.5rem 1rem;
     background: var(--color-primary);
@@ -682,63 +673,55 @@ h3 {
     background: #f4f4f4;
 }
 
-.chart-container
-{
+.chart-container {
     position: relative;
     height: 450px;
     width: 100%;
 }
 
-@media (max-width: 650px)
-{
-    #stockLayout
-    {
+@media (max-width: 650px) {
+
+    #stockLayout {
         grid-template-columns: 1fr;
     }
 
-    #leftColumn
-    {
+    #leftColumn {
         padding-right: 0;
         border-right: none;
     }
 
-    #rightColumn
-    {
+    #rightColumn {
         padding-left: 0;
         border-top: 2px solid #ddd;
         padding-top: 20px;
     }
 }
 
-@media (max-width: 900px)
-{
-    .chart-container
-    {
+@media (max-width: 900px) {
+
+    .chart-container {
         height: 350px;
     }
 }
 
-@media (max-width: 600px)
-{
-    .chart-container
-    {
+@media (max-width: 600px) {
+
+    .chart-container {
         height: 250px;
     }
 }
 
 /* Hiding the chart on mobile because it is too dense for mobile display */
-@media (max-width: 600px)
-{
-    #sectorChartSection
-    {
+@media (max-width: 600px) {
+
+    #sectorChartSection {
         display: none;
     }
 }
 
-@media (max-width: 600px)
-{
-    #sectorChartSection::before
-    {
+@media (max-width: 600px) {
+
+    #sectorChartSection::before {
         content: "Chart not available on mobile — view on desktop for full detail.";
         display: block;
         padding: 1rem;

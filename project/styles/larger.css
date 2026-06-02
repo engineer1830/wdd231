@@ -1,7 +1,6 @@
-@media (min-width: 768px)
-{
-    .hero
-    {
+@media (min-width: 768px) {
+    
+    .hero {
         max-width: 1200px;
         margin: 1rem auto;
         max-height: 350px;
@@ -9,14 +8,11 @@
         object-position: bottom;
         width: 100%;
     }
-
-    .hamburger
-    {
+    .hamburger {
         display: none;
     }
 
-    .navigation
-    {
+    .navigation {
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -26,8 +22,7 @@
         padding: 0;
     }
 
-    .navigation ul
-    {
+    .navigation ul {
         display: flex;
         flex-direction: row;
         gap: 1.75rem;
@@ -38,19 +33,26 @@
         justify-content: space-between;
     }
 
-        .navigation a {
-            color: var(--color-text-light);
-        }
+    .navigation a {
+        color: var(--color-text-light);
+    }
 
-    .hero
-    {
+    .navigation a:hover {
+        color: lightblue;
+    }
+
+    .navigation a.active {
+        color: var(--color-text-light);
+        border-bottom: 3px solid var(--color-text-light);
+    }
+
+    .hero {
         width: 100%;
         max-width: 1400px;
         margin: 1rem auto;
     }
 
-    .grid
-    {
+    .grid {
         max-width: 1400px;
         margin: 2rem auto;
     }
