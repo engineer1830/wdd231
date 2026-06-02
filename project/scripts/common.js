@@ -11,6 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const navlinks = document.querySelector('#nav-bar');
 
     navbutton.addEventListener('click', () => {
+
+        console.log("navlinks:", navlinks);
+        console.log("navbutton:", navbutton);
+
         navlinks.classList.toggle('show');
         navbutton.classList.toggle('show');
     });
