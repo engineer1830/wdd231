@@ -1,3 +1,5 @@
+console.log(">>> Loaded UPDATED stockdetails.js");
+
 export async function getStockDetail(ticker) {
     try {
         // Fetch Alpha fundamentals
