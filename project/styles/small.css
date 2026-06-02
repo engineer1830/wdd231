@@ -174,7 +174,22 @@ main {
         padding: 0;
     }
 
-    .navigation a {
+        .navigation a:link,
+        .navigation a:visited {
+            color: var(--color-text-dark);
+            text-decoration: none;
+        }
+    
+        .navigation a:hover {
+            color: var(--color-primary);
+        }
+    
+        .navigation a.active {
+            color: var(--color-primary);
+            border-bottom: 3px solid var(--color-primary);
+        }
+
+    /* .navigation a {
         color: var(--color-text-dark);
     }
     
@@ -185,7 +200,7 @@ main {
     .navigation a.active {
         color: var(--color-primary);
         border-bottom: 3px solid var(--color-primary);   
-    }
+    } */
 
     .hamburger {
         margin-left: auto;
