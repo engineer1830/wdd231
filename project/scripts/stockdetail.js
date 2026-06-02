@@ -49,45 +49,6 @@ export async function getStockDetail(ticker) {
 }
 
 
-// Old version before updating for Yahoo for price and Alpha for fundamentals
-
-// export async function getStockDetail(ticker) {
-//     try {
-//         const res = await fetch(
-//             `https://hamiltondesigns.vercel.app/api/alpha_details?ticker=${ticker}`
-//         );
-
-//         const data = await res.json();
-
-//         if (data.error) {
-//             console.warn(`Alpha details missing for ${ticker}:`, data.error);
-//             return { symbol: ticker };
-//         }
-
-//         return {
-//             symbol: ticker,
-//             name: data.name,
-//             description: data.description,
-//             sector: data.sector,
-//             industry: data.industry,
-//             marketCapAlpha: data.marketCap,
-//             peRatio: data.peRatio,
-//             eps: data.eps,
-//             dividendYield: data.dividendYield,
-//             profitMargin: data.profitMargin,
-//             returnOnEquity: data.returnOnEquity,
-//             returnOnAssets: data.returnOnAssets,
-//             revenueTTM: data.revenueTTM,
-//             fiftyTwoWeekHigh: data.fiftyTwoWeekHigh,
-//             fiftyTwoWeekLow: data.fiftyTwoWeekLow
-//         };
-
-//     } catch (err) {
-//         console.error("Alpha fetch failed for", ticker, err);
-//         return { symbol: ticker };
-//     }
-// }
-
 export function renderStockDetails(details) {
     const container = document.getElementById("stockDetailsPanel");
 

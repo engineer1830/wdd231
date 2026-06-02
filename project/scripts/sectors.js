@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let message = "";
 
     if (!lastVisit) {
-        message = "Welcome! Let us know if you have any questions.";
+        message = "Welcome! Let us know if you have any questions by using the form below.";
     } else {
         const days = daysBetween(Number(lastVisit), now);
         if (days < 1) {
