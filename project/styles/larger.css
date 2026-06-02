@@ -33,15 +33,15 @@
         justify-content: space-between;
     }
 
-    header .navigation a {
+    header nav .navigation a {
         color: var(--color-text-light);
     }
 
-    header .navigation a:hover {
+    header nav .navigation a:hover {
         color: lightblue;
     }
 
-    header .navigation a.active {
+    header nav .navigation a.active {
         color: var(--color-text-light);
         border-bottom: 3px solid var(--color-text-light);
     }
