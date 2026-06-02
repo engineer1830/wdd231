@@ -479,15 +479,26 @@ h1, h2 {
 /* =========================================
    JOIN PAGE
 ========================================= */
-.join-layout
-{
+.join-layout {
     display: grid;
     gap: 2rem;
     grid-template-columns: 1fr;
 }
 
-@media (min-width:768px)
-{
+.modal-content {
+    margin: 0 auto;
+    max-width: 90%;
+    text-align: left;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width:768px) {
+
     .join-layout
     {
         grid-template-columns: 2fr 1fr;
@@ -495,21 +506,19 @@ h1, h2 {
     }
 }
 
-.join-form-column
-{
+.join-form-column {
     margin-left: 2rem;
 }
 
-.membership-column
-{
+.membership-column {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
 /* Animation */
-@keyframes fadeIn
-{
+@keyframes fadeIn {
+
     from
     {
         opacity: 0;
@@ -523,8 +532,7 @@ h1, h2 {
     }
 }
 
-.membership-card
-{
+.membership-card {
     background: #FDF5E2;
     padding: 1rem;
     border-radius: 8px;
@@ -534,35 +542,29 @@ h1, h2 {
     animation: fadeIn 4s ease-out both;
 }
 
-.membership-card:nth-child(1)
-{
+.membership-card:nth-child(1) {
     animation-delay: .1s;
 }
 
-.membership-card:nth-child(2)
-{
+.membership-card:nth-child(2) {
     animation-delay: .2s;
 }
 
-.membership-card:nth-child(3)
-{
+.membership-card:nth-child(3) {
     animation-delay: .3s;
 }
 
-.membership-card:nth-child(4)
-{
+.membership-card:nth-child(4) {
     animation-delay: .4s;
 }
 
-.card-header
-{
+.card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.info-btn
-{
+.info-btn {
     background: none;
     border: none;
     font-size: .75rem;
@@ -571,21 +573,18 @@ h1, h2 {
 }
 
 /* Form */
-form
-{
+form {
     margin: 1rem 2%;
 }
 
-label
-{
+label {
     display: block;
     font-size: .8rem;
     color: purple;
     padding-top: .2rem;
 }
 
-h3
-{
+h3 {
     font-size: 1rem;
     color: blue;
     margin: 1.5rem 0 .2rem;
@@ -597,8 +596,7 @@ form input[type=tel],
 form input[type=date],
 form input[type=email],
 form select,
-form textarea
-{
+form textarea {
     display: block;
     width: 250px;
     margin: .1rem 0 1rem;
@@ -610,34 +608,28 @@ form textarea
     color: #3D405B;
 }
 
-form textarea
-{
+form textarea {
     margin-top: .5rem;
 }
 
-form label:has(textarea)
-{
+form label:has(textarea) {
     margin-top: 1rem;
 }
 
-form input:required
-{
+form input:required {
     border-left-color: #d70000;
 }
 
-form input:focus
-{
+form input:focus {
     border-left-color: black;
     outline: none;
 }
 
-form input:required:valid
-{
+form input:required:valid {
     border-left-color: green;
 }
 
-form input[type=submit]
-{
+form input[type=submit] {
     border: none;
     background-color: #3D405B;
     color: white;
@@ -648,13 +640,11 @@ form input[type=submit]
     appearance: none;
 }
 
-input:-webkit-autofill
-{
+input:-webkit-autofill {
     -webkit-text-fill-color: #3D405B;
 }
 
-#results
-{
+#results {
     background-color: #F4F1DE;
     padding: 0 1rem;
     border: 1px solid #E07A5F;
@@ -667,8 +657,7 @@ input:-webkit-autofill
 /* Note - the activity cards pick up much of their formatting 
 from the .business-card that is used on the directory page */
 
-.activity-card
-{
+.activity-card {
     overflow: hidden;
     display: grid;
     gap: 0.5rem;
@@ -679,32 +668,27 @@ from the .business-card that is used on the directory page */
         "location";
 }
 
-.activity-card .activity-photo
-{
+.activity-card .activity-photo {
     grid-area: photo;
     justify-self: center;
     align-self: center;
     border-radius: 6px;
 }
 
-.activity-card .activity-title
-{
+.activity-card .activity-title {
     margin: 1rem 10px;
     grid-area: name;
 }
 
-.activity-card .activity-description
-{
+.activity-card .activity-description {
     grid-area: description;
 }
 
-.activity-card .activity-location
-{
+.activity-card .activity-location {
     grid-area: location;
 }
 
-.visit-message
-{
+.visit-message {
     background-color: #f0f8ff;
     font-weight: 500;
     color: var(--color-primary);
@@ -721,8 +705,7 @@ from the .business-card that is used on the directory page */
     box-shadow: none;
 }
 
-.activity-info
-{
+.activity-info {
     display: inline-block;
     margin-top: .75rem;
     padding: .5rem 1.5rem;
@@ -736,8 +719,7 @@ from the .business-card that is used on the directory page */
     text-align: center;
 }
 
-.activity-info:hover
-{
+.activity-info:hover {
     background: var(--color-secondary);
 }
 
@@ -745,8 +727,7 @@ from the .business-card that is used on the directory page */
 /* =========================================
    FOOTER
 ========================================= */
-footer
-{
+footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -758,81 +739,69 @@ footer
     min-height: 180px;
 }
 
-.ccaddress
-{
+.ccaddress {
     text-align: left;
     max-width: 250px;
 }
 
-.classinfo
-{
+.classinfo {
     text-align: right;
     max-width: 200px;
 }
 
-.social
-{
+.social {
     display: flex;
     gap: 1rem;
     justify-content: center;
 }
 
-.social img
-{
+.social img {
     filter: brightness(0) invert(1);
     transition: transform .2s ease;
 }
 
-.social img:hover
-{
+.social img:hover {
     transform: scale(1.5);
 }
 
 /* =========================================
    MEDIA QUERIES
 ========================================= */
-@media (max-width:700px)
-{
-    .cta
-    {
+@media (max-width:700px) {
+
+    .cta{
         top: 1rem;
         right: 1rem;
         font-size: 1rem;
         padding: .5rem 1rem;
     }
 
-    footer
-    {
+    footer{
         flex-direction: column;
         text-align: center;
     }
 
     .ccaddress,
-    .classinfo
-    {
+    .classinfo {
         text-align: center;
     }
 
-    .grid
-    {
+    .grid {
         grid-template-columns: 1fr;
     }
 
-    .list-view .business-card
-    {
+    .list-view .business-card {
         flex-direction: column;
         align-items: flex-start;
         text-align: left;
     }
 
-    .list-view .business-card img
-    {
+    .list-view .business-card img {
         width: 120px;
         height: auto;
     }
 
-    .list-view .business-card a
-    {
+    .list-view .business-card a {
         width: 100%;
         text-align: center;
     }
