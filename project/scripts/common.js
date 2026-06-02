@@ -5,4 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Last modified
     document.getElementById("lastModified").textContent = document.lastModified;
+
+    // Hamburger menu
+    const navbutton = document.querySelector('#ham-btn');
+    const navlinks = document.querySelector('#nav-bar');
+
+    navbutton.addEventListener('click', () => {
+        navlinks.classList.toggle('show');
+        navbutton.classList.toggle('show');
+    });
 });
