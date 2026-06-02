@@ -2,7 +2,7 @@ import { getWeightedSectorPerformance } from "./dashboard.js";
 
 import { initSectorChart } from "./chart.js";
 
-initSectorChart();
+// initSectorChart();
 
 function createSectorTile(sectorName, value) {
     const tile = document.createElement("div");
@@ -51,9 +51,12 @@ async function initDashboard() {
     }
 }
 
-initDashboard();
+// initDashboard();
 
 document.addEventListener("DOMContentLoaded", () => {
+    initDashboard();
+    initSectorChart();
+
     const dialogBox = document.getElementById("dialogBox");
     const dialogBoxText = document.getElementById("dialogBoxText");
     const openModalBtn = document.getElementById("openModalBtn");
