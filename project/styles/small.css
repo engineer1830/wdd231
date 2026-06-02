@@ -189,19 +189,6 @@ main {
             border-bottom: 3px solid var(--color-primary);
         }
 
-    /* .navigation a {
-        color: var(--color-text-dark);
-    }
-    
-    .navigation a:hover {
-        color: var(--color-primary);
-    }
-
-    .navigation a.active {
-        color: var(--color-primary);
-        border-bottom: 3px solid var(--color-primary);   
-    } */
-
     .hamburger {
         margin-left: auto;
         width: 40px;
@@ -209,7 +196,7 @@ main {
         background: none;
         border: none;
         cursor: pointer;
-        color: var(--color-secondary);
+        color: var(--color-primarary);
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         position: relative;
         z-index: 1001;
