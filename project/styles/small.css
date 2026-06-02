@@ -147,14 +147,14 @@ main {
 @media (max-width: 767px) {
     header
         {
-            display: block;
+            position: relative;
         }
 
     .navigation {
         z-index: 3000;
         display: none;
         position: absolute;
-        top: 100%;
+        top: 60px;
         left: 0;
         right: 0;
         background: var(--color-bg-white);
@@ -172,6 +172,19 @@ main {
         list-style: none;
         margin: 0;
         padding: 0;
+    }
+
+    .navigation a {
+        color: var(--color-text-dark);
+    }
+    
+    .navigation a:hover {
+        color: var(--color-primary);
+    }
+
+    .navigation a.active {
+        color: var(--color-primary);
+        border-bottom: 3px solid var(--color-primary);   
     }
 
     .hamburger {
