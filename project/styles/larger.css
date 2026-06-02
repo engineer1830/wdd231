@@ -1,72 +1,7 @@
-/* This is the larger file from chamber */
-
-@media (min-width: 1024px)
-{
-    .hero
-    {
-        max-width: 1200px;
-        margin: 1rem auto;
-        max-height: 350px;
-        object-fit: cover;
-        object-position: bottom;
-        width: 100%;
-    }
-
-    .hamburger
-    {
-        display: none;
-    }
-
-    .navigation
-    {
-        position: static;
-        display: block;
-        background: transparent;
-        padding: 0;
-    }
-
-    .navigation ul
-    {
-        flex-direction: row;
-        gap: 1.5rem;
-    }
-
-    .hero
-    {
-        width: 100%;
-        max-width: 1400px;
-        margin: 1rem auto;
-    }
-
-    .grid
-    {
-        max-width: 1400px;
-        margin: 2rem auto;
-    }
-
-    .activity-grid
-    {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .activity-card
-    {
-        grid-template-areas:
-            "photo name"
-            "photo description"
-            "photo location";
-    }
-
-    .activity-card .activity-photo
-    {
-        width: 300px;
-    }
-}
 
 /* This is the original larger file */
 
-/* @media (min-width: 768px)
+@media (min-width: 768px)
 {
     .hero
     {
@@ -118,4 +53,4 @@
         max-width: 1400px;
         margin: 2rem auto;
     }
-} */
+}

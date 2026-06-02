@@ -60,7 +60,7 @@ main {
 
 /* These are straight from chamber */
 
-.navigation
+/* .navigation
 {
     display: none;
     position: absolute;
@@ -122,11 +122,11 @@ main {
 .hamburger.show::before
 {
     content: "\00d7";
-}
+} */
 
 /* There are the navigation rules that I'm struggling with for menu */
 
-/* .navigation a:link,
+.navigation a:link,
 .navigation a:visited {
     color: var(--color-text-light);
     text-decoration: none;
@@ -147,6 +147,7 @@ main {
 @media (max-width: 767px) {
 
     .navigation {
+        z-index: 3000;
         display: none;
         position: absolute;
         top: 100%;
@@ -190,7 +191,7 @@ main {
     .hamburger.show::before {
         content: "\00d7";
     }
-} */
+}
 
 /* -------------------------
    3. Typography
