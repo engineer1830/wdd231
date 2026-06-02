@@ -44,6 +44,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap;
     background-color: var(--color-primary);
     color: var(--color-text-light);
     padding: 1rem;
@@ -52,79 +53,17 @@ header {
     min-height: 60px;
 }
 
+.site-title {
+    flex: 1 1 auto;
+    white-space: nowrap;
+    min-width: 0;
+}
+
 main {
     max-width: 1500px;
     margin: 1rem auto;
     padding: 1rem;
 }
-
-/* These are straight from chamber */
-
-/* .navigation
-{
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--color-bg-white);
-    padding: .75rem 1rem;
-}
-
-.navigation.show
-{
-    display: block;
-}
-
-.navigation ul
-{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: .75rem;
-}
-
-.navigation a
-{
-    text-decoration: none;
-    font-weight: 600;
-    color: var(--color-text-dark);
-}
-
-.navigation a.active
-{
-    color: var(--color-primary);
-    border-bottom: 3px solid var(--color-primary);
-}
-
-.hamburger
-{
-    margin-left: auto;
-    width: 40px;
-    height: 40px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--color-secondary);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    position: relative;
-    z-index: 1001;
-}
-
-.hamburger::before
-{
-    content: "\2630";
-    font-size: 2rem;
-}
-
-.hamburger.show::before
-{
-    content: "\00d7";
-} */
-
-/* There are the navigation rules that I'm struggling with for menu */
 
 .navigation a:link,
 .navigation a:visited {
