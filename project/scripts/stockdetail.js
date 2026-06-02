@@ -122,8 +122,17 @@ export async function getStockDetail(ticker) {
 // }
 
 
+// document.getElementById("detailsBtn").addEventListener("click", async () => {
+//     const ticker = document.getElementById("tickerInput").value.toUpperCase();
+//     const details = await getStockDetail(ticker);
+//     renderStockDetails(details);
+// });
+
 document.getElementById("detailsBtn").addEventListener("click", async () => {
+    console.log(">>> CLICK HANDLER FIRED");
     const ticker = document.getElementById("tickerInput").value.toUpperCase();
     const details = await getStockDetail(ticker);
+    console.log(">>> DETAILS RETURNED:", details);
     renderStockDetails(details);
 });
+
