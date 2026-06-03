@@ -259,3 +259,80 @@ h2
 .figma-embed {
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+@media (min-width: 768px)
+{
+
+    .hero
+    {
+        max-width: 1200px;
+        margin: 1rem auto;
+        max-height: 350px;
+        object-fit: cover;
+        object-position: bottom;
+        width: 100%;
+    }
+
+    .hamburger
+    {
+        display: none;
+    }
+
+    .navigation
+    {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        position: static;
+        background: transparent;
+        padding: 0;
+    }
+
+    .navigation ul
+    {
+        display: flex;
+        flex-direction: row;
+        gap: 1.75rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: auto;
+        justify-content: space-between;
+    }
+
+    header nav.navigation a:link,
+    header nav.navigation a:visited
+    {
+        color: var(--color-text-light);
+    }
+
+    header nav.navigation a:hover
+    {
+        color: lightblue;
+    }
+
+    header nav.navigation a:active
+    {
+        color: var(--color-text-light);
+    }
+
+    header nav.navigation a.active
+    {
+        color: var(--color-text-light);
+        border-bottom: 3px solid var(--color-text-light);
+    }
+
+    .hero
+    {
+        width: 100%;
+        max-width: 1400px;
+        margin: 1rem auto;
+    }
+
+    .grid
+    {
+        max-width: 1400px;
+        margin: 2rem auto;
+    }
+}
