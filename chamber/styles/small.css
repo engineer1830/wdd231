@@ -484,12 +484,17 @@ h1, h2 {
     gap: 2rem;
     grid-template-columns: 1fr;
 }
-
-.modal-content {
+.modal-content
+{
+    background: #fff;
+    padding: 1.5rem;
+    max-width: 500px;
+    width: 100%;
     margin: 0 auto;
-    max-width: 90%;
     text-align: left;
     border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .modal {
