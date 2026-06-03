@@ -543,13 +543,13 @@ dialog[open] {
 
     .join-layout
     {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr 1fr;
         align-items: start;
     }
 }
 
 .join-form-column {
-    margin-left: 2rem;
+    margin-left: 4rem;
     align-items: center;
 }
 
