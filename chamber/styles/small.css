@@ -515,6 +515,13 @@ dialog {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
+.dialog-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
 dialog::backdrop {
     background: rgba(0, 0, 0, 0.5);
 }
