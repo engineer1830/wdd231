@@ -48,12 +48,20 @@ header
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap;
     background-color: var(--color-primary);
     color: var(--color-text-light);
     padding: 1rem;
     padding-right: 3.5rem;
     font-size: 2rem;
     min-height: 60px;
+}
+
+.site-title
+{
+    flex: 1 1 auto;
+    white-space: nowrap;
+    min-width: 0;
 }
 
 main
@@ -75,14 +83,105 @@ main
     color: lightblue;
 }
 
-.navigation a:active
-{
-    color: white;
-}
-
 .navigation a.active
 {
+    color: var(--color-text-light);
     border-bottom: 3px solid var(--color-text-light);
+}
+
+@media (max-width: 767px)
+{
+
+    header
+    {
+        position: relative;
+    }
+
+    .navigation
+    {
+        z-index: 3000;
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: var(--color-bg-white);
+        padding: 0.75rem 1rem;
+    }
+
+    .navigation.show
+    {
+        display: block;
+    }
+
+    .navigation ul
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navigation a:link,
+    .navigation a:visited
+    {
+        color: var(--color-text-dark);
+        text-decoration: none;
+    }
+
+    .navigation a:hover
+    {
+        color: var(--color-primary);
+    }
+
+    .navigation a.active
+    {
+        color: var(--color-primary);
+        border-bottom: 3px solid var(--color-primary);
+    }
+
+    .hamburger
+    {
+        margin-left: auto;
+        width: 40px;
+        height: 40px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--color-primarary);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        position: relative;
+        z-index: 1001;
+    }
+
+    .hamburger::before
+    {
+        content: "\2630";
+        font-size: 2rem;
+    }
+
+    .hamburger.show::before
+    {
+        content: "\00d7";
+    }
+}
+
+@media (min-width: 768px) and (max-width: 980px)
+{
+
+    header
+    {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navigation
+    {
+        margin-top: 0.5rem;
+        justify-content: flex-start;
+    }
 }
 
 /* -------------------------
