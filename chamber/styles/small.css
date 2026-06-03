@@ -504,10 +504,6 @@ h1, h2 {
 }
 
 dialog {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
     border: none;
     border-radius: 1.5rem;
     padding: 1.5rem;
