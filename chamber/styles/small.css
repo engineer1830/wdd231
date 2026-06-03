@@ -504,6 +504,10 @@ h1, h2 {
 }
 
 dialog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
     border: none;
     border-radius: 1.5rem;
     padding: 1.5rem;
@@ -513,6 +517,17 @@ dialog {
 
 dialog::backdrop {
     background: rgba(0, 0, 0, 0.5);
+}
+
+#dialogBoxText {
+    text-align: center;
+}
+
+#closeButton {
+    display: block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
 }
 
 dialog[open] {
