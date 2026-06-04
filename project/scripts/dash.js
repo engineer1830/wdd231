@@ -1,5 +1,5 @@
 import { loadTopStocks } from "./sectorperf.js";
-import { getWeightedSectorPerformance } from "./maindashboard.js";
+import { getWeightedSectorPerformance } from "./dashboard.js";
 import { initSectorChart } from "./chart.js";
 
 function createSectorTile(sectorName, value) {

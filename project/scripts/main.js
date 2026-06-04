@@ -1,3 +1,3 @@
 import './sectorperf.js';
-import './maindashboard.js';
+import './dashboard.js';
 import './dash.js';
