@@ -1,4 +1,4 @@
-import { getWeightedSectorPerformance } from "./dashboard.js";
+import { getWeightedSectorPerformance } from "./maindashboard.js";
 
 import { initSectorChart } from "./chart.js";
 
