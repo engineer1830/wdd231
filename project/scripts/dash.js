@@ -49,7 +49,8 @@ async function initDashboard() {
     }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+    await loadTopStocks();
     initDashboard();
     initSectorChart();
 
