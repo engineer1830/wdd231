@@ -2,39 +2,6 @@ import { loadTopStocks } from "./sectorperf.js";
 import { getWeightedSectorPerformance } from "./dashboard.js";
 import { initSectorChart } from "./chart.js";
 
-document.addEventListener("DOMContentLoaded", async () => {
-    console.log("Dashboard DOM loaded.");
-
-    try {
-        console.log("Loading top stocks...");
-        await loadTopStocks();
-        console.log("Top stocks loaded.");
-    } catch (err) {
-        console.error("loadTopStocks failed:", err);
-    }
-
-    try {
-        console.log("Initializing dashboard...");
-        await initDashboard();
-        console.log("Dashboard initialized.");
-    } catch (err) {
-        console.error("initDashboard failed:", err);
-    }
-
-    try {
-        console.log("Initializing sector chart...");
-        initSectorChart();
-        console.log("Sector chart initialized.");
-    } catch (err) {
-        console.error("initSectorChart failed:", err);
-    }
-
-    console.log("Modal setup starting...");
-    // modal setup code...
-    console.log("Modal setup complete.");
-});
-
-
 function createSectorTile(sectorName, value) {
     const tile = document.createElement("div");
     tile.classList.add("sector-tile");
