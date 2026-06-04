@@ -3,7 +3,7 @@ import { loadTopStocks, getTickerDetails } from "./sectorperf.js";
 await loadTopStocks();
 
 export async function getWeightedSectorPerformance() {
-    const response = await fetch("data/topstocksdata.json");
+    const response = await fetch("data/topstocksdata.json?v=1.0");
     const tickerData = await response.json();
 
     const sectorPerformance = {};

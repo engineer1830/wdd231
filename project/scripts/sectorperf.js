@@ -1,7 +1,7 @@
 let topStocksBySector = {};
 
 export async function loadTopStocks() {
-    const res = await fetch("data/topstocks.json");
+    const res = await fetch("data/topstocks.json?v=1.0");
     topStocksBySector = await res.json();
 }
 
