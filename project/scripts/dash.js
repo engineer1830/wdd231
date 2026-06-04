@@ -1,3 +1,5 @@
+console.log("dash.js loaded");
+
 import { loadTopStocks } from "./sectorperf.js";
 import { getWeightedSectorPerformance } from "./dashboard.js";
 import { initSectorChart } from "./chart.js";
@@ -127,3 +129,4 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     console.log("Modal setup complete.");
 });
+

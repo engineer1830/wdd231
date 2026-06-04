@@ -1,3 +1,5 @@
+console.log("dashboard.js loaded");
+
 import { loadTopStocks, getTickerDetails } from "./sectorperf.js";
 
 await loadTopStocks();
@@ -49,6 +51,9 @@ export async function getWeightedSectorPerformance() {
 
     return sectorPerformance;
 }
+
+
+
 
 
 

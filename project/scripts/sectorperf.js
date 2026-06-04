@@ -1,3 +1,5 @@
+console.log("sectorperf.js loaded");
+
 let topStocksBySector = {};
 
 export async function loadTopStocks() {
@@ -40,3 +42,5 @@ export async function getTop5Stocks(sector) {
     const details = await Promise.all(tickers.map(getTickerDetails));
     return details.sort((a, b) => b.marketCap - a.marketCap).slice(0, 5);
 }
+
+
