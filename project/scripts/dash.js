@@ -1,5 +1,5 @@
+import { loadTopStocks } from "./sectorperf.js";
 import { getWeightedSectorPerformance } from "./maindashboard.js";
-
 import { initSectorChart } from "./chart.js";
 
 function createSectorTile(sectorName, value) {
@@ -50,7 +50,6 @@ async function initDashboard() {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-    await loadTopStocks();
     initDashboard();
     initSectorChart();
 
@@ -76,4 +75,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         dialogBox.close();
     });
 });
+
+
 
