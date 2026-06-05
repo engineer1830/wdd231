@@ -253,6 +253,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.log("Modal setup complete.");
 });
 
+console.log("END OF FILE >>> THIS SHOULD BE LAST LINE");
+
 
 /*  
    ⭐ IMPORTANT ⭐  
