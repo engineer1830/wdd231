@@ -1,3 +1,6 @@
+console.log("DASH VERSION >>> 20240605-001");
+
+
 // console.log("dash.js loaded");
 
 // import { loadTopStocks } from "./sectorperf.js";
