@@ -201,6 +201,8 @@ async function initDashboard() {
         updateSectorTile(sector, performance[sector]);
     }
 }
+console.log("AFTER initDashboard CLOSING BRACE");
+
 
 /*  
    ⭐ IMPORTANT ⭐  
