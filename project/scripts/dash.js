@@ -84,6 +84,7 @@ async function initDashboard() {
 // New stuff below and this DOMContentLoaded was commmented out above
 
 document.addEventListener("DOMContentLoaded", async () => {
+    console.log("DOMContentLoaded registered");
     console.log("Dashboard DOM loaded.");
 
     try {
