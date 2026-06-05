@@ -5,6 +5,8 @@ import { getWeightedSectorPerformance } from "./dashboard.js";
 import { initSectorChart } from "./chart.js";
 
 console.log("Reached before DOMContentLoaded");
+console.log("About to register DOMContentLoaded");
+
 
 function createSectorTile(sectorName, value) {
     const tile = document.createElement("div");
