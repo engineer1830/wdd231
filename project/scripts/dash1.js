@@ -203,8 +203,58 @@ async function initDashboard() {
 }
 console.log("AFTER initDashboard CLOSING BRACE");
 
-document.addEventListener("DOMContentLoaded", async () => {
-    console.log("DOMContentLoaded registered");
+// document.addEventListener("DOMContentLoaded", async () => {
+//     console.log("DOMContentLoaded registered");
+//     console.log("Dashboard DOM loaded.");
+
+//     try {
+//         console.log("Loading top stocks...");
+//         await loadTopStocks();
+//         console.log("Top stocks loaded.");
+//     } catch (err) {
+//         console.error("loadTopStocks failed:", err);
+//     }
+
+//     try {
+//         console.log("Initializing dashboard...");
+//         await initDashboard();
+//         console.log("Dashboard initialized.");
+//     } catch (err) {
+//         console.error("initDashboard failed:", err);
+//     }
+
+//     try {
+//         console.log("Initializing sector chart...");
+//         initSectorChart();
+//         console.log("Sector chart initialized.");
+//     } catch (err) {
+//         console.error("initSectorChart failed:", err);
+//     }
+
+//     console.log("Modal setup starting...");
+
+//     const dialogBox = document.getElementById("dialogBox");
+//     const dialogBoxText = document.getElementById("dialogBoxText");
+//     const openModalBtn = document.getElementById("openModalBtn");
+//     const closeButton = document.getElementById("closeButton");
+
+//     const modalText = `
+//         This dashboard is representative only. It is built using only free APIs and as such,
+//         not all financial fundamentals are available. These calculations are based on the
+//         cumulative performance of the top 15 stocks in each sector and comparison to the
+//         broader market segments will have variations.
+//     `;
+
+//     dialogBoxText.textContent = modalText;
+
+//     openModalBtn.addEventListener("click", () => dialogBox.showModal());
+//     closeButton.addEventListener("click", () => dialogBox.close());
+
+//     console.log("Modal setup complete.");
+// });
+
+async function startDashboard() {
+    console.log("DOMContentLoaded registered (or document already loaded)");
     console.log("Dashboard DOM loaded.");
 
     try {
@@ -251,7 +301,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     closeButton.addEventListener("click", () => dialogBox.close());
 
     console.log("Modal setup complete.");
-});
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", startDashboard);
+} else {
+    // DOMContentLoaded already fired; run immediately
+    startDashboard();
+}
+
 
 console.log("END OF FILE >>> THIS SHOULD BE LAST LINE");
 
